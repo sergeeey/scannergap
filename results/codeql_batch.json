@@ -1,0 +1,185 @@
+{
+  "results": [
+    {
+      "cve_id": "CVE-2023-3224",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2023-32766",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 4,
+      "rules": [
+        "js/xss",
+        "js/missing-origin-check",
+        "js/client-side-unvalidated-url-redirection"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-33965",
+      "status": "scanned",
+      "language": "go",
+      "findings": 2,
+      "rules": [
+        "go/log-injection",
+        "go/command-injection"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35844",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 6,
+      "rules": [
+        "js/missing-rate-limiting",
+        "js/path-injection"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35852",
+      "status": "db_failed",
+      "error": "]\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\cpp\\tools\\autobuild.cmd]\n"
+    },
+    {
+      "cve_id": "CVE-2023-35926",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2023-35947",
+      "status": "db_failed",
+      "error": "\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\java\\tools\\autobuild.cmd]\n"
+    },
+    {
+      "cve_id": "CVE-2023-37466",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2023-37913",
+      "status": "db_failed",
+      "error": "\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\java\\tools\\autobuild.cmd]\n"
+    },
+    {
+      "cve_id": "CVE-2023-37918",
+      "status": "scanned",
+      "language": "go",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2023-38691",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2023-46119",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2024-24749",
+      "status": "db_failed",
+      "error": "\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\java\\tools\\autobuild.cmd]\n"
+    },
+    {
+      "cve_id": "CVE-2024-29029",
+      "status": "scanned",
+      "language": "go",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2024-34068",
+      "status": "scanned",
+      "language": "go",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2024-37899",
+      "status": "db_failed",
+      "error": "\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\java\\tools\\autobuild.cmd]\n"
+    },
+    {
+      "cve_id": "CVE-2024-37900",
+      "status": "db_failed",
+      "error": "\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\java\\tools\\autobuild.cmd]\n"
+    },
+    {
+      "cve_id": "CVE-2024-37901",
+      "status": "db_failed",
+      "error": "\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\java\\tools\\autobuild.cmd]\n"
+    },
+    {
+      "cve_id": "CVE-2024-39699",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2024-39943",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2024-41813",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2024-42362",
+      "status": "db_failed",
+      "error": "\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\java\\tools\\autobuild.cmd]\n"
+    },
+    {
+      "cve_id": "CVE-2024-43379",
+      "status": "scanned",
+      "language": "go",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2024-45390",
+      "status": "scanned",
+      "language": "javascript",
+      "findings": 0,
+      "rules": []
+    },
+    {
+      "cve_id": "CVE-2024-8003",
+      "status": "scanned",
+      "language": "go",
+      "findings": 1,
+      "rules": [
+        "go/log-injection"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-8375",
+      "status": "db_failed",
+      "error": "]\nA fatal error occurred: Exit status 1 from command: [C:\\Users\\serge\\codeql-home\\codeql\\tools\\win64\\runner.exe, cmd.exe, /C, type, NUL, &&, C:\\Users\\serge\\codeql-home\\codeql\\cpp\\tools\\autobuild.cmd]\n"
+    }
+  ],
+  "summary": {
+    "scanned": 17,
+    "found": 4,
+    "blind": 13
+  }
+}

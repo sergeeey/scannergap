@@ -28,6 +28,10 @@ MVP complete. Benchmark validated, documented, CLI working end-to-end. All merge
 5. Wire CWE metadata into pipeline
 
 ## Auto-commit log
+- [2026-04-14 00:27] `88220d9`: merge: 135 CVE corpus — 61.5% blind spot rate confirmed at scale
+- [2026-04-13 23:53] `4943a70`: feat: detector v0.2 — 26 rules, XSS + SSTI, CodeQL batch script
+- [2026-04-13 23:38] `23edab4`: feat: README, LICENSE, CI workflow, Ruby rules, expanded corpus
+- [2026-04-13 23:31] `e7c708d`: feat: blind spot detector v0.1 + corpus expansion script
 - [2026-04-13 23:11] merge: findings document, CodeQL verification, CLI pipeline
 - [2026-04-13 19:56] `59db94d`: CodeQL decision gate STRONG
 - [2026-04-13 19:47] `1350706`: all 4 kill criteria passed — 56% on 23 CVEs
