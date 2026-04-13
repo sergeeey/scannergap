@@ -1,0 +1,70 @@
+rules:
+  # ============================================================
+  # BlindSpotSec Custom Rules — PHP
+  # Detects patterns that standard Semgrep rules miss
+  # ============================================================
+
+  - id: blindspot-php-dynamic-include-post
+    message: >
+      PHP include/require with a path derived from $_POST/$_GET/$_REQUEST.
+      htmlspecialchars() does NOT sanitize path traversal characters.
+      Standard rules may miss this when sanitization functions are present
+      but insufficient for the sink type.
+    severity: ERROR
+    languages: [php]
+    metadata:
+      cwe: "CWE-94"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+      references:
+        - "CVE-2024-9006 (123solar)"
+    pattern-either:
+      - pattern: include("..." . $_POST[$KEY] . "...")
+      - pattern: include("..." . $_GET[$KEY] . "...")
+      - pattern: include("..." . $_REQUEST[$KEY] . "...")
+      - pattern: require("..." . $_POST[$KEY] . "...")
+      - pattern: require_once("..." . $_POST[$KEY] . "...")
+      - pattern: |
+          $VAR = $_POST[$KEY];
+          ...
+          include("..." . $VAR . "...");
+
+  - id: blindspot-php-dynamic-class-instantiation
+    message: >
+      PHP class instantiated from user-controlled string (new $_REQUEST[...]).
+      This allows arbitrary class instantiation, potentially triggering
+      dangerous __construct/__destruct methods or SSRF via internal classes.
+    severity: ERROR
+    languages: [php]
+    metadata:
+      cwe: "CWE-918"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+      references:
+        - "CVE-2024-27098 (GLPI)"
+    pattern-either:
+      - pattern: new $_REQUEST[$KEY](...)
+      - pattern: new $_GET[$KEY](...)
+      - pattern: new $_POST[$KEY](...)
+      - pattern: |
+          $CLASS = $_REQUEST[$KEY];
+          ...
+          new $CLASS(...);
+
+  - id: blindspot-php-twig-raw-unsanitized
+    message: >
+      Twig compiler raw() method called with unsanitized variable.
+      In Twig extension nodes, raw() output becomes executable PHP code.
+      Standard scanners miss this because they don't model the Twig
+      compile pipeline.
+    severity: ERROR
+    languages: [php]
+    metadata:
+      cwe: "CWE-94"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+      references:
+        - "CVE-2024-42355 (Shopware)"
+    patterns:
+      - pattern: $COMPILER->raw($VAR)
+      - pattern-not: $COMPILER->raw("...")

@@ -1,0 +1,79 @@
+rules:
+  # ============================================================
+  # BlindSpotSec Custom Rules — Java
+  # Detects patterns that standard Semgrep/CodeQL rules miss
+  # ============================================================
+
+  - id: blindspot-java-snakeyaml-no-constructor
+    message: >
+      SnakeYAML Yaml() instantiated without SafeConstructor or type restrictions.
+      The default constructor allows arbitrary Java class instantiation from
+      YAML type tags (!!), enabling Remote Code Execution. Use
+      new Yaml(new SafeConstructor()) or Yaml(new Constructor(AllowedType.class)).
+    severity: ERROR
+    languages: [java]
+    metadata:
+      cwe: "CWE-502"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+      references:
+        - "CVE-2024-42362 (Hertzbeat)"
+    patterns:
+      - pattern: new Yaml()
+      - pattern-not-inside: |
+          new Yaml(new SafeConstructor())
+      - pattern-not-inside: |
+          new Yaml(new Constructor(...))
+
+  - id: blindspot-java-snakeyaml-load-inputstream
+    message: >
+      SnakeYAML yaml.load() called on InputStream/Reader that may contain
+      user-supplied YAML. Combined with default Yaml() constructor (no type
+      restrictions), this enables RCE via deserialization.
+    severity: ERROR
+    languages: [java]
+    metadata:
+      cwe: "CWE-502"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    pattern-either:
+      - pattern: $YAML.load($STREAM)
+      - pattern: $YAML.loadAll($STREAM)
+      - pattern: $YAML.loadAs($STREAM, ...)
+
+  - id: blindspot-java-url-decode-before-check
+    message: >
+      URLDecoder.decode() called before a security check (regex, contains,
+      startsWith). Percent-encoded payloads (e.g., %2e%2e for ..) bypass
+      the check because decoding happens first. Check THEN decode, or
+      decode THEN check the decoded value.
+    severity: WARNING
+    languages: [java]
+    metadata:
+      cwe: "CWE-22"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+      references:
+        - "CVE-2024-24749 (GeoWebCache)"
+    pattern: |
+      $DECODED = URLDecoder.decode($INPUT, ...);
+      ...
+      if (<... $DECODED.matches(...) ...>) { ... }
+
+  - id: blindspot-java-velocity-eval-user-content
+    message: >
+      Velocity template engine evaluating content from user-controlled source
+      (database, request, file). If a user can inject Velocity directives
+      (#set, #foreach, $class.forName), this enables server-side code execution.
+    severity: ERROR
+    languages: [java]
+    metadata:
+      cwe: "CWE-94"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+      references:
+        - "CVE-2024-37899 (XWiki)"
+    pattern-either:
+      - pattern: Velocity.evaluate($CTX, ..., $TEMPLATE, ...)
+      - pattern: $ENGINE.evaluate($CTX, ..., $TEMPLATE, ...)
+      - pattern: $VE.mergeTemplate($TEMPLATE, ...)
