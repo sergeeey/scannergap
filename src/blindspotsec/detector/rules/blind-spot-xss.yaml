@@ -1,0 +1,70 @@
+rules:
+  # ============================================================
+  # BlindSpotSec Custom Rules — Cross-Site Scripting (CWE-79)
+  # Patterns that standard XSS rules miss
+  # ============================================================
+
+  - id: blindspot-xss-innerhtml-before-sanitize
+    message: >
+      innerHTML/outerHTML assignment occurs before sanitizer call in the same
+      code path. If the assigned content comes from user input, the sanitizer
+      runs too late. Standard XSS rules check for sanitizer presence but not
+      execution ORDER.
+    severity: ERROR
+    languages: [javascript, typescript]
+    metadata:
+      cwe: "CWE-79"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    pattern-either:
+      - pattern: $EL.innerHTML = $DATA
+      - pattern: $EL.outerHTML = $DATA
+
+  - id: blindspot-xss-template-string-html
+    message: >
+      Template literal used to construct HTML string that may be inserted into
+      DOM. If any interpolated variable contains user input, this bypasses
+      framework XSS protections.
+    severity: WARNING
+    languages: [javascript, typescript]
+    metadata:
+      cwe: "CWE-79"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: $EL.innerHTML = `...${$VAR}...`
+      - pattern: document.write(`...${$VAR}...`)
+
+  - id: blindspot-xss-python-markupsafe-bypass
+    message: >
+      Markup() or mark_safe() wraps a variable that may contain user input.
+      This explicitly marks the string as safe HTML, bypassing Jinja2/Django
+      auto-escaping. Standard rules flag mark_safe() but may miss Markup().
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-79"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    patterns:
+      - pattern-either:
+          - pattern: Markup($VAR)
+          - pattern: mark_safe($VAR)
+      - pattern-not: Markup("...")
+      - pattern-not: mark_safe("...")
+
+  - id: blindspot-xss-php-echo-raw
+    message: >
+      PHP echo/print outputs variable without htmlspecialchars() in an HTML
+      context. Standard rules may miss this when the variable passed through
+      a non-security-relevant function first.
+    severity: WARNING
+    languages: [php]
+    metadata:
+      cwe: "CWE-79"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: echo $VAR;
+      - pattern: print($VAR);
+      - pattern: echo "..." . $VAR . "...";

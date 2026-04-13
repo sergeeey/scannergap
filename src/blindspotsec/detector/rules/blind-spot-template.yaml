@@ -1,0 +1,69 @@
+rules:
+  # ============================================================
+  # BlindSpotSec Custom Rules — Template Injection (CWE-1336)
+  # Server-Side Template Injection patterns across frameworks
+  # ============================================================
+
+  - id: blindspot-ssti-jinja2-environment-from-string
+    message: >
+      Jinja2 Environment().from_string() renders a template from a string
+      variable. If the string comes from user input or database, this enables
+      SSTI. Use SandboxedEnvironment or pre-compiled templates.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-1336"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    patterns:
+      - pattern-either:
+          - pattern: jinja2.Environment(...).from_string($TEMPLATE)
+          - pattern: |
+              $ENV = jinja2.Environment(...)
+              ...
+              $ENV.from_string($TEMPLATE)
+      - pattern-not: jinja2.sandbox.SandboxedEnvironment(...)
+
+  - id: blindspot-ssti-mako-template-text
+    message: >
+      Mako Template() instantiated with user-controlled text argument.
+      Mako templates execute arbitrary Python code — no sandbox available.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-1336"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    patterns:
+      - pattern: Template($TEXT)
+      - pattern-not: Template("...")
+      - pattern-not: Template(filename=...)
+
+  - id: blindspot-ssti-twig-createtemplate
+    message: >
+      Twig createTemplate() renders a template from a runtime string.
+      If the string is user-controlled, this enables server-side template
+      injection in PHP applications.
+    severity: ERROR
+    languages: [php]
+    metadata:
+      cwe: "CWE-1336"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    pattern-either:
+      - pattern: $TWIG->createTemplate($STRING)
+      - pattern: $ENV->createTemplate($STRING)
+
+  - id: blindspot-ssti-freemarker-new-template
+    message: >
+      FreeMarker Template constructed from a string that may be user-controlled.
+      FreeMarker templates can execute arbitrary Java code via built-ins.
+    severity: ERROR
+    languages: [java]
+    metadata:
+      cwe: "CWE-1336"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    patterns:
+      - pattern: new Template($NAME, new StringReader($CONTENT), ...)
+      - pattern: new Template($NAME, $CONTENT, ...)

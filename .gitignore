@@ -17,6 +17,7 @@ venv/
 *.log
 corpus/raw/
 corpus/code/
+codeql-dbs/
 results/*.json
 results/*.csv
 !results/.gitkeep
