@@ -1,5 +1,5 @@
 {
-  "total": 95,
+  "total": 171,
   "cves": [
     {
       "cve_id": "CVE-2024-21514",
@@ -1375,6 +1375,1141 @@
         "https://github.com/backstage/backstage/commit/fb7375507d56faedcb7bb3665480070593c8949a",
         "https://github.com/backstage/backstage/releases/tag/v1.15.0",
         "https://github.com/backstage/backstage/security/advisories/GHSA-wg6p-jmpc-xjmr"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35150",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Starting in version 2.40m-2 and prior to versions 14.4.8, 14.10.4, and 15.0, any user with view",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/b65220a4d86b8888791c3b643074ebca5c089a3a",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/b65220a4d86b8888791c3b643074ebca5c089a3a",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-6mf5-36v9-3h2w",
+        "https://github.com/xwiki/xwiki-platform/commit/b65220a4d86b8888791c3b643074ebca5c089a3a"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-37466",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "description": "vm2 is an advanced vm/sandbox for Node.js. The library contains critical security issues and should not be used for production. The maintenance of the project has been discontinued. In vm2 for version",
+      "patch_url": "https://github.com/patriksimek/vm2/commit/d9a1fde8ec5a5a9c9e5a69bf91d703950859d744",
+      "github_refs": [
+        "https://github.com/patriksimek/vm2/commit/d9a1fde8ec5a5a9c9e5a69bf91d703950859d744",
+        "https://github.com/patriksimek/vm2/releases/tag/v3.10.0",
+        "https://github.com/patriksimek/vm2/security/advisories/GHSA-cchq-frgv-rjh5"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-34959",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 5.3,
+      "description": "An issue in Chamilo v1.11.* up to v1.11.18 allows attackers to execute a Server-Side Request Forgery (SSRF) and obtain information on the services running on the server via crafted requests in the soc",
+      "patch_url": "https://github.com/chamilo/chamilo-lms/commit/cc278f01864948b1fb160e03f0a3dc0875d5f81f",
+      "github_refs": [
+        "https://github.com/chamilo/chamilo-lms/commit/cc278f01864948b1fb160e03f0a3dc0875d5f81f",
+        "https://github.com/chamilo/chamilo-lms/commit/ea5791ff8ce6ea45148a171b0da5348a7c415e6f",
+        "https://github.com/chamilo/chamilo-lms/commit/ed946908fef23e8aa4cefc28f745f3cd6710099f"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-3981",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 4.9,
+      "description": "Server-Side Request Forgery (SSRF) in GitHub repository omeka/omeka-s prior to 4.0.2.",
+      "patch_url": "https://github.com/omeka/omeka-s/commit/dc01ca1b03e845db8a6a6b665d8da36c8dcd2c31",
+      "github_refs": [
+        "https://github.com/omeka/omeka-s/commit/dc01ca1b03e845db8a6a6b665d8da36c8dcd2c31",
+        "https://github.com/omeka/omeka-s/commit/dc01ca1b03e845db8a6a6b665d8da36c8dcd2c31"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-4624",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 2.4,
+      "description": "Server-Side Request Forgery (SSRF) in GitHub repository bookstackapp/bookstack prior to v23.08.",
+      "patch_url": "https://github.com/bookstackapp/bookstack/commit/c324ad928dbdd54ce5b09eb0dabe60ef9de1ea38",
+      "github_refs": [
+        "https://github.com/bookstackapp/bookstack/commit/c324ad928dbdd54ce5b09eb0dabe60ef9de1ea38",
+        "https://github.com/bookstackapp/bookstack/commit/c324ad928dbdd54ce5b09eb0dabe60ef9de1ea38"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-34944",
+      "cwe_ids": [
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "description": "An arbitrary file upload vulnerability in the /fileUpload.lib.php component of Chamilo 1.11.* up to v1.11.18 allows attackers to execute arbitrary code via uploading a crafted SVG file.",
+      "patch_url": "https://github.com/chamilo/chamilo-lms/commit/0d0c88c4806280ac9b70a299d6e3099269c9bc54",
+      "github_refs": [
+        "https://github.com/chamilo/chamilo-lms/commit/0d0c88c4806280ac9b70a299d6e3099269c9bc54",
+        "https://github.com/chamilo/chamilo-lms/commit/f6e83550c2d17fc93a65ec4be602a78312289f37",
+        "https://github.com/chamilo/chamilo-lms/commit/0d0c88c4806280ac9b70a299d6e3099269c9bc54"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-3069",
+      "cwe_ids": [
+        "CWE-620",
+        "CWE-287"
+      ],
+      "cvss_score": 9.8,
+      "description": "Unverified Password Change in GitHub repository tsolucio/corebos prior to 8.",
+      "patch_url": "https://github.com/tsolucio/corebos/commit/e3dabd74c68646bb54538d66411fc1e633ec454b",
+      "github_refs": [
+        "https://github.com/tsolucio/corebos/commit/e3dabd74c68646bb54538d66411fc1e633ec454b",
+        "https://github.com/tsolucio/corebos/commit/e3dabd74c68646bb54538d66411fc1e633ec454b"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-37918",
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-287"
+      ],
+      "cvss_score": 6.8,
+      "description": "Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge. A vulnerability has been found in Dapr that allows bypassing API token authentication, which is u",
+      "patch_url": "https://github.com/dapr/dapr/commit/83ca1abb11ffe34211db55dcd36d96b94252827a",
+      "github_refs": [
+        "https://github.com/dapr/dapr/commit/83ca1abb11ffe34211db55dcd36d96b94252827a",
+        "https://github.com/dapr/dapr/security/advisories/GHSA-59m6-82qm-vqgj",
+        "https://github.com/dapr/dapr/commit/83ca1abb11ffe34211db55dcd36d96b94252827a"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-38691",
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-287"
+      ],
+      "cvss_score": 5.0,
+      "description": "matrix-appservice-bridge provides an API for setting up bridges. Starting in version 4.0.0 and prior to versions 8.1.2 and 9.0.1, a malicious Matrix server can use a foreign user's MXID in an OpenID e",
+      "patch_url": "https://github.com/matrix-org/matrix-appservice-bridge/commit/4c6723a5e7beda65cdf1ae5dbb882e8beaac8552",
+      "github_refs": [
+        "https://github.com/matrix-org/matrix-appservice-bridge/commit/4c6723a5e7beda65cdf1ae5dbb882e8beaac8552",
+        "https://github.com/matrix-org/matrix-appservice-bridge/security/advisories/GHSA-vc7j-h8xg-fv5x",
+        "https://github.com/matrix-org/matrix-appservice-bridge/commit/4c6723a5e7beda65cdf1ae5dbb882e8beaac8552"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46122",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 3.9,
+      "description": "sbt is a build tool for Scala, Java, and others. Given a specially crafted zip or JAR file, `IO.unzip` allows writing of arbitrary file. This would have potential to overwrite `/root/.ssh/authorized_k",
+      "patch_url": "https://github.com/sbt/io/commit/124538348db0713c80793cb57b915f97ec13188a",
+      "github_refs": [
+        "https://github.com/sbt/io/commit/124538348db0713c80793cb57b915f97ec13188a",
+        "https://github.com/sbt/io/issues/358",
+        "https://github.com/sbt/io/pull/360"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-37913",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-23",
+        "CWE-22"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Starting in version 3.5-milestone-1 and prior to versions 14.10.8 and 15.3-rc-1, triggering the",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/45d182a4141ff22f3ff289cf71e4669bdc714544",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/45d182a4141ff22f3ff289cf71e4669bdc714544",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-vcvr-v426-3m3m",
+        "https://github.com/xwiki/xwiki-platform/commit/45d182a4141ff22f3ff289cf71e4669bdc714544"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46119",
+      "cwe_ids": [
+        "CWE-23",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Parse Server crashes when uploading a file without extension. This vulnerability has been patche",
+      "patch_url": "https://github.com/parse-community/parse-server/commit/686a9f282dc23c31beab3d93e6d21ccd0e1328fe",
+      "github_refs": [
+        "https://github.com/parse-community/parse-server/commit/686a9f282dc23c31beab3d93e6d21ccd0e1328fe",
+        "https://github.com/parse-community/parse-server/commit/fd86278919556d3682e7e2c856dfccd5beffbfc0",
+        "https://github.com/parse-community/parse-server/releases/tag/5.5.6"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-45158",
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cvss_score": 9.8,
+      "description": "An OS command injection vulnerability exists in web2py 2.24.1 and earlier. When the product is configured to use notifySendHandler for logging (not the default configuration), a crafted web request ma",
+      "patch_url": "https://github.com/web2py/web2py/commit/936e2260b0c34c44e2f3674a893e96d2a7fad0a3",
+      "github_refs": [
+        "https://github.com/web2py/web2py/commit/936e2260b0c34c44e2f3674a893e96d2a7fad0a3",
+        "https://github.com/web2py/web2py/commit/936e2260b0c34c44e2f3674a893e96d2a7fad0a3"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46117",
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 8.8,
+      "description": "reconFTW is a tool designed to perform automated recon on a target domain by running the best set of tools to perform scanning and finding out vulnerabilities. A vulnerability has been identified in r",
+      "patch_url": "https://github.com/six2dez/reconftw/commit/e639de356c0880fe5fe01a32de9d0c58afb5f086",
+      "github_refs": [
+        "https://github.com/six2dez/reconftw/commit/e639de356c0880fe5fe01a32de9d0c58afb5f086",
+        "https://github.com/six2dez/reconftw/security/advisories/GHSA-fxwr-vr9x-wvjp",
+        "https://github.com/six2dez/reconftw/commit/e639de356c0880fe5fe01a32de9d0c58afb5f086"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-45826",
+      "cwe_ids": [
+        "CWE-89",
+        "CWE-89"
+      ],
+      "cvss_score": 6.5,
+      "description": "Leantime is an open source project management system. A 'userId' variable in `app/domain/files/repositories/class.files.php` is not parameterized. An authenticated attacker can send a carefully crafte",
+      "patch_url": "https://github.com/Leantime/leantime/commit/be75f1e0f311d11c00a0bdc7079a62eef3594bf0",
+      "github_refs": [
+        "https://github.com/Leantime/leantime/commit/be75f1e0f311d11c00a0bdc7079a62eef3594bf0",
+        "https://github.com/Leantime/leantime/security/advisories/GHSA-559g-3h98-g3fj",
+        "https://github.com/Leantime/leantime/commit/be75f1e0f311d11c00a0bdc7079a62eef3594bf0"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-37909",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Starting in version 5.1-rc-1 and prior to versions 14.10.8 and 15.3-rc-1, any user who can edit",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/9e8f080094333dec63a8583229a3799208d773be",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/9e8f080094333dec63a8583229a3799208d773be",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-v2rr-xw95-wcjx",
+        "https://github.com/xwiki/xwiki-platform/commit/9e8f080094333dec63a8583229a3799208d773be"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46731",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 10.0,
+      "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. XWiki doesn't properly escape the section URL parameter that is used in the code for displaying",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/fec8e0e53f9fa2c3f1e568cc15b0e972727c803a",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/fec8e0e53f9fa2c3f1e568cc15b0e972727c803a",
+        "https://github.com/xwiki/xwiki-platform/commit/fec8e0e53f9fa2c3f1e568cc15b0e972727c803a#diff-6271f9be501f30b2ba55459eb451aee3413d34171ba8198a77c865306d174e23",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-62pr-qqf7-hh89"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-50721",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform. Starting in 4.5-rc-1 and prior to versions 14.10.15, 15.5.2, and 15.7-rc-1, the search administration interface doesn't properly escape the id and label of s",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/62863736d78ffd60d822279c5fb7fb9593042766",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/62863736d78ffd60d822279c5fb7fb9593042766",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-7654-vfh6-rw6x",
+        "https://github.com/xwiki/xwiki-platform/commit/62863736d78ffd60d822279c5fb7fb9593042766"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-50723",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform. Starting in 2.3 and prior to versions 14.10.15, 15.5.2, and 15.7-rc-1, anyone who can edit an arbitrary wiki page in an XWiki installation can gain programmi",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/0f367aaae4e0696f61cf5a67a75edd27d1d16db6",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/0f367aaae4e0696f61cf5a67a75edd27d1d16db6",
+        "https://github.com/xwiki/xwiki-platform/commit/1157c1ecea395aac7f64cd8a6f484b1225416dc7",
+        "https://github.com/xwiki/xwiki-platform/commit/749f6aee1bfbcf191c3734ea0aa9eba3aa63240e"
+      ]
+    },
+    {
+      "cve_id": "CVE-2017-20189",
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 9.8,
+      "description": "In Clojure before 1.9.0, classes can be used to construct a serialized object that executes arbitrary code upon deserialization. This is relevant if a server deserializes untrusted objects.",
+      "patch_url": "https://github.com/clojure/clojure/commit/271674c9b484d798484d134a5ac40a6df15d3ac3",
+      "github_refs": [
+        "https://github.com/clojure/clojure/commit/271674c9b484d798484d134a5ac40a6df15d3ac3",
+        "https://github.com/frohoff/ysoserial/pull/68/files",
+        "https://github.com/clojure/clojure/commit/271674c9b484d798484d134a5ac40a6df15d3ac3"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-44384",
+      "cwe_ids": [
+        "CWE-691",
+        "CWE-918"
+      ],
+      "cvss_score": 4.1,
+      "description": "Discourse-jira is a Discourse plugin allows Jira projects, issue types, fields and field options will be synced automatically. An administrator user can make an SSRF attack by setting the Jira URL to ",
+      "patch_url": "https://github.com/discourse/discourse-jira/commit/8a2d3ad228883199fd5f081cc93d173c88e2e48f",
+      "github_refs": [
+        "https://github.com/discourse/discourse-jira/commit/8a2d3ad228883199fd5f081cc93d173c88e2e48f",
+        "https://github.com/discourse/discourse-jira/pull/50",
+        "https://github.com/discourse/discourse-jira/security/advisories/GHSA-pmv5-h2x6-35fh"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-45152",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 2.0,
+      "description": "Engelsystem is a shift planning system for chaos events. A Blind SSRF in the \"Import schedule\" functionality makes it possible to perform a port scan against the local environment. This vulnerability ",
+      "patch_url": "https://github.com/engelsystem/engelsystem/commit/ee7d30b33935ea001705f438fec8ffd05734f295",
+      "github_refs": [
+        "https://github.com/engelsystem/engelsystem/commit/ee7d30b33935ea001705f438fec8ffd05734f295",
+        "https://github.com/engelsystem/engelsystem/security/advisories/GHSA-jj9g-75wf-6ppf",
+        "https://github.com/engelsystem/engelsystem/commit/ee7d30b33935ea001705f438fec8ffd05734f295"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46229",
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cvss_score": 8.8,
+      "description": "LangChain before 0.0.317 allows SSRF via document_loaders/recursive_url_loader.py because crawling can proceed from an external server to an internal server.",
+      "patch_url": "https://github.com/langchain-ai/langchain/commit/9ecb7240a480720ec9d739b3877a52f76098a2b8",
+      "github_refs": [
+        "https://github.com/langchain-ai/langchain/commit/9ecb7240a480720ec9d739b3877a52f76098a2b8",
+        "https://github.com/langchain-ai/langchain/pull/11925",
+        "https://github.com/langchain-ai/langchain/commit/9ecb7240a480720ec9d739b3877a52f76098a2b8"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46124",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 8.2,
+      "description": "Fides is an open-source privacy engineering platform for managing the fulfillment of data privacy requests in runtime environments, and the enforcement of privacy regulations in code. The Fides web ap",
+      "patch_url": "https://github.com/ethyca/fides/commit/cd344d016b1441662a61d0759e7913e8228ed1ee",
+      "github_refs": [
+        "https://github.com/ethyca/fides/commit/cd344d016b1441662a61d0759e7913e8228ed1ee",
+        "https://github.com/ethyca/fides/releases/tag/2.22.1",
+        "https://github.com/ethyca/fides/security/advisories/GHSA-jq3w-9mgf-43m4"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46725",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-367",
+        "CWE-918"
+      ],
+      "cvss_score": 8.1,
+      "description": "FoodCoopShop is open source software for food coops and local shops. Versions starting with 3.2.0 prior to 3.6.1 are vulnerable to server-side request forgery. In the Network module, a manufacturer ac",
+      "patch_url": "https://github.com/foodcoopshop/foodcoopshop/commit/0d5bec5c4c22e1affe7fd321a30e3f3a4d99e808",
+      "github_refs": [
+        "https://github.com/foodcoopshop/foodcoopshop/commit/0d5bec5c4c22e1affe7fd321a30e3f3a4d99e808",
+        "https://github.com/foodcoopshop/foodcoopshop/pull/972",
+        "https://github.com/foodcoopshop/foodcoopshop/security/advisories/GHSA-jhww-fx2j-3rf7"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-6124",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 4.3,
+      "description": "Server-Side Request Forgery (SSRF) in GitHub repository salesagility/suitecrm prior to 7.14.2, 8.4.2, 7.12.14.",
+      "patch_url": "https://github.com/salesagility/suitecrm/commit/54bc56c3bd9f1db75408db1c1d7d652c3f5f71e9",
+      "github_refs": [
+        "https://github.com/salesagility/suitecrm/commit/54bc56c3bd9f1db75408db1c1d7d652c3f5f71e9",
+        "https://github.com/salesagility/suitecrm/commit/54bc56c3bd9f1db75408db1c1d7d652c3f5f71e9"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-48240",
+      "cwe_ids": [
+        "CWE-201",
+        "CWE-281",
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 9.0,
+      "description": "XWiki Platform is a generic wiki platform. The rendered diff in XWiki embeds images to be able to compare the contents and not display a difference for an actually unchanged image. For this, XWiki req",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/bff0203e739b6e3eb90af5736f04278c73c2a8bb",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/bff0203e739b6e3eb90af5736f04278c73c2a8bb",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-7rfg-6273-f5wp",
+        "https://github.com/xwiki/xwiki-platform/commit/bff0203e739b6e3eb90af5736f04278c73c2a8bb"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-47129",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.3,
+      "description": "Statmic is a core Laravel content management system Composer package. Prior to versions 3.4.13 and 4.33.0, on front-end forms with an asset upload field, PHP files crafted to look like images may be u",
+      "patch_url": "https://github.com/statamic/cms/commit/098ef8024d97286ca501273c18ae75b646262d75",
+      "github_refs": [
+        "https://github.com/statamic/cms/commit/098ef8024d97286ca501273c18ae75b646262d75",
+        "https://github.com/statamic/cms/commit/f6c688154f6bdbd0b67039f8f11dcd98ba061e77",
+        "https://github.com/statamic/cms/security/advisories/GHSA-72hg-5wr5-rmfc"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-47621",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.8,
+      "description": "Guest Entries is a php library which allows users to create, update & delete entries from the front-end of a site. In affected versions the file uploads feature did not prevent the upload of PHP files",
+      "patch_url": "https://github.com/duncanmcclean/guest-entries/commit/a8e17b4413bfbbc337a887761a6c858ef1ddb4da",
+      "github_refs": [
+        "https://github.com/duncanmcclean/guest-entries/commit/a8e17b4413bfbbc337a887761a6c858ef1ddb4da",
+        "https://github.com/duncanmcclean/guest-entries/security/advisories/GHSA-rw82-mhmx-grmj",
+        "https://github.com/duncanmcclean/guest-entries/commit/a8e17b4413bfbbc337a887761a6c858ef1ddb4da"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-48217",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-434"
+      ],
+      "cvss_score": 8.8,
+      "description": "Statamic is a flat-first, Laravel + Git powered CMS designed for building websites. In affected versions certain additional PHP files crafted to look like images may be uploaded regardless of mime typ",
+      "patch_url": "https://github.com/statamic/cms/commit/4c6fe041e2203a8033e5949ce4a5d9d6c0ad2411",
+      "github_refs": [
+        "https://github.com/statamic/cms/commit/4c6fe041e2203a8033e5949ce4a5d9d6c0ad2411",
+        "https://github.com/statamic/cms/security/advisories/GHSA-2r53-9295-3m86",
+        "https://github.com/statamic/cms/commit/4c6fe041e2203a8033e5949ce4a5d9d6c0ad2411"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-26150",
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-287"
+      ],
+      "cvss_score": 6.5,
+      "description": "Versions of the package asyncua before 0.9.96 are vulnerable to Improper Authentication such that it is possible to access Address Space without encryption and authentication.\r\r**Note:**\r\rThis issue i",
+      "patch_url": "https://github.com/FreeOpcUa/opcua-asyncio/commit/2be7ce80df05de8d6c6ae1ebce6fa2bb7147844a",
+      "github_refs": [
+        "https://gist.github.com/artfire52/84f7279a4119d6f90381ac49d7121121",
+        "https://github.com/FreeOpcUa/opcua-asyncio/commit/2be7ce80df05de8d6c6ae1ebce6fa2bb7147844a",
+        "https://github.com/FreeOpcUa/opcua-asyncio/commit/b4106dfd5037423c9d1810b48a97296b59cde513"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-5844",
+      "cwe_ids": [
+        "CWE-620",
+        "CWE-287"
+      ],
+      "cvss_score": 7.2,
+      "description": "Unverified Password Change in GitHub repository pimcore/admin-ui-classic-bundle prior to 1.2.0.",
+      "patch_url": "https://github.com/pimcore/admin-ui-classic-bundle/commit/498ac77e54541177be27b0c710e387c47b3836ea",
+      "github_refs": [
+        "https://github.com/pimcore/admin-ui-classic-bundle/commit/498ac77e54541177be27b0c710e387c47b3836ea",
+        "https://github.com/pimcore/admin-ui-classic-bundle/commit/498ac77e54541177be27b0c710e387c47b3836ea"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-47127",
+      "cwe_ids": [
+        "CWE-302",
+        "CWE-287"
+      ],
+      "cvss_score": 4.2,
+      "description": "TYPO3 is an open source PHP based web content management system released under the GNU GPL. In typo3 installations there are always at least two different sites. Eg. first.example.org and second.examp",
+      "patch_url": "https://github.com/TYPO3/typo3/commit/535dfbdc54fd5362e0bc08d911db44eac7f64019",
+      "github_refs": [
+        "https://github.com/TYPO3/typo3/commit/535dfbdc54fd5362e0bc08d911db44eac7f64019",
+        "https://github.com/TYPO3/typo3/security/advisories/GHSA-3vmm-7h4j-69rm",
+        "https://github.com/TYPO3/typo3/commit/535dfbdc54fd5362e0bc08d911db44eac7f64019"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-24756",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "Crafatar serves Minecraft avatars based on the skin for use in external applications. Files outside of the `lib/public/` directory can be requested from the server. Instances running behind Cloudflare",
+      "patch_url": "https://github.com/crafatar/crafatar/commit/bba004acc725b362a5d2d5dfe30cf60e7365a373",
+      "github_refs": [
+        "https://github.com/crafatar/crafatar/blob/e0233f2899a3206a817d2dd3b80da83d51c7a726/lib/server.js#L64-L67",
+        "https://github.com/crafatar/crafatar/commit/bba004acc725b362a5d2d5dfe30cf60e7365a373",
+        "https://github.com/crafatar/crafatar/security/advisories/GHSA-5cxq-25mp-q5f2"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-22779",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 8.8,
+      "description": "Directory Traversal vulnerability in Kihron ServerRPExposer v.1.0.2 and before allows a remote attacker to execute arbitrary code via the loadServerPack in ServerResourcePackProviderMixin.java.",
+      "patch_url": "https://github.com/Kihron/ServerRPExposer/commit/8f7b829df633f59e828d677f736c53652d6f1b8f",
+      "github_refs": [
+        "https://gist.github.com/apple502j/193358682885fe1a6708309ce934e4ed",
+        "https://github.com/Kihron/ServerRPExposer/commit/8f7b829df633f59e828d677f736c53652d6f1b8f",
+        "https://gist.github.com/apple502j/193358682885fe1a6708309ce934e4ed"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-52138",
+      "cwe_ids": [
+        "CWE-25",
+        "CWE-22",
+        "CWE-59"
+      ],
+      "cvss_score": 8.2,
+      "description": "Engrampa is an archive manager for the MATE environment. Engrampa is found to be vulnerable to a Path Traversal vulnerability that can be leveraged to achieve full Remote Command Execution (RCE) on th",
+      "patch_url": "https://github.com/mate-desktop/engrampa/commit/63d5dfa9005c6b16d0f0ccd888cc859fca78f970",
+      "github_refs": [
+        "https://github.com/mate-desktop/engrampa/commit/63d5dfa9005c6b16d0f0ccd888cc859fca78f970",
+        "https://github.com/mate-desktop/engrampa/security/advisories/GHSA-c98h-v39w-3r7v",
+        "https://github.com/mate-desktop/engrampa/commit/63d5dfa9005c6b16d0f0ccd888cc859fca78f970"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-0964",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 9.4,
+      "description": "A local file include could be remotely triggered in Gradio due to a vulnerable user-supplied JSON value in an API request.",
+      "patch_url": "https://github.com/gradio-app/gradio/commit/d76bcaaaf0734aaf49a680f94ea9d4d22a602e70",
+      "github_refs": [
+        "https://github.com/gradio-app/gradio/commit/d76bcaaaf0734aaf49a680f94ea9d4d22a602e70",
+        "https://github.com/gradio-app/gradio/commit/d76bcaaaf0734aaf49a680f94ea9d4d22a602e70"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1163",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.1,
+      "description": "The attacker may exploit a path traversal vulnerability leading to information disclosure.",
+      "patch_url": "https://github.com/mbloch/mapshaper/commit/7437d903c0a87802c3751fc529d2de7098094c72",
+      "github_refs": [
+        "https://github.com/mbloch/mapshaper/commit/7437d903c0a87802c3751fc529d2de7098094c72",
+        "https://github.com/mbloch/mapshaper/commit/7437d903c0a87802c3751fc529d2de7098094c72"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1485",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 8.0,
+      "description": "A flaw was found in the decompression function of registry-support. This issue can be triggered if an unauthenticated remote attacker tricks a user into parsing a devfile which uses the `parent` or `p",
+      "patch_url": "https://github.com/devfile/registry-support/commit/0e44b9ca6d03fac4fc3f77d37656d56dc5defe0d",
+      "github_refs": [
+        "https://github.com/advisories/GHSA-84xv-jfrm-h4gm",
+        "https://github.com/devfile/registry-support/commit/0e44b9ca6d03fac4fc3f77d37656d56dc5defe0d",
+        "https://github.com/devfile/registry-support/pull/197"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25125",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 5.3,
+      "description": "Digdag is an open source tool that to build, run, schedule, and monitor complex pipelines of tasks across various platforms. Treasure Data's digdag workload automation system is susceptible to a path ",
+      "patch_url": "https://github.com/treasure-data/digdag/commit/eae89b0daf6c62f12309d8c7194454dfb18cc5c3",
+      "github_refs": [
+        "https://github.com/treasure-data/digdag/commit/eae89b0daf6c62f12309d8c7194454dfb18cc5c3",
+        "https://github.com/treasure-data/digdag/security/advisories/GHSA-5mp4-32rr-v3x5",
+        "https://github.com/treasure-data/digdag/commit/eae89b0daf6c62f12309d8c7194454dfb18cc5c3"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25620",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 6.4,
+      "description": "Helm is a tool for managing Charts. Charts are packages of pre-configured Kubernetes resources. When either the Helm client or SDK is used to save a chart whose name within the `Chart.yaml` file inclu",
+      "patch_url": "https://github.com/helm/helm/commit/0d0f91d1ce277b2c8766cdc4c7aa04dbafbf2503",
+      "github_refs": [
+        "https://github.com/helm/helm/commit/0d0f91d1ce277b2c8766cdc4c7aa04dbafbf2503",
+        "https://github.com/helm/helm/security/advisories/GHSA-v53g-5gjp-272r",
+        "https://github.com/helm/helm/commit/0d0f91d1ce277b2c8766cdc4c7aa04dbafbf2503"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25123",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.3,
+      "description": "MSS (Mission Support System) is an open source package designed for planning atmospheric research flights. In file: `index.py`, there is a method that is vulnerable to path manipulation attack. By mod",
+      "patch_url": "https://github.com/Open-MSS/MSS/commit/f23033729ee930b97f8bdbd07df0174311c9b658",
+      "github_refs": [
+        "https://github.com/Open-MSS/MSS/commit/f23033729ee930b97f8bdbd07df0174311c9b658",
+        "https://github.com/Open-MSS/MSS/security/advisories/GHSA-pf2h-qjcr-qvq2",
+        "https://github.com/Open-MSS/MSS/commit/f23033729ee930b97f8bdbd07df0174311c9b658"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-49508",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 6.5,
+      "description": "Directory Traversal vulnerability in YetiForceCompany YetiForceCRM versions 6.4.0 and before allows a remote authenticated attacker to obtain sensitive information via the license parameter in the Lib",
+      "patch_url": "https://github.com/YetiForceCompany/YetiForceCRM/commit/ba3a348aa6ecdf0a1d8b289cbb679bebcda7a132",
+      "github_refs": [
+        "https://github.com/YetiForceCompany/YetiForceCRM/commit/ba3a348aa6ecdf0a1d8b289cbb679bebcda7a132",
+        "https://github.com/c4v4r0n/Research/tree/main/CVE-2023-49508",
+        "https://github.com/YetiForceCompany/YetiForceCRM/commit/ba3a348aa6ecdf0a1d8b289cbb679bebcda7a132"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-26129",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 5.8,
+      "description": "PrestaShop is an open-source e-commerce platform. Starting in version 8.1.0 and prior to version 8.1.4, PrestaShop is vulnerable to path disclosure in a JavaScript variable. A patch is available in ve",
+      "patch_url": "https://github.com/PrestaShop/PrestaShop/commit/444bd0dea581659918fe2067541b9863cf099dd5",
+      "github_refs": [
+        "https://github.com/PrestaShop/PrestaShop/commit/444bd0dea581659918fe2067541b9863cf099dd5",
+        "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-3366-9287-7qpr",
+        "https://github.com/PrestaShop/PrestaShop/commit/444bd0dea581659918fe2067541b9863cf099dd5"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-26150",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 8.7,
+      "description": "`@backstage/backend-common` is a common functionality library for backends for Backstage, an open platform for building developer portals. In `@backstage/backend-common` prior to versions 0.21.1, 0.20",
+      "patch_url": "https://github.com/backstage/backstage/commit/1ad2b1b61ebb430051f7d804b0cc7ebfe7922b6f",
+      "github_refs": [
+        "https://github.com/backstage/backstage/commit/1ad2b1b61ebb430051f7d804b0cc7ebfe7922b6f",
+        "https://github.com/backstage/backstage/commit/78f892b3a84d63de2ba167928f171154c447b717",
+        "https://github.com/backstage/backstage/commit/edf65d7d31e027599c2415f597d085ee84807871"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-27318",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "Versions of the package onnx before and including 1.15.0 are vulnerable to Directory Traversal as the external_data field of the tensor proto can have a path to the file which is outside the model cur",
+      "patch_url": "https://github.com/onnx/onnx/commit/66b7fb630903fdcf3e83b6b6d56d82e904264a20",
+      "github_refs": [
+        "https://github.com/onnx/onnx/commit/66b7fb630903fdcf3e83b6b6d56d82e904264a20",
+        "https://github.com/onnx/onnx/commit/66b7fb630903fdcf3e83b6b6d56d82e904264a20"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-27081",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.2,
+      "description": "ESPHome is a system to control your ESP8266/ESP32. A security misconfiguration in the edit configuration file API in the dashboard component of ESPHome version 2023.12.9 (command line installation) al",
+      "patch_url": "https://github.com/esphome/esphome/commit/d814ed1d4adc71fde47c4df41215bee449884513",
+      "github_refs": [
+        "https://github.com/esphome/esphome/commit/d814ed1d4adc71fde47c4df41215bee449884513",
+        "https://github.com/esphome/esphome/security/advisories/GHSA-8p25-3q46-8q2p",
+        "https://github.com/esphome/esphome/commit/d814ed1d4adc71fde47c4df41215bee449884513"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-51450",
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 5.6,
+      "description": "baserCMS is a website development framework. Prior to version 5.0.9, there is an OS Command Injection vulnerability in the site search feature of baserCMS. Version 5.0.9 contains a fix for this vulner",
+      "patch_url": "https://github.com/baserproject/basercms/commit/18f426d63e752b4d22c40e9ea8d1f6e692ef601c",
+      "github_refs": [
+        "https://github.com/baserproject/basercms/commit/18f426d63e752b4d22c40e9ea8d1f6e692ef601c",
+        "https://github.com/baserproject/basercms/security/advisories/GHSA-77fc-4cv5-hmfr",
+        "https://github.com/baserproject/basercms/commit/18f426d63e752b4d22c40e9ea8d1f6e692ef601c"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28187",
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 7.2,
+      "description": "SOY CMS is an open source CMS (content management system) that allows you to build blogs and online shops. SOY CMS versions prior to 3.14.2 are vulnerable to an OS Command Injection vulnerability with",
+      "patch_url": "https://github.com/inunosinsi/soycms/commit/9b0e452f628df28dec69cd72b6b55db21066cbf8",
+      "github_refs": [
+        "https://github.com/inunosinsi/soycms/commit/9b0e452f628df28dec69cd72b6b55db21066cbf8",
+        "https://github.com/inunosinsi/soycms/security/advisories/GHSA-qg3q-hfgc-5jmm",
+        "https://github.com/inunosinsi/soycms/commit/9b0e452f628df28dec69cd72b6b55db21066cbf8"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-51699",
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 4.0,
+      "description": "Fluid is an open source Kubernetes-native Distributed Dataset Orchestrator and Accelerator for data-intensive applications. An OS command injection vulnerability within the Fluid project's JuicefsRunt",
+      "patch_url": "https://github.com/fluid-cloudnative/fluid/commit/e0184cff8790ad000c3e8943392c7f544fad7d66",
+      "github_refs": [
+        "https://github.com/fluid-cloudnative/fluid/commit/e0184cff8790ad000c3e8943392c7f544fad7d66",
+        "https://github.com/fluid-cloudnative/fluid/security/advisories/GHSA-wx8q-4gm9-rj2g",
+        "https://github.com/fluid-cloudnative/fluid/commit/e0184cff8790ad000c3e8943392c7f544fad7d66"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-21485",
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 6.5,
+      "description": "Versions of the package dash-core-components before 2.13.0; versions of the package dash-core-components before 2.0.0; versions of the package dash before 2.15.0; versions of the package dash-html-com",
+      "patch_url": "https://github.com/plotly/dash/commit/9920073c9a8619ae8f90fcec1924f2f3a4332a8c",
+      "github_refs": [
+        "https://github.com/plotly/dash/commit/9920073c9a8619ae8f90fcec1924f2f3a4332a8c",
+        "https://github.com/plotly/dash/issues/2729",
+        "https://github.com/plotly/dash/pull/2732"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1118",
+      "cwe_ids": [
+        "CWE-89",
+        "CWE-89"
+      ],
+      "cvss_score": 8.8,
+      "description": "The Podlove Subscribe button plugin for WordPress is vulnerable to UNION-based SQL Injection via the 'button' attribute of the podlove-subscribe-button shortcode in all versions up to, and including, ",
+      "patch_url": "https://github.com/podlove/podlove-subscribe-button-wp-plugin/commit/b16b7a2e98db4c642ca671b0aede4dbfce4578b3",
+      "github_refs": [
+        "https://github.com/podlove/podlove-subscribe-button-wp-plugin/commit/b16b7a2e98db4c642ca671b0aede4dbfce4578b3",
+        "https://github.com/podlove/podlove-subscribe-button-wp-plugin/commit/b16b7a2e98db4c642ca671b0aede4dbfce4578b3"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-42374",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "description": "An issue in mystenlabs Sui Blockchain before v.1.6.3 allow a remote attacker to execute arbitrary code and cause a denial of service via a crafted compressed script to the Sui node component.",
+      "patch_url": "https://github.com/MystenLabs/sui/commit/42d4ad103a21d23fecd7c0271453da41604e71e9",
+      "github_refs": [
+        "https://github.com/MystenLabs/sui/commit/42d4ad103a21d23fecd7c0271453da41604e71e9",
+        "https://github.com/MystenLabs/sui/commit/42d4ad103a21d23fecd7c0271453da41604e71e9"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28116",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "description": "Grav is an open-source, flat-file content management system. Grav CMS prior to version 1.7.45 is vulnerable to a Server-Side Template Injection (SSTI), which allows any authenticated user (editor perm",
+      "patch_url": "https://github.com/getgrav/grav/commit/4149c81339274130742831422de2685f298f3a6e",
+      "github_refs": [
+        "https://github.com/getgrav/grav/commit/4149c81339274130742831422de2685f298f3a6e",
+        "https://github.com/getgrav/grav/security/advisories/GHSA-c9gp-64c4-2rrh",
+        "https://github.com/getgrav/grav/commit/4149c81339274130742831422de2685f298f3a6e"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28117",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "description": "Grav is an open-source, flat-file content management system. Prior to version 1.7.45, Grav validates accessible functions through the Utils::isDangerousFunction function, but does not impose restricti",
+      "patch_url": "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+      "github_refs": [
+        "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+        "https://github.com/getgrav/grav/security/advisories/GHSA-qfv4-q44r-g7rv",
+        "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28118",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "description": "Grav is an open-source, flat-file content management system. Prior to version 1.7.45, due to the unrestricted access to twig extension class from Grav context, an attacker can redefine config variable",
+      "patch_url": "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+      "github_refs": [
+        "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+        "https://github.com/getgrav/grav/security/advisories/GHSA-r6vw-8v8r-pmp4",
+        "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28119",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "description": "Grav is an open-source, flat-file content management system. Prior to version 1.7.45, due to the unrestricted access to twig extension class from grav context, an attacker can redefine the escape func",
+      "patch_url": "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+      "github_refs": [
+        "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+        "https://github.com/getgrav/grav/security/advisories/GHSA-2m7x-c7px-hp58",
+        "https://github.com/twigphp/Twig/blob/3.x/src/Extension/EscaperExtension.php#L99"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31465",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform. Starting in version 5.0-rc-1 and prior to versions 14.10.20, 15.5.4, and 15.9-rc-1, any user with edit right on any page can execute any code on the server b",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/0317a3aa78065e66c86fc725976b06bf7f9b446e",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/0317a3aa78065e66c86fc725976b06bf7f9b446e",
+        "https://github.com/xwiki/xwiki-platform/commit/2740974c32dbb7cc565546d0f04e2374b32b36f7",
+        "https://github.com/xwiki/xwiki-platform/commit/6a7f19f6424036fce3d703413137adde950ae809"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31982",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 10.0,
+      "description": "XWiki Platform is a generic wiki platform. Starting in version 2.4-milestone-1 and prior to versions 4.10.20, 15.5.4, and 15.10-rc-1, XWiki's database search allows remote code execution through the s",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/3c9e4bb04286de94ad24854026a09fa967538e31",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/3c9e4bb04286de94ad24854026a09fa967538e31",
+        "https://github.com/xwiki/xwiki-platform/commit/459e968be8740c8abc2a168196ce21e5ba93cfb8",
+        "https://github.com/xwiki/xwiki-platform/commit/95bdd6cc6298acdf7f8f21298d40eeb8390a8565"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31984",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform. Starting in version 7.2-rc-1 and prior to versions 4.10.20, 15.5.4, and 15.10-rc-1, by creating a document with a specially crafted title, it is possible to ",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/43c9d551e3c11e9d8f176b556dd33bbe31fc66e0",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/43c9d551e3c11e9d8f176b556dd33bbe31fc66e0",
+        "https://github.com/xwiki/xwiki-platform/commit/5ef9d294d37be92ee22b2549e38663b29dce8767",
+        "https://github.com/xwiki/xwiki-platform/commit/74e301c481e69eeea674dac7fed6af3614cf08c5"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31996",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 10.0,
+      "description": "XWiki Platform is a generic wiki platform. Starting in version 3.0.1 and prior to versions 4.10.19, 15.5.4, and 15.10-rc-1, the HTML escaping of escaping tool that is used in XWiki doesn't escape `{`,",
+      "patch_url": "https://github.com/xwiki/xwiki-commons/commit/b0805160ec7b01ee12417e79cb384e60ae4817aa",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-commons/commit/b0805160ec7b01ee12417e79cb384e60ae4817aa",
+        "https://github.com/xwiki/xwiki-commons/commit/b94142e2a66ec32e89eacab67c3da8d91f5ef93a",
+        "https://github.com/xwiki/xwiki-commons/commit/ed7ff515a2436a1c6dcbd0c6ca0c41e434d58915"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-51389",
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 9.8,
+      "description": "Hertzbeat is a real-time monitoring system. At the interface of `/define/yml`, SnakeYAML is used as a parser to parse yml content, but no security configuration is used, resulting in a YAML deserializ",
+      "patch_url": "https://github.com/dromara/hertzbeat/commit/97c3f14446d1c96d1fc993df111684926b6cce17",
+      "github_refs": [
+        "https://github.com/dromara/hertzbeat/commit/97c3f14446d1c96d1fc993df111684926b6cce17",
+        "https://github.com/dromara/hertzbeat/security/advisories/GHSA-rmvr-9p5x-mm96",
+        "https://github.com/dromara/hertzbeat/commit/97c3f14446d1c96d1fc993df111684926b6cce17"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-23328",
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 9.1,
+      "description": "Dataease is an open source data visualization analysis tool. A deserialization vulnerability exists in the DataEase datasource, which can be exploited to execute arbitrary code. The location of the vu",
+      "patch_url": "https://github.com/dataease/dataease/commit/4128adf5fc4592b55fa1722a53b178967545d46a",
+      "github_refs": [
+        "https://github.com/dataease/dataease/commit/4128adf5fc4592b55fa1722a53b178967545d46a",
+        "https://github.com/dataease/dataease/commit/bb540e6dc83df106ac3253f331066129a7487d1a",
+        "https://github.com/dataease/dataease/security/advisories/GHSA-8x8q-p622-jf25"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-42282",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 9.8,
+      "description": "The ip package before 1.1.9 for Node.js might allow SSRF because some IP addresses (such as 0x7f.1) are improperly categorized as globally routable via isPublic.",
+      "patch_url": "https://github.com/indutny/node-ip/commit/6a3ada9b471b09d5f0f5be264911ab564bf67894",
+      "github_refs": [
+        "https://github.com/indutny/node-ip/commit/6a3ada9b471b09d5f0f5be264911ab564bf67894",
+        "https://github.com/indutny/node-ip/commit/6a3ada9b471b09d5f0f5be264911ab564bf67894"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-23654",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 4.1,
+      "description": "discourse-ai is the AI plugin for the open-source discussion platform Discourse. Prior to commit 94ba0dadc2cf38e8f81c3936974c167219878edd, interactions with different AI services are vulnerable to adm",
+      "patch_url": "https://github.com/discourse/discourse-ai/commit/94ba0dadc2cf38e8f81c3936974c167219878edd",
+      "github_refs": [
+        "https://github.com/discourse/discourse-ai/commit/94ba0dadc2cf38e8f81c3936974c167219878edd",
+        "https://github.com/discourse/discourse-ai/security/advisories/GHSA-32cj-rm2q-22cc",
+        "https://github.com/discourse/discourse-ai/commit/94ba0dadc2cf38e8f81c3936974c167219878edd"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25674",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "description": "An issue was discovered in MISP before 2.4.184. Organisation logo upload is insecure because of a lack of checks for the file extension and MIME type.",
+      "patch_url": "https://github.com/MISP/MISP/commit/312d2d5422235235ddd211dcb6bb5bb09c07791f",
+      "github_refs": [
+        "https://github.com/MISP/MISP/commit/312d2d5422235235ddd211dcb6bb5bb09c07791f",
+        "https://github.com/MISP/MISP/compare/v2.4.183...v2.4.184",
+        "https://github.com/MISP/MISP/commit/312d2d5422235235ddd211dcb6bb5bb09c07791f"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25623",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.5,
+      "description": "Mastodon is a free, open-source social network server based on ActivityPub. Prior to versions 4.2.7, 4.1.15, 4.0.15, and 3.5.19, when fetching remote statuses, Mastodon doesn't check that the response",
+      "patch_url": "https://github.com/mastodon/mastodon/commit/9fee5e852669e26f970e278021302e1a203fc022",
+      "github_refs": [
+        "https://github.com/mastodon/mastodon/commit/9fee5e852669e26f970e278021302e1a203fc022",
+        "https://github.com/mastodon/mastodon/security/advisories/GHSA-jhrq-qvrm-qr36",
+        "https://github.com/mastodon/mastodon/commit/9fee5e852669e26f970e278021302e1a203fc022"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25636",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 7.1,
+      "description": "Misskey is an open source, decentralized social media platform with ActivityPub support. Prior to version 2024.2.0, when fetching remote Activity Streams objects, Misskey doesn't check that the respon",
+      "patch_url": "https://github.com/misskey-dev/misskey/commit/9a70ce8f5ea9df00001894809f5ce7bc69b14c8a",
+      "github_refs": [
+        "https://github.com/misskey-dev/misskey/blob/2024.2.0-beta.10/packages/backend/src/core/activitypub/ApResolverService.ts#L69-L119",
+        "https://github.com/misskey-dev/misskey/blob/2024.2.0-beta.10/packages/backend/src/core/activitypub/models/ApNoteService.ts#L112-L308",
+        "https://github.com/misskey-dev/misskey/blob/2024.2.0-beta.10/packages/backend/src/server/api/endpoints/ap/show.ts#L125-L143"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-51444",
+      "cwe_ids": [
+        "CWE-20",
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 7.2,
+      "description": "GeoServer is an open source software server written in Java that allows users to share and edit geospatial data. An arbitrary file upload vulnerability exists in versions prior to 2.23.4 and 2.24.1 th",
+      "patch_url": "https://github.com/geoserver/geoserver/commit/ca683170c669718cb6ad4c79e01b0451065e13b8",
+      "github_refs": [
+        "https://github.com/geoserver/geoserver/commit/ca683170c669718cb6ad4c79e01b0451065e13b8",
+        "https://github.com/geoserver/geoserver/commit/fe235b3bb1d7f05751a4a2ef5390c36f5c9e78ae",
+        "https://github.com/geoserver/geoserver/pull/7222"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-27923",
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.8,
+      "description": "Grav is a content management system (CMS). Prior to version 1.7.43, users who may write a page may use the `frontmatter` feature due to insufficient permission validation and inadequate file name vali",
+      "patch_url": "https://github.com/getgrav/grav/commit/e3b0aa0c502aad251c1b79d1ee973dcd93711f07",
+      "github_refs": [
+        "https://github.com/getgrav/grav/commit/e3b0aa0c502aad251c1b79d1ee973dcd93711f07",
+        "https://github.com/getgrav/grav/security/advisories/GHSA-f6g2-h7qv-3m5v",
+        "https://github.com/getgrav/grav/commit/e3b0aa0c502aad251c1b79d1ee973dcd93711f07"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-29859",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "description": "In MISP before 2.4.187, add_misp_export in app/Controller/EventsController.php does not properly check for a valid file upload.",
+      "patch_url": "https://github.com/MISP/MISP/commit/238010bfd004680757b324cba0c6344f77a25399",
+      "github_refs": [
+        "https://github.com/MISP/MISP/commit/238010bfd004680757b324cba0c6344f77a25399",
+        "https://github.com/MISP/MISP/commit/238010bfd004680757b324cba0c6344f77a25399"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28105",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 7.2,
+      "description": "phpMyFAQ is an open source FAQ web application for PHP 8.1+ and MySQL, PostgreSQL and other databases. The category image upload function in phpmyfaq is vulnerable to manipulation of the `Content-type",
+      "patch_url": "https://github.com/thorsten/phpMyFAQ/commit/9136883776af67dfdb0e8cf14f5e0ca22bf4f2e7",
+      "github_refs": [
+        "https://github.com/thorsten/phpMyFAQ/commit/9136883776af67dfdb0e8cf14f5e0ca22bf4f2e7",
+        "https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-pwh2-fpfr-x5gf",
+        "https://github.com/thorsten/phpMyFAQ/commit/9136883776af67dfdb0e8cf14f5e0ca22bf4f2e7"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2221",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-22",
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "description": "qdrant/qdrant is vulnerable to a path traversal and arbitrary file upload vulnerability via the `/collections/{COLLECTION}/snapshots/upload` endpoint, specifically through the `snapshot` parameter. Th",
+      "patch_url": "https://github.com/qdrant/qdrant/commit/e6411907f0ecf3c2f8ba44ab704b9e4597d9705d",
+      "github_refs": [
+        "https://github.com/qdrant/qdrant/commit/e6411907f0ecf3c2f8ba44ab704b9e4597d9705d",
+        "https://github.com/qdrant/qdrant/commit/e6411907f0ecf3c2f8ba44ab704b9e4597d9705d"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31214",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 9.6,
+      "description": "Traccar is an open source GPS tracking system. Traccar versions 5.1 through 5.12 allow arbitrary files to be uploaded through the device image upload API. Attackers have full control over the file con",
+      "patch_url": "https://github.com/traccar/traccar/commit/3fbdcd81566bc72e319ec05c77cf8a4120b87b8f",
+      "github_refs": [
+        "https://github.com/traccar/traccar/blob/master/src/main/java/org/traccar/model/Device.java#L56",
+        "https://github.com/traccar/traccar/blob/v5.12/src/main/java/org/traccar/api/resource/DeviceResource.java#L191",
+        "https://github.com/traccar/traccar/commit/3fbdcd81566bc72e319ec05c77cf8a4120b87b8f"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1109",
+      "cwe_ids": [
+        "CWE-862",
+        "CWE-862"
+      ],
+      "cvss_score": 5.3,
+      "description": "The Podlove Podcast Publisher plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the init_download() and init() functions in all versions up to, and",
+      "patch_url": "https://github.com/podlove/podlove-publisher/commit/0ac83d1955aa964a358833b1b5ce790fff45b3f4",
+      "github_refs": [
+        "https://github.com/podlove/podlove-publisher/commit/0ac83d1955aa964a358833b1b5ce790fff45b3f4",
+        "https://github.com/podlove/podlove-publisher/commit/0ac83d1955aa964a358833b1b5ce790fff45b3f4"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1110",
+      "cwe_ids": [
+        "CWE-862",
+        "CWE-862",
+        "CWE-862"
+      ],
+      "cvss_score": 5.3,
+      "description": "The Podlove Podcast Publisher plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the init() function in all versions up to, and including, 4.0",
+      "patch_url": "https://github.com/podlove/podlove-publisher/commit/7873ff520631087e2f10737860cdcd64d53187ba",
+      "github_refs": [
+        "https://github.com/podlove/podlove-publisher/commit/7873ff520631087e2f10737860cdcd64d53187ba",
+        "https://github.com/podlove/podlove-publisher/commit/7873ff520631087e2f10737860cdcd64d53187ba"
       ]
     }
   ]
