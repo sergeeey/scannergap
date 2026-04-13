@@ -27,3 +27,6 @@ Pipeline: Ingest -> Scan -> Quadrant -> Taxonomy -> Falsify -> Benchmark
 
 ## Next Step
 Week 1: Set up NVD API client and collect first 100 CVEs.
+
+## Auto-commit log
+- [2026-04-13 17:39] `67255c4`: feat: initialize BlindSpotSec project — security blind spot meta-scanner

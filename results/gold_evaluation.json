@@ -1,0 +1,577 @@
+{
+  "summary": {
+    "total": 20,
+    "baseline_a": {
+      "detected": 9,
+      "blind": 11,
+      "blind_spot_rate": 0.55
+    },
+    "baseline_b": {
+      "detected": 7,
+      "blind": 13,
+      "blind_spot_rate": 0.65
+    },
+    "by_detection_requirement": {
+      "PAT": {
+        "total": 4,
+        "default_hit": 2,
+        "tuned_hit": 2
+      },
+      "LDF": {
+        "total": 8,
+        "default_hit": 4,
+        "tuned_hit": 4
+      },
+      "IPT": {
+        "total": 10,
+        "default_hit": 4,
+        "tuned_hit": 2
+      },
+      "SEM": {
+        "total": 9,
+        "default_hit": 4,
+        "tuned_hit": 2
+      },
+      "CFG": {
+        "total": 2,
+        "default_hit": 0,
+        "tuned_hit": 0
+      }
+    }
+  },
+  "details": [
+    {
+      "cve_id": "CVE-2024-2914",
+      "cwe": "CWE-22",
+      "language": "python",
+      "detection_requires": [
+        "PAT",
+        "LDF"
+      ],
+      "semgrep_default": {
+        "verdict": "HIT",
+        "findings": 3
+      },
+      "semgrep_tuned": {
+        "verdict": "HIT",
+        "findings": 3
+      },
+      "bandit_default": {
+        "verdict": "HIT",
+        "findings": 3
+      },
+      "bandit_tuned": {
+        "verdict": "HIT",
+        "findings": 3
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": true
+    },
+    {
+      "cve_id": "CVE-2024-2928",
+      "cwe": "CWE-22",
+      "language": "python",
+      "detection_requires": [
+        "IPT"
+      ],
+      "semgrep_default": {
+        "verdict": "PARTIAL",
+        "findings": 3
+      },
+      "semgrep_tuned": {
+        "verdict": "PARTIAL",
+        "findings": 3
+      },
+      "bandit_default": {
+        "verdict": "PARTIAL",
+        "findings": 11
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2023-49793",
+      "cwe": "CWE-22",
+      "language": "python",
+      "detection_requires": [
+        "PAT",
+        "LDF"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-39903",
+      "cwe": "CWE-22",
+      "language": "python",
+      "detection_requires": [
+        "IPT",
+        "SEM"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 3
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 3
+      },
+      "bandit_default": {
+        "verdict": "HIT",
+        "findings": 10
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-24749",
+      "cwe": "CWE-22",
+      "language": "java",
+      "detection_requires": [
+        "SEM",
+        "CFG"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-21514",
+      "cwe": "CWE-89",
+      "language": "php",
+      "detection_requires": [
+        "LDF"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-39943",
+      "cwe": "CWE-78",
+      "language": "javascript",
+      "detection_requires": [
+        "LDF"
+      ],
+      "semgrep_default": {
+        "verdict": "HIT",
+        "findings": 2
+      },
+      "semgrep_tuned": {
+        "verdict": "HIT",
+        "findings": 2
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": true
+    },
+    {
+      "cve_id": "CVE-2024-32464",
+      "cwe": "CWE-79",
+      "language": "ruby",
+      "detection_requires": [
+        "IPT",
+        "SEM"
+      ],
+      "semgrep_default": {
+        "verdict": "HIT",
+        "findings": 2
+      },
+      "semgrep_tuned": {
+        "verdict": "HIT",
+        "findings": 2
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": true
+    },
+    {
+      "cve_id": "CVE-2024-42362",
+      "cwe": "CWE-502",
+      "language": "java",
+      "detection_requires": [
+        "PAT",
+        "LDF"
+      ],
+      "semgrep_default": {
+        "verdict": "PARTIAL",
+        "findings": 1
+      },
+      "semgrep_tuned": {
+        "verdict": "PARTIAL",
+        "findings": 1
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-8003",
+      "cwe": "CWE-502",
+      "language": "go",
+      "detection_requires": [
+        "IPT",
+        "SEM"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-37899",
+      "cwe": "CWE-94",
+      "language": "java",
+      "detection_requires": [
+        "IPT",
+        "SEM"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-43404",
+      "cwe": "CWE-94",
+      "language": "python",
+      "detection_requires": [
+        "PAT"
+      ],
+      "semgrep_default": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "semgrep_tuned": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "bandit_default": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "bandit_tuned": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": true
+    },
+    {
+      "cve_id": "CVE-2024-45390",
+      "cwe": "CWE-94",
+      "language": "javascript",
+      "detection_requires": [
+        "LDF"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-42355",
+      "cwe": "CWE-94",
+      "language": "php",
+      "detection_requires": [
+        "IPT",
+        "SEM"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 1
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 1
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-8374",
+      "cwe": "CWE-94",
+      "language": "python",
+      "detection_requires": [
+        "LDF"
+      ],
+      "semgrep_default": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "semgrep_tuned": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "bandit_default": {
+        "verdict": "HIT",
+        "findings": 4
+      },
+      "bandit_tuned": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": true
+    },
+    {
+      "cve_id": "CVE-2024-9006",
+      "cwe": "CWE-94",
+      "language": "php",
+      "detection_requires": [
+        "LDF"
+      ],
+      "semgrep_default": {
+        "verdict": "HIT",
+        "findings": 14
+      },
+      "semgrep_tuned": {
+        "verdict": "HIT",
+        "findings": 14
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": true
+    },
+    {
+      "cve_id": "CVE-2024-45053",
+      "cwe": "CWE-94",
+      "language": "python",
+      "detection_requires": [
+        "IPT",
+        "SEM"
+      ],
+      "semgrep_default": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "semgrep_tuned": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "bandit_default": {
+        "verdict": "HIT",
+        "findings": 6
+      },
+      "bandit_tuned": {
+        "verdict": "HIT",
+        "findings": 1
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": true
+    },
+    {
+      "cve_id": "CVE-2024-24759",
+      "cwe": "CWE-918",
+      "language": "python",
+      "detection_requires": [
+        "IPT",
+        "SEM"
+      ],
+      "semgrep_default": {
+        "verdict": "PARTIAL",
+        "findings": 1
+      },
+      "semgrep_tuned": {
+        "verdict": "PARTIAL",
+        "findings": 1
+      },
+      "bandit_default": {
+        "verdict": "HIT",
+        "findings": 2
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": true,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-39699",
+      "cwe": "CWE-918",
+      "language": "javascript",
+      "detection_requires": [
+        "IPT",
+        "SEM"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    },
+    {
+      "cve_id": "CVE-2024-37164",
+      "cwe": "CWE-918",
+      "language": "python",
+      "detection_requires": [
+        "IPT",
+        "CFG"
+      ],
+      "semgrep_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "semgrep_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_default": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "bandit_tuned": {
+        "verdict": "MISS",
+        "findings": 0
+      },
+      "any_hit_default": false,
+      "any_hit_tuned": false
+    }
+  ]
+}
