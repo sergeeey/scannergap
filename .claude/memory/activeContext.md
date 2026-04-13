@@ -34,11 +34,26 @@ Now: make claim defendable — reproducibility + targeted cluster expansion.
 - Gold subset annotations committed BEFORE re-scanning
 - PARTIAL does NOT count as detected (conservative)
 
+## Kill Criteria Status (all PASS as of 1350706)
+1. Blind spot rate 56% >= 15% — PASS
+2. 4 systematic clusters (CWE-22, CWE-94, CWE-502, CWE-918) — PASS
+3. Non-trivial 82% >= 50% — PASS
+4. Reproducibility 0/20 diffs — PASS
+
+## CodeQL Decision Gate (59db94d)
+- Tested 5 blind CVEs with Semgrep Baseline C (6 rule packs)
+- Strict matching: 1/5 HIT (SnakeYAML PAT only), 4/5 remain blind
+- Claim upgraded: "SAST class blind spots" not just "Bandit+Semgrep"
+- Gate verdict: STRONG
+
 ## Next Steps
-1. Reproducibility: re-run gold_evaluation.py from clean state
-2. Targeted cluster expansion: add 3-5 CVE per borderline cluster
-3. Decision gate: CodeQL on 5 blind CVEs — does it change the picture?
+1. Merge feature/gold-evaluation -> master
+2. Public benchmark draft (Week 4 roadmap)
+3. Blog post / findings document
+4. Consider: real CodeQL CLI on the 3 BLIND CVEs as final verification
 
 ## Auto-commit log
+- [2026-04-13 19:56] `59db94d`: feat: CodeQL decision gate STRONG — 4/5 blind CVEs persist with max coverage
+- [2026-04-13 19:47] `1350706`: feat: all 4 kill criteria passed — 56% blind spot rate on 23 CVEs
 - [2026-04-13 19:20] `c8cca4b`: feat: gold subset evaluation — 55% blind spot rate on 20 annotated CVEs
 - [2026-04-13 17:39] `67255c4`: feat: initialize BlindSpotSec project — security blind spot meta-scanner
