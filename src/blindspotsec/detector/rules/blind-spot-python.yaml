@@ -1,0 +1,110 @@
+rules:
+  # ============================================================
+  # BlindSpotSec Custom Rules — Python
+  # Detects patterns that standard Semgrep/Bandit rules miss
+  # ============================================================
+
+  # --- Type I: Cross-function taint gaps ---
+
+  - id: blindspot-python-ssrf-boto3-endpoint
+    message: >
+      User-controlled value passed as endpoint_url to boto3 session/resource.
+      This is an SSRF sink that standard scanners miss because boto3 is not
+      recognized as an HTTP client. An attacker can redirect S3-compatible
+      requests to internal network services.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-918"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+      references:
+        - "CVE-2024-37164 (CVAT)"
+    patterns:
+      - pattern-either:
+          - pattern: boto3.Session(...).resource(..., endpoint_url=$URL, ...)
+          - pattern: boto3.Session(...).client(..., endpoint_url=$URL, ...)
+          - pattern: boto3.resource(..., endpoint_url=$URL, ...)
+          - pattern: boto3.client(..., endpoint_url=$URL, ...)
+          - pattern: $SESSION.resource(..., endpoint_url=$URL, ...)
+          - pattern: $SESSION.client(..., endpoint_url=$URL, ...)
+      - pattern-not: boto3.Session(...).resource(..., endpoint_url="...", ...)
+      - pattern-not: boto3.Session(...).client(..., endpoint_url="...", ...)
+
+  - id: blindspot-python-ssrf-requests-fstring
+    message: >
+      URL constructed via f-string or format() with user-controlled components
+      passed to requests library. Standard SSRF rules may miss this if the
+      base URL is hardcoded but the path/query is attacker-controlled.
+    severity: WARNING
+    languages: [python]
+    metadata:
+      cwe: "CWE-918"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+      references:
+        - "CVE-2024-24759 (MindsDB)"
+    pattern-either:
+      - pattern: requests.$METHOD(f"...{$VAR}...", ...)
+      - pattern: requests.$METHOD("...".format($VAR), ...)
+      - pattern: requests.$METHOD("..." + $VAR, ...)
+
+  # --- Type II: Semantic context blindness ---
+
+  - id: blindspot-python-jinja2-unsandboxed
+    message: >
+      Jinja2 Environment() used without SandboxedEnvironment. If the template
+      string comes from user input or database, this enables Server-Side
+      Template Injection (SSTI). Standard rules flag render_template_string()
+      but miss raw jinja2.Environment().from_string().
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-94"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+      references:
+        - "CVE-2024-45053 (Fides)"
+    patterns:
+      - pattern: jinja2.Environment(...).from_string($TEMPLATE)
+      - pattern-not: jinja2.sandbox.SandboxedEnvironment(...).from_string(...)
+
+  - id: blindspot-python-zipfile-extractall-no-check
+    message: >
+      zipfile.ZipFile.extractall() called without iterating members to check
+      for path traversal sequences (../) in filenames. This is a zip-slip
+      vulnerability. Standard Bandit/Semgrep rules catch tarfile.extractall
+      but often miss zipfile.extractall.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-22"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+      references:
+        - "CVE-2023-49793 (CodeChecker)"
+    pattern-either:
+      - pattern: zipfile.ZipFile(...).extractall(...)
+      - pattern: |
+          $Z = zipfile.ZipFile(...)
+          ...
+          $Z.extractall(...)
+
+  # --- Type III: Non-standard sinks ---
+
+  - id: blindspot-python-eval-from-file
+    message: >
+      eval() called on data derived from file parsing (config, archive, model).
+      Standard rules flag eval(user_input) but miss eval(parsed_file_data)
+      where the file is attacker-supplied (e.g., 3MF models, YAML configs).
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-94"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+      references:
+        - "CVE-2024-8374 (Cura)"
+    patterns:
+      - pattern: eval($DATA)
+      - pattern-not: eval("...")
