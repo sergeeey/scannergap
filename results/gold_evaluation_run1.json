@@ -1,19 +1,19 @@
 {
   "summary": {
-    "total": 23,
+    "total": 20,
     "baseline_a": {
-      "detected": 10,
-      "blind": 13,
-      "blind_spot_rate": 0.565
+      "detected": 9,
+      "blind": 11,
+      "blind_spot_rate": 0.55
     },
     "baseline_b": {
-      "detected": 8,
-      "blind": 15,
-      "blind_spot_rate": 0.652
+      "detected": 7,
+      "blind": 13,
+      "blind_spot_rate": 0.65
     },
     "by_detection_requirement": {
       "PAT": {
-        "total": 5,
+        "total": 4,
         "default_hit": 2,
         "tuned_hit": 2
       },
@@ -23,17 +23,17 @@
         "tuned_hit": 4
       },
       "IPT": {
-        "total": 11,
-        "default_hit": 5,
-        "tuned_hit": 3
+        "total": 10,
+        "default_hit": 4,
+        "tuned_hit": 2
       },
       "SEM": {
-        "total": 12,
-        "default_hit": 5,
-        "tuned_hit": 3
+        "total": 9,
+        "default_hit": 4,
+        "tuned_hit": 2
       },
       "CFG": {
-        "total": 3,
+        "total": 2,
         "default_hit": 0,
         "tuned_hit": 0
       }
@@ -561,87 +561,6 @@
       "semgrep_tuned": {
         "verdict": "MISS",
         "findings": 0
-      },
-      "bandit_default": {
-        "verdict": "MISS",
-        "findings": 0
-      },
-      "bandit_tuned": {
-        "verdict": "MISS",
-        "findings": 0
-      },
-      "any_hit_default": false,
-      "any_hit_tuned": false
-    },
-    {
-      "cve_id": "CVE-2024-27098",
-      "cwe": "CWE-918",
-      "language": "php",
-      "detection_requires": [
-        "IPT",
-        "SEM"
-      ],
-      "semgrep_default": {
-        "verdict": "HIT",
-        "findings": 7
-      },
-      "semgrep_tuned": {
-        "verdict": "HIT",
-        "findings": 7
-      },
-      "bandit_default": {
-        "verdict": "MISS",
-        "findings": 0
-      },
-      "bandit_tuned": {
-        "verdict": "MISS",
-        "findings": 0
-      },
-      "any_hit_default": true,
-      "any_hit_tuned": true
-    },
-    {
-      "cve_id": "CVE-2024-31993",
-      "cwe": "CWE-918",
-      "language": "python",
-      "detection_requires": [
-        "CFG",
-        "SEM"
-      ],
-      "semgrep_default": {
-        "verdict": "MISS",
-        "findings": 0
-      },
-      "semgrep_tuned": {
-        "verdict": "MISS",
-        "findings": 0
-      },
-      "bandit_default": {
-        "verdict": "MISS",
-        "findings": 0
-      },
-      "bandit_tuned": {
-        "verdict": "MISS",
-        "findings": 0
-      },
-      "any_hit_default": false,
-      "any_hit_tuned": false
-    },
-    {
-      "cve_id": "CVE-2023-26153",
-      "cwe": "CWE-502",
-      "language": "ruby",
-      "detection_requires": [
-        "PAT",
-        "SEM"
-      ],
-      "semgrep_default": {
-        "verdict": "MISS",
-        "findings": 1
-      },
-      "semgrep_tuned": {
-        "verdict": "MISS",
-        "findings": 1
       },
       "bandit_default": {
         "verdict": "MISS",

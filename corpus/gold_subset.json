@@ -2,7 +2,7 @@
   "version": "0.1.0",
   "created": "2026-04-13",
   "note": "Annotations committed BEFORE re-scanning per kill_criteria.md protocol",
-  "total": 20,
+  "total": 23,
   "cves": [
     {
       "cve_id": "CVE-2024-2914",
@@ -203,6 +203,36 @@
       "match_definition": "Finding must reference SSRF or unvalidated endpoint_url in boto3/cloud_provider",
       "language": "python",
       "description_short": "CVAT SSRF: user-supplied S3 endpoint_url passed to boto3 without validation"
+    },
+    {
+      "cve_id": "CVE-2024-27098",
+      "vulnerable_file": "ajax/dropdownLocation.php",
+      "vulnerable_sink": "new $_REQUEST['itemtype']() — dynamic class instantiation from user input",
+      "cwe_primary": "CWE-918",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference SSRF or unsafe dynamic class instantiation from user input in dropdownLocation.php",
+      "language": "php",
+      "description_short": "GLPI SSRF: arbitrary class instantiated from user-supplied itemtype param"
+    },
+    {
+      "cve_id": "CVE-2024-31993",
+      "vulnerable_file": "docs/docs/documentation/getting-started/installation/backend-config.md",
+      "vulnerable_sink": "OIDC_CONFIGURATION_URL env var fetched via HTTP without SSRF protection",
+      "cwe_primary": "CWE-918",
+      "detection_requires": ["CFG", "SEM"],
+      "match_definition": "Finding must reference SSRF or unvalidated URL fetch from OIDC configuration",
+      "language": "python",
+      "description_short": "Mealie SSRF: OIDC discovery URL fetched without network egress restrictions"
+    },
+    {
+      "cve_id": "CVE-2023-26153",
+      "vulnerable_file": "lib/geokit-rails/ip_geocode_lookup.rb",
+      "vulnerable_sink": "YAML.load(cookies[:geo_location]) line 37",
+      "cwe_primary": "CWE-502",
+      "detection_requires": ["PAT", "SEM"],
+      "match_definition": "Finding must reference unsafe YAML.load or deserialization of cookie data in ip_geocode_lookup",
+      "language": "ruby",
+      "description_short": "geokit-rails: YAML.load on attacker-controlled cookie enables RCE via deserialization"
     }
   ]
 }
