@@ -1,0 +1,33 @@
+{
+  "scanners": {
+    "semgrep": {
+      "enabled": true,
+      "config": "auto",
+      "timeout_seconds": 300,
+      "version_min": "1.60"
+    },
+    "bandit": {
+      "enabled": true,
+      "timeout_seconds": 300,
+      "python_only": true
+    },
+    "codeql": {
+      "enabled": false,
+      "note": "Requires CodeQL CLI installation and database creation",
+      "languages": ["python", "javascript", "java", "cpp"],
+      "timeout_seconds": 600
+    },
+    "snyk": {
+      "enabled": false,
+      "note": "Requires Snyk CLI and authentication token",
+      "timeout_seconds": 300
+    }
+  },
+  "corpus": {
+    "min_cves": 100,
+    "max_cves": 500,
+    "languages": ["python", "javascript", "java", "c", "cpp"],
+    "severity_filter": ["critical", "high", "medium"],
+    "year_range": [2020, 2026]
+  }
+}
