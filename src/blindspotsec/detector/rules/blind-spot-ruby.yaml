@@ -1,0 +1,44 @@
+rules:
+  # ============================================================
+  # BlindSpotSec Custom Rules — Ruby
+  # Detects patterns that standard Semgrep rules miss
+  # ============================================================
+
+  - id: blindspot-ruby-yaml-load-untrusted
+    message: >
+      YAML.load() called on untrusted input (cookies, params, request body).
+      Ruby's YAML.load deserializes arbitrary objects, enabling RCE via
+      gadget chains. Use YAML.safe_load() or Psych.safe_load() instead.
+      Standard Semgrep rules may flag YAML.load but miss the taint from
+      cookies/params to the load call.
+    severity: ERROR
+    languages: [ruby]
+    metadata:
+      cwe: "CWE-502"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+      references:
+        - "CVE-2023-26153 (geokit-rails)"
+    pattern-either:
+      - pattern: YAML.load(cookies[$KEY])
+      - pattern: YAML.load(params[$KEY])
+      - pattern: YAML.load(request.$METHOD)
+      - pattern: |
+          $DATA = cookies[$KEY]
+          ...
+          YAML.load($DATA)
+
+  - id: blindspot-ruby-marshal-load-untrusted
+    message: >
+      Marshal.load() called on data that may be user-controlled.
+      Ruby's Marshal deserializes arbitrary objects, enabling RCE.
+      Use JSON.parse() or YAML.safe_load() for untrusted data.
+    severity: ERROR
+    languages: [ruby]
+    metadata:
+      cwe: "CWE-502"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    patterns:
+      - pattern: Marshal.load($DATA)
+      - pattern-not: Marshal.load(Marshal.dump(...))
