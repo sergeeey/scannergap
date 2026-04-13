@@ -1,0 +1,1127 @@
+{
+  "total": 78,
+  "cves": [
+    {
+      "cve_id": "CVE-2024-21514",
+      "cwe_ids": [
+        "CWE-89",
+        "CWE-89"
+      ],
+      "cvss_score": 7.4,
+      "description": "This affects versions of the package opencart/opencart from 0.0.0. An SQL Injection issue was identified in the Divido payment extension for OpenCart, which is included by default in version 3.0.3.9. ",
+      "patch_url": "https://github.com/opencart/opencart/commit/46bd5f5a8056ff9aad0aa7d71729c4cf593d67e2",
+      "github_refs": [
+        "https://github.com/opencart/opencart/blob/3.0.3.9/upload/catalog/model/extension/payment/divido.php%23L114",
+        "https://github.com/opencart/opencart/commit/46bd5f5a8056ff9aad0aa7d71729c4cf593d67e2",
+        "https://github.com/opencart/opencart/blob/3.0.3.9/upload/catalog/model/extension/payment/divido.php%23L114"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-32464",
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-80",
+        "CWE-79"
+      ],
+      "cvss_score": 6.1,
+      "description": "Action Text brings rich text content and editing to Rails. Instances of ActionText::Attachable::ContentAttachment included within a rich_text_area tag could potentially contain unsanitized HTML. This ",
+      "patch_url": "https://github.com/rails/rails/commit/e215bf3360e6dfe1497c1503a495e384ed6b0995",
+      "github_refs": [
+        "https://github.com/rails/rails/commit/e215bf3360e6dfe1497c1503a495e384ed6b0995",
+        "https://github.com/rails/rails/security/advisories/GHSA-prjp-h48f-jgf6",
+        "https://github.com/rails/rails/commit/e215bf3360e6dfe1497c1503a495e384ed6b0995"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-4577",
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 9.8,
+      "description": "In PHP versions 8.1.* before 8.1.29, 8.2.* before 8.2.20, 8.3.* before 8.3.8, when using Apache and PHP-CGI on Windows, if the system is set up to use certain code pages, Windows may use \"Best-Fit\" be",
+      "patch_url": "https://github.com/rapid7/metasploit-framework/pull/19247",
+      "github_refs": [
+        "https://github.com/11whoami99/CVE-2024-4577",
+        "https://github.com/php/php-src/security/advisories/GHSA-3qgc-jrrr-25jv",
+        "https://github.com/rapid7/metasploit-framework/pull/19247"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-39943",
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-284"
+      ],
+      "cvss_score": 9.9,
+      "description": "rejetto HFS (aka HTTP File Server) 3 before 0.52.10 on Linux, UNIX, and macOS allows OS command execution by remote authenticated users (if they have Upload permissions). This occurs because a shell i",
+      "patch_url": "https://github.com/rejetto/hfs/commit/305381bd36eee074fb238b64302a252668daad1d",
+      "github_refs": [
+        "https://github.com/rejetto/hfs/commit/305381bd36eee074fb238b64302a252668daad1d",
+        "https://github.com/rejetto/hfs/compare/v0.52.9...v0.52.10",
+        "https://github.com/rejetto/hfs/commit/305381bd36eee074fb238b64302a252668daad1d"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41815",
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-78"
+      ],
+      "cvss_score": 7.4,
+      "description": "Starship is a cross-shell prompt. Starting in version 1.0.0 and prior to version 1.20.0, undocumented and unpredictable shell expansion and/or quoting rules make it easily to accidentally cause shell ",
+      "patch_url": "https://github.com/starship/starship/commit/cfc58161e0ec595db90af686ad77a73df6d44d74",
+      "github_refs": [
+        "https://github.com/starship/starship/commit/cfc58161e0ec595db90af686ad77a73df6d44d74",
+        "https://github.com/starship/starship/releases/tag/v1.20.0",
+        "https://github.com/starship/starship/security/advisories/GHSA-vx24-x4mv-vwr5"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2914",
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 8.8,
+      "description": "A TarSlip vulnerability exists in the deepjavalibrary/djl, affecting version 0.26.0 and fixed in version 0.27.0. This vulnerability allows an attacker to manipulate file paths within tar archives to o",
+      "patch_url": "https://github.com/deepjavalibrary/djl/commit/5235be508cec9e8cb6f496a4ed2fa40e4f62c370",
+      "github_refs": [
+        "https://github.com/deepjavalibrary/djl/commit/5235be508cec9e8cb6f496a4ed2fa40e4f62c370",
+        "https://github.com/deepjavalibrary/djl/commit/5235be508cec9e8cb6f496a4ed2fa40e4f62c370"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2548",
+      "cwe_ids": [
+        "CWE-36",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "A path traversal vulnerability exists in the parisneo/lollms-webui application, specifically within the `lollms_core/lollms/server/endpoints/lollms_binding_files_server.py` and `lollms_core/lollms/sec",
+      "patch_url": "https://github.com/parisneo/lollms-webui/commit/49b0332e98d42dd5204dda53dee410b160106265",
+      "github_refs": [
+        "https://github.com/parisneo/lollms-webui/commit/49b0332e98d42dd5204dda53dee410b160106265",
+        "https://github.com/parisneo/lollms-webui/commit/49b0332e98d42dd5204dda53dee410b160106265"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2624",
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 9.8,
+      "description": "A path traversal and arbitrary file upload vulnerability exists in the parisneo/lollms-webui application, specifically within the `@router.get(\"/switch_personal_path\")` endpoint in `./lollms-webui/lol",
+      "patch_url": "https://github.com/parisneo/lollms-webui/commit/aeba79f3ea934331b8ecd625a58bae6e4f7e7d3f",
+      "github_refs": [
+        "https://github.com/parisneo/lollms-webui/commit/aeba79f3ea934331b8ecd625a58bae6e4f7e7d3f",
+        "https://github.com/parisneo/lollms-webui/commit/aeba79f3ea934331b8ecd625a58bae6e4f7e7d3f"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2928",
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "A Local File Inclusion (LFI) vulnerability was identified in mlflow/mlflow, specifically in version 2.9.2, which was fixed in version 2.11.3. This vulnerability arises from the application's failure t",
+      "patch_url": "https://github.com/mlflow/mlflow/commit/96f0b573a73d8eedd6735a2ce26e08859527be07",
+      "github_refs": [
+        "https://github.com/mlflow/mlflow/commit/96f0b573a73d8eedd6735a2ce26e08859527be07",
+        "https://github.com/mlflow/mlflow/commit/96f0b573a73d8eedd6735a2ce26e08859527be07"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-3429",
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 9.8,
+      "description": "A path traversal vulnerability exists in the parisneo/lollms application, specifically within the `sanitize_path_from_endpoint` and `sanitize_path` functions in `lollms_core\\lollms\\security.py`. This ",
+      "patch_url": "https://github.com/parisneo/lollms/commit/f4424cfc3d6dfb3ad5ac17dd46801efe784933e9",
+      "github_refs": [
+        "https://github.com/parisneo/lollms/commit/f4424cfc3d6dfb3ad5ac17dd46801efe784933e9",
+        "https://github.com/parisneo/lollms/commit/f4424cfc3d6dfb3ad5ac17dd46801efe784933e9"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-4881",
+      "cwe_ids": [
+        "CWE-36",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "A path traversal vulnerability exists in the parisneo/lollms application, affecting version 9.4.0 and potentially earlier versions, but fixed in version 5.9.0. The vulnerability arises due to improper",
+      "patch_url": "https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6",
+      "github_refs": [
+        "https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6",
+        "https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-36116",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "Reposilite is an open source, lightweight and easy-to-use repository manager for Maven based artifacts in JVM ecosystem. Reposilite provides support for JavaDocs files, which are archives that contain",
+      "patch_url": "https://github.com/dzikoysk/reposilite/commit/848173738e4375482c70365db5cebae29f125eaa",
+      "github_refs": [
+        "https://github.com/dzikoysk/reposilite/commit/848173738e4375482c70365db5cebae29f125eaa",
+        "https://github.com/dzikoysk/reposilite/releases/tag/3.5.12",
+        "https://github.com/dzikoysk/reposilite/security/advisories/GHSA-frvj-cfq4-3228"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-49793",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 6.5,
+      "description": "CodeChecker is an analyzer tooling, defect database and viewer extension for the Clang Static Analyzer and Clang Tidy. Zip files uploaded to the server endpoint of `CodeChecker store` are not properly",
+      "patch_url": "https://github.com/Ericsson/codechecker/commit/46bada41e32f3ba0f6011d5c556b579f6dddf07a",
+      "github_refs": [
+        "https://github.com/Ericsson/codechecker/commit/46bada41e32f3ba0f6011d5c556b579f6dddf07a",
+        "https://github.com/Ericsson/codechecker/security/advisories/GHSA-h26w-r4m5-8rrf",
+        "https://github.com/Ericsson/codechecker/commit/46bada41e32f3ba0f6011d5c556b579f6dddf07a"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-24749",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "GeoServer is an open source server that allows users to share and edit geospatial data. Prior to versions 2.23.5 and 2.24.3, if GeoServer is deployed in the Windows operating system using an Apache To",
+      "patch_url": "https://github.com/GeoWebCache/geowebcache/commit/c7f76bd8a1d67c3b986146e7a5e0b14dd64a8fef",
+      "github_refs": [
+        "https://github.com/GeoWebCache/geowebcache/commit/c7f76bd8a1d67c3b986146e7a5e0b14dd64a8fef",
+        "https://github.com/GeoWebCache/geowebcache/pull/1211",
+        "https://github.com/geoserver/geoserver/security/advisories/GHSA-jhqx-5v5g-mpf3"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-39903",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 8.6,
+      "description": "Solara is a pure Python, React-style framework for scaling Jupyter and web apps. A Local File Inclusion (LFI) vulnerability was identified in widgetti/solara, in version <1.35.1, which was fixed in ve",
+      "patch_url": "https://github.com/widgetti/solara/commit/df2fd66a7f4e8ffd36e8678697a8a4f76760dc54",
+      "github_refs": [
+        "https://github.com/widgetti/solara/commit/df2fd66a7f4e8ffd36e8678697a8a4f76760dc54",
+        "https://github.com/widgetti/solara/security/advisories/GHSA-9794-pc4r-438w",
+        "https://github.com/widgetti/solara/commit/df2fd66a7f4e8ffd36e8678697a8a4f76760dc54"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-8003",
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 3.5,
+      "description": "A vulnerability was found in Go-Tribe gotribe-admin 1.0 and classified as problematic. Affected by this issue is the function InitRoutes of the file internal/app/routes/routes.go of the component Log ",
+      "patch_url": "https://github.com/Go-Tribe/gotribe-admin/commit/45ac90d6d1f82716f77dbcdf8e7309c229080e3c",
+      "github_refs": [
+        "https://github.com/Go-Tribe/gotribe-admin/commit/45ac90d6d1f82716f77dbcdf8e7309c229080e3c",
+        "https://github.com/Go-Tribe/gotribe-admin/issues/1",
+        "https://github.com/Go-Tribe/gotribe-admin/issues/1#issuecomment-2298187923"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-42362",
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 8.8,
+      "description": "Hertzbeat is an open source, real-time monitoring system. Hertzbeat has an authenticated (user role) RCE via unsafe deserialization in /api/monitors/import. This vulnerability is fixed in 1.6.0.",
+      "patch_url": "https://github.com/apache/hertzbeat/commit/79f5408e345e8e89da97be05f43e3204a950ddfb",
+      "github_refs": [
+        "https://github.com/apache/hertzbeat/commit/79f5408e345e8e89da97be05f43e3204a950ddfb",
+        "https://github.com/apache/hertzbeat/commit/9dbbfb7812fc4440ba72bdee66799edd519d06bb",
+        "https://github.com/apache/hertzbeat/pull/1611"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-8375",
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-416",
+        "CWE-502"
+      ],
+      "cvss_score": 7.8,
+      "description": "There exists a use after free vulnerability in Reverb. Reverb supports the VARIANT datatype, which is supposed to represent an arbitrary object in C++. When a tensor proto of type VARIANT is unpacked,",
+      "patch_url": "https://github.com/google-deepmind/reverb/commit/6a0dcf4c9e842b7f999912f792aaa6f6bd261a25",
+      "github_refs": [
+        "https://github.com/google-deepmind/reverb/commit/6a0dcf4c9e842b7f999912f792aaa6f6bd261a25",
+        "https://github.com/google-deepmind/reverb/issues/141"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37885",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 3.8,
+      "description": "The Nextcloud Desktop Client is a tool to synchronize files from Nextcloud Server with your computer. A code injection in Nextcloud Desktop Client for macOS allowed to load arbitrary code when startin",
+      "patch_url": "https://github.com/nextcloud/desktop/pull/6378",
+      "github_refs": [
+        "https://github.com/nextcloud/desktop/pull/6378",
+        "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-4mf7-v63m-99p7",
+        "https://github.com/nextcloud/desktop/pull/6378"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37899",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 9.0,
+      "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. When an admin disables a user account, the user's profile is executed with the admin's rights. ",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/f89c8f47fad6e5cc7e68c69a7e0acde07f5eed5a",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/f89c8f47fad6e5cc7e68c69a7e0acde07f5eed5a",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-j584-j2vj-3f93",
+        "https://github.com/xwiki/xwiki-platform/commit/f89c8f47fad6e5cc7e68c69a7e0acde07f5eed5a"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-36401",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "description": "GeoServer is an open source server that allows users to share and edit geospatial data. Prior to versions 2.22.6, 2.23.6, 2.24.4, and 2.25.2, multiple OGC request parameters allow Remote Code Executio",
+      "patch_url": "https://github.com/geotools/geotools/pull/4797",
+      "github_refs": [
+        "https://github.com/Warxim/CVE-2022-41852?tab=readme-ov-file#workaround-for-cve-2022-41852",
+        "https://github.com/geoserver/geoserver/security/advisories/GHSA-6jj6-gm7p-fcvv",
+        "https://github.com/geotools/geotools/pull/4797"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37900",
+      "cwe_ids": [
+        "CWE-96",
+        "CWE-94"
+      ],
+      "cvss_score": 6.4,
+      "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. When uploading an attachment with a malicious filename, malicious JavaScript code could be exec",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/6cdd69d31d6bf3caa7f40ec55eb317e4e528ad28",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/6cdd69d31d6bf3caa7f40ec55eb317e4e528ad28",
+        "https://github.com/xwiki/xwiki-platform/commit/8b8a2d80529b9a9c038014c1eb6c2adc08069dfd",
+        "https://github.com/xwiki/xwiki-platform/commit/910a5018a50039e8b24556573dfe342f143ef949"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37901",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-862",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Any user with edit right on any page can perform arbitrary remote code execution by adding inst",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/0b135760514fef73db748986a3311f3edd4a553b",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/0b135760514fef73db748986a3311f3edd4a553b",
+        "https://github.com/xwiki/xwiki-platform/commit/742cd4591642be4cdcaf68325f17540e0934e64e",
+        "https://github.com/xwiki/xwiki-platform/commit/9ce3e0319869b6d8131fc4e0909736f7041566a4"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41127",
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-94"
+      ],
+      "cvss_score": 8.3,
+      "description": "Monkeytype is a minimalistic and customizable typing test. Monkeytype is vulnerable to Poisoned Pipeline Execution through Code Injection in its ci-failure-comment.yml GitHub Workflow, enabling attack",
+      "patch_url": "https://github.com/monkeytypegame/monkeytype/commit/29627fd0d5f152e2da59671987090ea0a5c29874",
+      "github_refs": [
+        "https://github.com/monkeytypegame/monkeytype/commit/29627fd0d5f152e2da59671987090ea0a5c29874",
+        "https://github.com/monkeytypegame/monkeytype/security/advisories/GHSA-wcjf-5464-4wq9",
+        "https://securitylab.github.com/advisories/GHSL-2024-167_monkeytype"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-42355",
+      "cwe_ids": [
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.3,
+      "description": "Shopware, an open ecommerce platform, has a new Twig Tag `sw_silent_feature_call` which silences deprecation messages while triggered in this tag. Prior to versions 6.6.5.1 and 6.5.8.13, it accepts as",
+      "patch_url": "https://github.com/shopware/core/commit/a784aa1cec0624e36e0ee4d41aeebaed40e0442f",
+      "github_refs": [
+        "https://github.com/shopware/core/commit/a784aa1cec0624e36e0ee4d41aeebaed40e0442f",
+        "https://github.com/shopware/core/commit/d35ee2eda5c995faeb08b3dad127eab65c64e2a2",
+        "https://github.com/shopware/shopware/commit/445c6763cc093fbd651e0efaa4150deae4ae60da"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-42356",
+      "cwe_ids": [
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.3,
+      "description": "Shopware is an open commerce platform. Prior to versions 6.6.5.1 and 6.5.8.13, the `context` variable is injected into almost any Twig Template and allows to access to current language, currency infor",
+      "patch_url": "https://github.com/shopware/core/commit/04183e0c02af3b404eb7d52c683734bfe0595038",
+      "github_refs": [
+        "https://github.com/shopware/core/commit/04183e0c02af3b404eb7d52c683734bfe0595038",
+        "https://github.com/shopware/core/commit/a784aa1cec0624e36e0ee4d41aeebaed40e0442f",
+        "https://github.com/shopware/shopware/commit/8504ba7e56e53add6a1d5b9d45015e3d899cd0ac"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-43404",
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "description": "MEGABOT is a fully customized Discord bot for learning and fun. The `/math` command and functionality of MEGABOT versions < 1.5.0 contains a remote code execution vulnerability due to a Python `eval()",
+      "patch_url": "https://github.com/NicPWNs/MEGABOT/commit/71e79e5581ea36313700385b112d863053fb7ed6",
+      "github_refs": [
+        "https://github.com/NicPWNs/MEGABOT/commit/71e79e5581ea36313700385b112d863053fb7ed6",
+        "https://github.com/NicPWNs/MEGABOT/issues/137",
+        "https://github.com/NicPWNs/MEGABOT/pull/138"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-40453",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "description": "squirrellyjs squirrelly v9.0.0 and fixed in v.9.0.1 was discovered to contain a code injection vulnerability via the component options.varName.",
+      "patch_url": "https://github.com/squirrellyjs/squirrelly/pull/262",
+      "github_refs": [
+        "https://github.com/squirrellyjs/squirrelly",
+        "https://github.com/squirrellyjs/squirrelly/pull/262"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-8374",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 7.8,
+      "description": "UltiMaker Cura slicer versions 5.7.0-beta.1 through 5.7.2 are vulnerable to code injection via the 3MF format reader (/plugins/ThreeMFReader.py). The vulnerability arises from improper handling of the",
+      "patch_url": "https://github.com/Ultimaker/Cura/commit/285a241eb28da3188c977f85d68937c0dad79c50",
+      "github_refs": [
+        "https://github.com/Ultimaker/Cura/commit/285a241eb28da3188c977f85d68937c0dad79c50"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-45390",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 7.3,
+      "description": "@blakeembrey/template is a string template library. Prior to version 1.2.0, it is possible to inject and run code within the template if the attacker has access to write the template name. Version 1.2",
+      "patch_url": "https://github.com/blakeembrey/js-template/commit/b8d9aa999e464816c6cfb14acd1ad0f5d1e335aa",
+      "github_refs": [
+        "https://github.com/blakeembrey/js-template/commit/b8d9aa999e464816c6cfb14acd1ad0f5d1e335aa",
+        "https://github.com/blakeembrey/js-template/security/advisories/GHSA-q765-wm9j-66qj"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-45053",
+      "cwe_ids": [
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 9.1,
+      "description": "Fides is an open-source privacy engineering platform. Starting in version 2.19.0 and prior to version 2.44.0, the Email Templating feature uses Jinja2 without proper input sanitization or rendering en",
+      "patch_url": "https://github.com/ethyca/fides/commit/829cbd9cb5ef9c814fbac1ed6800e8d939d359c5",
+      "github_refs": [
+        "https://github.com/ethyca/fides/commit/829cbd9cb5ef9c814fbac1ed6800e8d939d359c5",
+        "https://github.com/ethyca/fides/security/advisories/GHSA-c34r-238x-f7qx"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-9006",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 6.3,
+      "description": "A vulnerability was found in jeanmarc77 123solar 1.8.4.5. It has been rated as critical. Affected by this issue is some unknown functionality of the file config/config_invt1.php. The manipulation of t",
+      "patch_url": "https://github.com/jeanmarc77/123solar/commit/f4a8c748ec436e5a79f91ccb6a6f73752b336aa5",
+      "github_refs": [
+        "https://github.com/jeanmarc77/123solar/commit/f4a8c748ec436e5a79f91ccb6a6f73752b336aa5",
+        "https://github.com/jeanmarc77/123solar/issues/74",
+        "https://github.com/jeanmarc77/123solar/issues/74#issuecomment-2357653441"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37164",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 7.1,
+      "description": "Computer Vision Annotation Tool (CVAT) is an interactive video and image annotation tool for computer vision. CVAT allows users to supply custom endpoint URLs for cloud storages based on Amazon S3 and",
+      "patch_url": "https://github.com/cvat-ai/cvat/commit/f2346934c80bd91740f55c2788ef7d535a291d4c",
+      "github_refs": [
+        "https://github.com/cvat-ai/cvat/commit/f2346934c80bd91740f55c2788ef7d535a291d4c",
+        "https://github.com/cvat-ai/cvat/security/advisories/GHSA-q684-4jjh-83g6",
+        "https://github.com/cvat-ai/cvat/commit/f2346934c80bd91740f55c2788ef7d535a291d4c"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37157",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 6.4,
+      "description": "Discourse is an open-source discussion platform. Prior to version 3.2.3 on the `stable` branch and version 3.3.0.beta4 on the `beta` and `tests-passed` branches, a malicious actor could get the FastIm",
+      "patch_url": "https://github.com/discourse/discourse/commit/5b8cf11b69e05d5c058c1148ec69ec309491fa6e",
+      "github_refs": [
+        "https://github.com/discourse/discourse/commit/5b8cf11b69e05d5c058c1148ec69ec309491fa6e",
+        "https://github.com/discourse/discourse/commit/67e78086035cec494b15ce79342a0cb9052c2d95",
+        "https://github.com/discourse/discourse/security/advisories/GHSA-46pq-7958-fc68"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-39699",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 5.0,
+      "description": "Directus is a real-time API and App dashboard for managing SQL database content. There was already a reported SSRF vulnerability via file import. It was fixed by resolving all DNS names and checking i",
+      "patch_url": "https://github.com/directus/directus/commit/d577b44231c0923aca99cac5770fd853801caee1",
+      "github_refs": [
+        "https://github.com/directus/directus/commit/d577b44231c0923aca99cac5770fd853801caee1",
+        "https://github.com/directus/directus/security/advisories/GHSA-8p72-rcq4-h6pw",
+        "https://github.com/directus/directus/commit/d577b44231c0923aca99cac5770fd853801caee1"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41812",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 7.5,
+      "description": "txtdot is an HTTP proxy that parses only text, links, and pictures from pages, removing ads and heavy scripts. Prior to version 1.7.0, a Server-Side Request Forgery (SSRF) vulnerability in the `/get` ",
+      "patch_url": "https://github.com/TxtDot/txtdot/commit/7c72d985f7a26ec1fd3cf628444717ca54986d2d",
+      "github_refs": [
+        "https://github.com/TxtDot/txtdot/blob/a7fdaf80fdf45abefe83b2eb5135ba112142dc74/src/handlers/distributor.ts#L43-L47",
+        "https://github.com/TxtDot/txtdot/commit/7c72d985f7a26ec1fd3cf628444717ca54986d2d",
+        "https://github.com/TxtDot/txtdot/security/advisories/GHSA-4gj5-xj97-j8fp"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41813",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 7.5,
+      "description": "txtdot is an HTTP proxy that parses only text, links, and pictures from pages, removing ads and heavy scripts. Starting in version 1.4.0 and prior to version 1.6.1, a Server-Side Request Forgery (SSRF",
+      "patch_url": "https://github.com/TxtDot/txtdot/commit/f241a46e05b148a39b84bf956051b5aaa489949e",
+      "github_refs": [
+        "https://github.com/TxtDot/txtdot/blob/a7fdaf80fdf45abefe83b2eb5135ba112142dc74/src/handlers/distributor.ts#L43-L47",
+        "https://github.com/TxtDot/txtdot/commit/f241a46e05b148a39b84bf956051b5aaa489949e",
+        "https://github.com/TxtDot/txtdot/security/advisories/GHSA-4c78-229v-hf6m"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41118",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 7.5,
+      "description": "streamlit-geospatial is a streamlit multipage app for geospatial applications. Prior to commit c4f81d9616d40c60584e36abb15300853a66e489, the `url` variable on line 47 of `pages/7_📦_Web_Map_Service.py`",
+      "patch_url": "https://github.com/opengeos/streamlit-geospatial/commit/c4f81d9616d40c60584e36abb15300853a66e489",
+      "github_refs": [
+        "https://github.com/opengeos/streamlit-geospatial/blob/4b89495f3bdd481998aadf1fc74b10de0f71c237/pages/7_%F0%9F%93%A6_Web_Map_Service.py#L25",
+        "https://github.com/opengeos/streamlit-geospatial/blob/4b89495f3bdd481998aadf1fc74b10de0f71c237/pages/7_%F0%9F%93%A6_Web_Map_Service.py#L47",
+        "https://github.com/opengeos/streamlit-geospatial/blob/4b89495f3bdd481998aadf1fc74b10de0f71c237/pages/7_%F0%9F%93%A6_Web_Map_Service.py#L53"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41120",
+      "cwe_ids": [
+        "CWE-20",
+        "CWE-918"
+      ],
+      "cvss_score": 9.8,
+      "description": "streamlit-geospatial is a streamlit multipage app for geospatial applications. Prior to commit c4f81d9616d40c60584e36abb15300853a66e489, the `url` variable on line 63 of `pages/9_🔲_Vector_Data_Visuali",
+      "patch_url": "https://github.com/opengeos/streamlit-geospatial/commit/c4f81d9616d40c60584e36abb15300853a66e489",
+      "github_refs": [
+        "https://github.com/opengeos/streamlit-geospatial/blob/4b89495f3bdd481998aadf1fc74b10de0f71c237/pages/9_%F0%9F%94%B2_Vector_Data_Visualization.py#L63",
+        "https://github.com/opengeos/streamlit-geospatial/blob/4b89495f3bdd481998aadf1fc74b10de0f71c237/pages/9_%F0%9F%94%B2_Vector_Data_Visualization.py#L87",
+        "https://github.com/opengeos/streamlit-geospatial/commit/c4f81d9616d40c60584e36abb15300853a66e489"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-43379",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 3.4,
+      "description": "TruffleHog is a secrets scanning tool. Prior to v3.81.9, this vulnerability allows a malicious actor to craft data in a way that, when scanned by specific detectors, could trigger the detector to make",
+      "patch_url": "https://github.com/trufflesecurity/trufflehog/commit/fe5624c70923355128868cffd647b6e2cfe11443",
+      "github_refs": [
+        "https://github.com/trufflesecurity/trufflehog/commit/fe5624c70923355128868cffd647b6e2cfe11443",
+        "https://github.com/trufflesecurity/trufflehog/security/advisories/GHSA-3r74-v83p-f4f4"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-24759",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 9.3,
+      "description": "MindsDB is a platform for building artificial intelligence from enterprise data. Prior to version 23.12.4.2, a threat actor can bypass the server-side request forgery protection on the whole website w",
+      "patch_url": "https://github.com/mindsdb/mindsdb/commit/5f7496481bd3db1d06a2d2e62c0dce960a1fe12b",
+      "github_refs": [
+        "https://github.com/mindsdb/mindsdb/commit/5f7496481bd3db1d06a2d2e62c0dce960a1fe12b",
+        "https://github.com/mindsdb/mindsdb/security/advisories/GHSA-4jcv-vp96-94xr"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-46990",
+      "cwe_ids": [
+        "CWE-284",
+        "CWE-918"
+      ],
+      "cvss_score": 5.0,
+      "description": "Directus is a real-time API and App dashboard for managing SQL database content. When relying on blocking access to localhost using the default `0.0.0.0` filter a user may bypass this block by using o",
+      "patch_url": "https://github.com/directus/directus/commit/4aace0bbe57232e38cd6a287ee475293e46dc91b",
+      "github_refs": [
+        "https://github.com/directus/directus/commit/4aace0bbe57232e38cd6a287ee475293e46dc91b",
+        "https://github.com/directus/directus/commit/769fa22797bff5a9231599883b391e013f122e52",
+        "https://github.com/directus/directus/commit/8cbf943b65fd4a763d09a5fdbba8996b1e7797ff"
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-45197",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "description": "The file upload plugin in Adminer and AdminerEvo allows an attacker to upload a file with a table name of “..” to the root of the Adminer directory. The attacker can effectively guess the name of the ",
+      "patch_url": "https://github.com/adminerevo/adminerevo/commit/1cc06d6a1005fd833fa009701badd5641627a1d4",
+      "github_refs": [
+        "https://github.com/adminerevo/adminerevo/commit/1cc06d6a1005fd833fa009701badd5641627a1d4",
+        "https://github.com/adminerevo/adminerevo/releases/tag/v4.8.3",
+        "https://github.com/adminerevo/adminerevo/commit/1cc06d6a1005fd833fa009701badd5641627a1d4"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-42054",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 5.4,
+      "description": "Cervantes through 0.5-alpha accepts insecure file uploads.",
+      "patch_url": "https://github.com/CervantesSec/cervantes/commit/78631a034d0fb3323a53fb7428b2022b29a0d2cd",
+      "github_refs": [
+        "https://github.com/CervantesSec/cervantes/commit/78631a034d0fb3323a53fb7428b2022b29a0d2cd",
+        "https://github.com/CervantesSec/cervantes/commit/78631a034d0fb3323a53fb7428b2022b29a0d2cd"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-38529",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 9.0,
+      "description": "Admidio is a free, open source user management system for websites of organizations and groups. In Admidio before version 4.3.10, there is a Remote Code Execution Vulnerability in the Message module o",
+      "patch_url": "https://github.com/Admidio/admidio/commit/3b1cc1cda05747edebe15f2825b79bc5a673d94c",
+      "github_refs": [
+        "https://github.com/Admidio/admidio/commit/3b1cc1cda05747edebe15f2825b79bc5a673d94c",
+        "https://github.com/Admidio/admidio/security/advisories/GHSA-g872-jwwr-vggm",
+        "https://github.com/Admidio/admidio/commit/3b1cc1cda05747edebe15f2825b79bc5a673d94c"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-40645",
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.8,
+      "description": "FOG is a cloning/imaging/rescue suite/inventory management system. An improperly restricted file upload feature allows authenticated users to execute arbitrary code on the fogproject server. The Rebra",
+      "patch_url": "https://github.com/FOGProject/fogproject/commit/9469606a18bf8887740cceed6593a2e0380b5e0c",
+      "github_refs": [
+        "https://github.com/FOGProject/fogproject/blob/a4bb1bf39ac53c3cbe623576915fbc3b5c80a00f/packages/web/lib/pages/fogconfigurationpage.class.php#L2860-L2896",
+        "https://github.com/FOGProject/fogproject/commit/9469606a18bf8887740cceed6593a2e0380b5e0c",
+        "https://github.com/FOGProject/fogproject/security/advisories/GHSA-59mq-q8g5-2f4f"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41800",
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-287"
+      ],
+      "cvss_score": 4.8,
+      "description": "Craft is a content management system (CMS). Craft CMS 5 allows reuse of TOTP tokens multiple times within the validity period. An attacker is able to re-submit a valid TOTP token to establish an authe",
+      "patch_url": "https://github.com/craftcms/cms/commit/7c790fa5ad5a8cb8016cb6793ec3554c4c079e38",
+      "github_refs": [
+        "https://github.com/craftcms/cms/commit/7c790fa5ad5a8cb8016cb6793ec3554c4c079e38",
+        "https://github.com/craftcms/cms/releases/tag/5.2.3",
+        "https://github.com/craftcms/cms/security/advisories/GHSA-wmx7-pw49-88jx"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-43409",
+      "cwe_ids": [
+        "CWE-284",
+        "CWE-287"
+      ],
+      "cvss_score": 6.5,
+      "description": "Ghost is a Node.js content management system. Improper authentication on some endpoints used for member actions would allow an attacker to perform member-only actions, and read member information. Thi",
+      "patch_url": "https://github.com/TryGhost/Ghost/commit/dac25612520b571f58679764ecc27109e641d1db",
+      "github_refs": [
+        "https://github.com/TryGhost/Ghost/commit/dac25612520b571f58679764ecc27109e641d1db",
+        "https://github.com/TryGhost/Ghost/security/advisories/GHSA-78x2-cwp9-5j42"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-8642",
+      "cwe_ids": [
+        "CWE-303",
+        "CWE-305",
+        "CWE-287"
+      ],
+      "cvss_score": 8.1,
+      "description": "In Eclipse Dataspace Components, from version 0.5.0 and before version 0.9.0, the ConsumerPullTransferTokenValidationApiController does not check for token validity (expiry, not-before, issuance date)",
+      "patch_url": "https://github.com/eclipse-edc/Connector/commit/04899e91dcdb4a407db4eb7af3e7b6ff9a9e9ad6",
+      "github_refs": [
+        "https://github.com/eclipse-edc/Connector/commit/04899e91dcdb4a407db4eb7af3e7b6ff9a9e9ad6",
+        "https://github.com/eclipse-edc/Connector/releases/tag/v0.9.0"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-5129",
+      "cwe_ids": [
+        "CWE-862",
+        "CWE-862"
+      ],
+      "cvss_score": 8.2,
+      "description": "A Privilege Escalation Vulnerability exists in lunary-ai/lunary version 1.2.2, where any user can delete any datasets due to missing authorization checks. The vulnerability is present in the dataset d",
+      "patch_url": "https://github.com/lunary-ai/lunary/commit/14078c1d2b8766075bf655f187ece24c7a787776",
+      "github_refs": [
+        "https://github.com/lunary-ai/lunary/commit/14078c1d2b8766075bf655f187ece24c7a787776",
+        "https://github.com/lunary-ai/lunary/commit/14078c1d2b8766075bf655f187ece24c7a787776"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-5685",
+      "cwe_ids": [
+        "CWE-862",
+        "CWE-862"
+      ],
+      "cvss_score": 7.6,
+      "description": "Users with \"User:edit\" and \"Self:api\" permissions can promote or demote themselves or other users by performing changes to the group's memberships via API call.This issue affects snipe-it: from v4.6.1",
+      "patch_url": "https://github.com/snipe/snipe-it/commit/34f1ea1c0ecd403047cd1327569ee391a7201cc1",
+      "github_refs": [
+        "https://github.com/snipe/snipe-it/commit/34f1ea1c0ecd403047cd1327569ee391a7201cc1",
+        "https://github.com/snipe/snipe-it/pull/14745",
+        "https://github.com/snipe/snipe-it/releases/tag/v6.4.2"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-48251",
+      "cwe_ids": [
+        "CWE-89",
+        "CWE-89"
+      ],
+      "cvss_score": 9.8,
+      "description": "Wavelog 1.8.5 allows Activated_gridmap_model.php get_band_confirmed SQL injection via band, sat, propagation, or mode.",
+      "patch_url": "https://github.com/wavelog/wavelog/commit/0bf2675d93602b591850790c8fcfced886eca423",
+      "github_refs": [
+        "https://github.com/wavelog/wavelog/commit/0bf2675d93602b591850790c8fcfced886eca423"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-48257",
+      "cwe_ids": [
+        "CWE-89",
+        "CWE-89"
+      ],
+      "cvss_score": 9.8,
+      "description": "Wavelog 1.8.5 allows Oqrs_model.php get_worked_modes station_id SQL injectioin.",
+      "patch_url": "https://github.com/wavelog/wavelog/commit/0bf2675d93602b591850790c8fcfced886eca423",
+      "github_refs": [
+        "https://github.com/wavelog/wavelog/commit/0bf2675d93602b591850790c8fcfced886eca423"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-47524",
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 7.2,
+      "description": "LibreNMS is an open-source, PHP/MySQL/SNMP-based network monitoring system. User with Admin role can create a Device Groups, the application did not properly sanitize the user input in the Device Grou",
+      "patch_url": "https://github.com/librenms/librenms/commit/d3b51560a8e2343e520d16e9adc72c6951aa91ee",
+      "github_refs": [
+        "https://github.com/librenms/librenms/commit/d3b51560a8e2343e520d16e9adc72c6951aa91ee",
+        "https://github.com/librenms/librenms/security/advisories/GHSA-fc38-2254-48g7"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28709",
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 6.1,
+      "description": "Cross Site Scripting vulnerability in LimeSurvey before 6.5.12+240611 allows a remote attacker to execute arbitrary code via a crafted script to the title and comment fields.",
+      "patch_url": "https://github.com/LimeSurvey/LimeSurvey/commit/c844c4fba81cc26ffe6544bf095bad6252910bc0",
+      "github_refs": [
+        "https://github.com/LimeSurvey/LimeSurvey/commit/c844c4fba81cc26ffe6544bf095bad6252910bc0"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28710",
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 6.1,
+      "description": "Cross Site Scripting vulnerability in LimeSurvey before 6.5.0+240319 allows a remote attacker to execute arbitrary code via a lack of input validation and output encoding in the Alert Widget's message",
+      "patch_url": "https://github.com/LimeSurvey/LimeSurvey/commit/c2fd60f94bc1db275f20cbb27a3135a9bdfb7f10",
+      "github_refs": [
+        "https://github.com/LimeSurvey/LimeSurvey/commit/c2fd60f94bc1db275f20cbb27a3135a9bdfb7f10"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-21535",
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 6.1,
+      "description": "Versions of the package markdown-to-jsx before 7.4.0 are vulnerable to Cross-site Scripting (XSS) via the src property due to improper input sanitization. An attacker can execute arbitrary code by inj",
+      "patch_url": "https://github.com/quantizor/markdown-to-jsx/commit/8eb74da825c0d8d2e9508d73c672bcae36ba555a",
+      "github_refs": [
+        "https://github.com/quantizor/markdown-to-jsx/commit/8eb74da825c0d8d2e9508d73c672bcae36ba555a"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-9944",
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 5.3,
+      "description": "The WooCommerce plugin for WordPress is vulnerable to HTML Injection in all versions up to, and including, 9.0.2. This is due to the plugin not properly neutralizing HTML elements from submitted order",
+      "patch_url": "https://github.com/woocommerce/woocommerce/pull/49370",
+      "github_refs": [
+        "https://github.com/woocommerce/woocommerce/pull/49370"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-51378",
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 10.0,
+      "description": "getresetstatus in dns/views.py and ftp/views.py in CyberPanel (aka Cyber Panel) before 1c0c6cb allows remote attackers to bypass authentication and execute arbitrary commands via /dns/getresetstatus o",
+      "patch_url": "https://github.com/usmannasir/cyberpanel/commit/1c0c6cbcf71abe573da0b5fddfb9603e7477f683",
+      "github_refs": [
+        "https://github.com/usmannasir/cyberpanel/commit/1c0c6cbcf71abe573da0b5fddfb9603e7477f683"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-52803",
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-78"
+      ],
+      "cvss_score": 7.5,
+      "description": "LLama Factory enables fine-tuning of large language models. A critical remote OS command injection vulnerability has been identified in the LLama Factory training process. This vulnerability arises fr",
+      "patch_url": "https://github.com/hiyouga/LLaMA-Factory/commit/b3aa80d54a67da45e9e237e349486fb9c162b2ac",
+      "github_refs": [
+        "https://gist.github.com/superboy-zjc/f2d2b93ae511c445ba97e144b70e534d",
+        "https://github.com/hiyouga/LLaMA-Factory/commit/b3aa80d54a67da45e9e237e349486fb9c162b2ac",
+        "https://github.com/hiyouga/LLaMA-Factory/security/advisories/GHSA-hj3w-wrh4-44vp"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-46898",
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "SHIRASAGI prior to v1.19.1 processes URLs in HTTP requests improperly, resulting in a path traversal vulnerability. If this vulnerability is exploited, arbitrary files on the server may be retrieved w",
+      "patch_url": "https://github.com/shirasagi/shirasagi/commit/5ac4685d7e4330f949f13219069107fc5d768934",
+      "github_refs": [
+        "https://github.com/shirasagi/shirasagi/commit/5ac4685d7e4330f949f13219069107fc5d768934"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-45309",
+      "cwe_ids": [
+        "CWE-200",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "OneDev is a Git server with CI/CD, kanban, and packages. A vulnerability in versions prior to 11.0.9 allows unauthenticated users to read arbitrary files accessible by the OneDev server process. This ",
+      "patch_url": "https://github.com/theonedev/onedev/commit/4637aaac8c70d41aa789b7fce208b75c6a7b711f",
+      "github_refs": [
+        "https://github.com/theonedev/onedev/commit/4637aaac8c70d41aa789b7fce208b75c6a7b711f",
+        "https://github.com/theonedev/onedev/security/advisories/GHSA-7wg5-6864-v489"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-47883",
+      "cwe_ids": [
+        "CWE-36",
+        "CWE-918",
+        "CWE-22"
+      ],
+      "cvss_score": 9.1,
+      "description": "The OpenRefine fork of the MIT Simile Butterfly server is a modular web application framework. The Butterfly framework uses the `java.net.URL` class to refer to (what are expected to be) local resourc",
+      "patch_url": "https://github.com/OpenRefine/simile-butterfly/commit/537f64bfa72746f8b21d4bda461fad843435319c",
+      "github_refs": [
+        "https://github.com/OpenRefine/simile-butterfly/commit/537f64bfa72746f8b21d4bda461fad843435319c",
+        "https://github.com/OpenRefine/simile-butterfly/security/advisories/GHSA-3p8v-w8mr-m3x8"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-7774",
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 9.1,
+      "description": "A path traversal vulnerability exists in the `getFullPath` method of langchain-ai/langchainjs version 0.2.5. This vulnerability allows attackers to save files anywhere in the filesystem, overwrite exi",
+      "patch_url": "https://github.com/langchain-ai/langchainjs/commit/a0fad77d6b569e5872bd4a9d33be0c0785e538a9",
+      "github_refs": [
+        "https://github.com/langchain-ai/langchainjs/commit/a0fad77d6b569e5872bd4a9d33be0c0785e538a9"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-7962",
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "An arbitrary file read vulnerability exists in gaizhenbiao/chuanhuchatgpt version 20240628 due to insufficient validation when loading prompt template files. An attacker can read any file that matches",
+      "patch_url": "https://github.com/gaizhenbiao/chuanhuchatgpt/commit/2836fd1db3efcd5ede63c0e7fbbdf677730dbb51",
+      "github_refs": [
+        "https://github.com/gaizhenbiao/chuanhuchatgpt/commit/2836fd1db3efcd5ede63c0e7fbbdf677730dbb51"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-10389",
+      "cwe_ids": [
+        "CWE-427",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "description": "There exists a Path Traversal vulnerability in Safearchive on Platforms with Case-Insensitive Filesystems (e.g., NTFS). This allows Attackers to Write Arbitrary Files via Archive Extraction containing",
+      "patch_url": "https://github.com/google/safearchive/commit/f7ce9d7b6f9c6ecd72d0b0f16216b046e55e44dc",
+      "github_refs": [
+        "https://github.com/google/safearchive/commit/f7ce9d7b6f9c6ecd72d0b0f16216b046e55e44dc"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-48964",
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-94"
+      ],
+      "cvss_score": 7.5,
+      "description": "The package Snyk CLI before 1.1294.0 is vulnerable to Code Injection when scanning an untrusted Gradle project. The vulnerability can be triggered if Snyk test is run inside the untrusted project due ",
+      "patch_url": "https://github.com/snyk/snyk-gradle-plugin/commit/2f5ee7579f00660282dd161a0b79690f4a9c865d",
+      "github_refs": [
+        "https://github.com/snyk/snyk-gradle-plugin/commit/2f5ee7579f00660282dd161a0b79690f4a9c865d"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-21541",
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 7.3,
+      "description": "Versions of the package dom-iterator before 1.0.1 are vulnerable to Arbitrary Code Execution due to use of the Function constructor without complete input sanitization. Function generates a new functi",
+      "patch_url": "https://github.com/matthewmueller/dom-iterator/commit/9e0e0fad5a251de5b42feb326c4204eb04080805",
+      "github_refs": [
+        "https://github.com/matthewmueller/dom-iterator/commit/9e0e0fad5a251de5b42feb326c4204eb04080805"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-55660",
+      "cwe_ids": [
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "description": "SiYuan is a personal knowledge management system. Prior to version 3.1.16, SiYuan's `/api/template/renderSprig` endpoint is vulnerable to Server-Side Template Injection (SSTI) through the Sprig templa",
+      "patch_url": "https://github.com/siyuan-note/siyuan/commit/e70ed57f6e4852e2bd702671aeb8eb3a47a36d71",
+      "github_refs": [
+        "https://github.com/siyuan-note/siyuan/commit/e70ed57f6e4852e2bd702671aeb8eb3a47a36d71",
+        "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-4pjc-pwgq-q9jp"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-55662",
+      "cwe_ids": [
+        "CWE-96",
+        "CWE-863",
+        "CWE-94",
+        "CWE-863"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform. Starting in version 3.3-milestone-1 and prior to versions 15.10.9 and 16.3.0, on instances where `Extension Repository Application` is installed, any user ca",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/8659f17d500522bf33595e402391592a35a162e8",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/8659f17d500522bf33595e402391592a35a162e8",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-j2pq-22jj-4pm5"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-55877",
+      "cwe_ids": [
+        "CWE-96",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "description": "XWiki Platform is a generic wiki platform. Starting in version 9.7-rc-1 and prior to versions 15.10.11, 16.4.1, and 16.5.0, any user with an account can perform arbitrary remote code execution by addi",
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/40e1afe001d61eafdf13f3621b4b597a0e58a3e3",
+      "github_refs": [
+        "https://github.com/xwiki/xwiki-platform/commit/40e1afe001d61eafdf13f3621b4b597a0e58a3e3",
+        "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-2r87-74cx-2p7c"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-47830",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 9.3,
+      "description": "Plane is an open-source project management tool. Plane uses the ** wildcard support to retrieve the image from any hostname as in /web/next.config.js. This may permit an attacker to induce the server ",
+      "patch_url": "https://github.com/makeplane/plane/commit/b9f78ba42b70461c8c1d26638fa8b9beef6a96a1",
+      "github_refs": [
+        "https://github.com/makeplane/plane/commit/b9f78ba42b70461c8c1d26638fa8b9beef6a96a1",
+        "https://github.com/makeplane/plane/security/advisories/GHSA-39gx-38xf-c348"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-51408",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 8.5,
+      "description": "AppSmith Community 1.8.3 before 1.46 allows SSRF via New DataSource for application/json requests to 169.254.169.254 to retrieve AWS metadata credentials.",
+      "patch_url": "https://github.com/appsmithorg/appsmith/pull/29286",
+      "github_refs": [
+        "https://github.com/appsmithorg/appsmith/pull/29286",
+        "https://github.com/appsmithorg/appsmith/releases/tag/v1.46",
+        "https://github.com/jahithoque/Vulnerability-Research/tree/main/CVE-2024-51408"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-55089",
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-352"
+      ],
+      "cvss_score": 4.1,
+      "description": "Rhymix before 2.1.24 is vulnerable to Server-Side Request Forgery (SSRF) in the background import data function because XML documents may contain external entities.",
+      "patch_url": "https://github.com/rhymix/rhymix/commit/464985b1ef382cc8cf852e9b028a960aa58b40c3",
+      "github_refs": [
+        "https://github.com/rhymix/rhymix/commit/464985b1ef382cc8cf852e9b028a960aa58b40c3"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-47823",
+      "cwe_ids": [
+        "CWE-20",
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "description": "Livewire is a full-stack framework for Laravel that allows for dynamic UI components without leaving PHP. In livewire/livewire prior to `2.12.7` and `v3.5.2`, the file extension of an uploaded file is",
+      "patch_url": "https://github.com/livewire/livewire/commit/70503b79f5db75a1eac9bf55826038a6ee5a16d5",
+      "github_refs": [
+        "https://github.com/livewire/livewire/commit/70503b79f5db75a1eac9bf55826038a6ee5a16d5",
+        "https://github.com/livewire/livewire/commit/cd168c6212ea13d13b82b3132485741f82d9fad9",
+        "https://github.com/livewire/livewire/pull/8624"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-47768",
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-862"
+      ],
+      "cvss_score": 8.1,
+      "description": "Lif Authentication Server is a server used by Lif to do various tasks regarding Lif accounts. This vulnerability has to do with the account recovery system where there does not appear to be a check to",
+      "patch_url": "https://github.com/Lif-Platforms/Lif-Auth-Server/commit/8dbd7cad914a8b939451c652bfb716aa796f754e",
+      "github_refs": [
+        "https://github.com/Lif-Platforms/Lif-Auth-Server/commit/8dbd7cad914a8b939451c652bfb716aa796f754e",
+        "https://github.com/Lif-Platforms/Lif-Auth-Server/security/advisories/GHSA-hmv6-8fg8-7m6f"
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-3987",
+      "cwe_ids": [
+        "CWE-284",
+        "CWE-862"
+      ],
+      "cvss_score": 4.3,
+      "description": "An improper access control vulnerability exists in janeczku/calibre-web. The affected version allows users without public shelf permissions to create public shelves. The vulnerability is due to the `c",
+      "patch_url": "https://github.com/janeczku/calibre-web/commit/bcdc97641447965af486964537f3821f47b28874",
+      "github_refs": [
+        "https://github.com/janeczku/calibre-web/commit/bcdc97641447965af486964537f3821f47b28874"
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-53258",
+      "cwe_ids": [
+        "CWE-359",
+        "CWE-862",
+        "CWE-862"
+      ],
+      "cvss_score": 5.3,
+      "description": "Autolab is a course management service that enables auto-graded programming assignments. From Autolab versions v.3.0.0 onward students can download all assignments from another student, as long as the",
+      "patch_url": "https://github.com/autolab/Autolab/commit/1aa4c7690892fb458d2c61ff86739f368e34769d",
+      "github_refs": [
+        "https://github.com/autolab/Autolab/commit/1aa4c7690892fb458d2c61ff86739f368e34769d",
+        "https://github.com/autolab/Autolab/security/advisories/GHSA-84qc-7773-2gg3"
+      ]
+    }
+  ]
+}

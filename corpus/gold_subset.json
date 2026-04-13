@@ -1,0 +1,238 @@
+{
+  "version": "0.1.0",
+  "created": "2026-04-13",
+  "note": "Annotations committed BEFORE re-scanning per kill_criteria.md protocol",
+  "total": 23,
+  "cves": [
+    {
+      "cve_id": "CVE-2024-2914",
+      "vulnerable_file": "extensions/spark/setup/djl_spark/util/files_util.py",
+      "vulnerable_sink": "tarfile.TarFile.extractall (lines 80-86, function download_and_extract)",
+      "cwe_primary": "CWE-22",
+      "detection_requires": ["PAT", "LDF"],
+      "match_definition": "Finding must reference tarfile.extractall without member path sanitization",
+      "language": "python",
+      "description_short": "TarSlip in djl: tar extracted without member path validation"
+    },
+    {
+      "cve_id": "CVE-2024-2928",
+      "vulnerable_file": "mlflow/server/handlers.py",
+      "vulnerable_sink": "posixpath.join + send_file (lines 263-268, proxied artifact path)",
+      "cwe_primary": "CWE-22",
+      "detection_requires": ["IPT"],
+      "match_definition": "Finding must reference unsanitized path in proxied artifact handler or path traversal in handlers.py",
+      "language": "python",
+      "description_short": "LFI in mlflow: proxied artifact path not sanitized before send_file"
+    },
+    {
+      "cve_id": "CVE-2023-49793",
+      "vulnerable_file": "web/server/codechecker_server/api/mass_store_run.py",
+      "vulnerable_sink": "zipfile.ZipFile.extractall (lines 82-84, function unzip)",
+      "cwe_primary": "CWE-22",
+      "detection_requires": ["PAT", "LDF"],
+      "match_definition": "Finding must reference zipfile.extractall without member name validation",
+      "language": "python",
+      "description_short": "Zip-slip in CodeChecker: ZIP extracted without member name check"
+    },
+    {
+      "cve_id": "CVE-2024-39903",
+      "vulnerable_file": "solara/server/cdn_helper.py",
+      "vulnerable_sink": "get_path() lines 72-90: cache_path = base_cache_dir / store_path without boundary check",
+      "cwe_primary": "CWE-22",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference path traversal in cdn_helper.py get_path or put_in_cache",
+      "language": "python",
+      "description_short": "LFI in solara: get_path() lacks boundary check present in sibling function"
+    },
+    {
+      "cve_id": "CVE-2024-24749",
+      "vulnerable_file": "geowebcache/rest/src/main/java/org/geowebcache/rest/controller/ByteStreamController.java",
+      "vulnerable_sink": "doGet() lines 94-105: URLDecoder.decode before UNSAFE_RESOURCE regex",
+      "cwe_primary": "CWE-22",
+      "detection_requires": ["SEM", "CFG"],
+      "match_definition": "Finding must reference decode-before-check ordering or path traversal in ByteStreamController",
+      "language": "java",
+      "description_short": "GeoWebCache path traversal: URL decode runs before regex filter"
+    },
+    {
+      "cve_id": "CVE-2024-21514",
+      "vulnerable_file": "upload/catalog/model/extension/payment/divido.php",
+      "vulnerable_sink": "db->query() ~L114: raw concatenation of unsanitized data into SQL",
+      "cwe_primary": "CWE-89",
+      "detection_requires": ["LDF"],
+      "match_definition": "Finding must reference SQL injection or unsanitized db->query in divido.php",
+      "language": "php",
+      "description_short": "SQL injection in OpenCart Divido payment: raw concatenation into query"
+    },
+    {
+      "cve_id": "CVE-2024-39943",
+      "vulnerable_file": "src/util-os.ts",
+      "vulnerable_sink": "execSync(`df -k \"${path}\"`) line 21, getDiskSpaceSync",
+      "cwe_primary": "CWE-78",
+      "detection_requires": ["LDF"],
+      "match_definition": "Finding must reference command injection or execSync with user-controlled path in util-os",
+      "language": "javascript",
+      "description_short": "OS command injection in HFS: user path interpolated into execSync"
+    },
+    {
+      "cve_id": "CVE-2024-32464",
+      "vulnerable_file": "actiontext/app/helpers/action_text/content_helper.rb",
+      "vulnerable_sink": "render_action_text_attachments: node.inner_html assigned before sanitizer",
+      "cwe_primary": "CWE-79",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference XSS or unsanitized HTML in content_helper.rb or ActionText attachment rendering",
+      "language": "ruby",
+      "description_short": "Stored XSS in Rails ActionText: attachment HTML rendered before sanitizer"
+    },
+    {
+      "cve_id": "CVE-2024-42362",
+      "vulnerable_file": "manager/src/main/java/org/dromara/hertzbeat/manager/service/impl/YamlImExportServiceImpl.java",
+      "vulnerable_sink": "new Yaml().load(is) lines 76-77: no SafeConstructor",
+      "cwe_primary": "CWE-502",
+      "detection_requires": ["PAT", "LDF"],
+      "match_definition": "Finding must reference unsafe SnakeYAML deserialization (new Yaml without SafeConstructor)",
+      "language": "java",
+      "description_short": "SnakeYAML unsafe deser in Hertzbeat: new Yaml().load() without type restriction"
+    },
+    {
+      "cve_id": "CVE-2024-8003",
+      "vulnerable_file": "internal/app/routes/routes.go",
+      "vulnerable_sink": "InitRoutes: OperationLogMiddleware deserializes request body (actual sink in middleware/)",
+      "cwe_primary": "CWE-502",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference unsafe deserialization in operation log middleware or routes.go",
+      "language": "go",
+      "description_short": "Unsafe deser in gotribe-admin: global middleware deserializes request body"
+    },
+    {
+      "cve_id": "CVE-2024-37899",
+      "vulnerable_file": "xwiki-platform-core/xwiki-platform-oldcore/src/main/java/com/xpn/xwiki/user/api/XWikiUser.java",
+      "vulnerable_sink": "setDisabled: saveDocument() executes user profile with admin Velocity context",
+      "cwe_primary": "CWE-94",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference code injection via Velocity rendering or privilege escalation in XWikiUser",
+      "language": "java",
+      "description_short": "XWiki code injection: disabling user executes profile with admin rights"
+    },
+    {
+      "cve_id": "CVE-2024-43404",
+      "vulnerable_file": "commands/math.py",
+      "vulnerable_sink": "eval(expression) line 8",
+      "cwe_primary": "CWE-94",
+      "detection_requires": ["PAT"],
+      "match_definition": "Finding must reference eval() with non-literal argument in math.py",
+      "language": "python",
+      "description_short": "MEGABOT: user Discord input passed directly to eval()"
+    },
+    {
+      "cve_id": "CVE-2024-45390",
+      "vulnerable_file": "src/index.ts",
+      "vulnerable_sink": "new Function(`return (${body})`) line 64",
+      "cwe_primary": "CWE-94",
+      "detection_requires": ["LDF"],
+      "match_definition": "Finding must reference new Function with tainted argument or code injection in template compile",
+      "language": "javascript",
+      "description_short": "Template injection: user template compiled into new Function()"
+    },
+    {
+      "cve_id": "CVE-2024-42355",
+      "vulnerable_file": "Framework/Adapter/Twig/Node/FeatureCallSilentToken.php",
+      "vulnerable_sink": "compile(): raw() concatenates $this->flag into PHP code, lines 24-30",
+      "cwe_primary": "CWE-94",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference code injection or unsanitized raw() in Twig compilation",
+      "language": "php",
+      "description_short": "Shopware Twig tag injects unsanitized flag into generated PHP code"
+    },
+    {
+      "cve_id": "CVE-2024-8374",
+      "vulnerable_file": "plugins/3MFReader/ThreeMFReader.py",
+      "vulnerable_sink": "eval(setting_value) line 185 in _convertSavitarNodeToUMNode",
+      "cwe_primary": "CWE-94",
+      "detection_requires": ["LDF"],
+      "match_definition": "Finding must reference eval() with file-derived setting value in ThreeMFReader",
+      "language": "python",
+      "description_short": "Cura 3MF reader: eval() on setting value from untrusted model file"
+    },
+    {
+      "cve_id": "CVE-2024-9006",
+      "vulnerable_file": "admin/admin_invt2.php",
+      "vulnerable_sink": "include \"../scripts/protocols/$PROTOCOLx.php\" line 444",
+      "cwe_primary": "CWE-94",
+      "detection_requires": ["LDF"],
+      "match_definition": "Finding must reference file inclusion with user-controlled path or $_POST in include path",
+      "language": "php",
+      "description_short": "123solar: POST param used directly in PHP include() path"
+    },
+    {
+      "cve_id": "CVE-2024-45053",
+      "vulnerable_file": "src/fides/api/service/messaging/message_dispatch_service.py",
+      "vulnerable_sink": "_render(): jinja2.Environment().from_string(template_str).render() lines 383-389",
+      "cwe_primary": "CWE-94",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference SSTI or unsandboxed Jinja2 Environment in message_dispatch_service",
+      "language": "python",
+      "description_short": "Fides SSTI: DB-stored template rendered with unsandboxed Jinja2 Environment"
+    },
+    {
+      "cve_id": "CVE-2024-24759",
+      "vulnerable_file": "mindsdb/integrations/handlers/instatus_handler/instatus_handler.py",
+      "vulnerable_sink": "requests.get(url) lines 105-107: endpoint from user query without SSRF protection",
+      "cwe_primary": "CWE-918",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference SSRF or unvalidated URL in instatus_handler requests calls",
+      "language": "python",
+      "description_short": "MindsDB SSRF: handler passes user-controlled endpoint to requests without validation"
+    },
+    {
+      "cve_id": "CVE-2024-39699",
+      "vulnerable_file": "api/src/services/roles.ts",
+      "vulnerable_sink": "Role update triggers URL fetch via ItemsService without SSRF filter",
+      "cwe_primary": "CWE-918",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference SSRF or unvalidated URL fetch in roles service or import pipeline",
+      "language": "javascript",
+      "description_short": "Directus SSRF bypass: roles endpoint skips DNS-resolution SSRF filter"
+    },
+    {
+      "cve_id": "CVE-2024-37164",
+      "vulnerable_file": "cvat/apps/engine/cloud_provider.py",
+      "vulnerable_sink": "boto3 session.resource('s3', endpoint_url=endpoint_url) line 445",
+      "cwe_primary": "CWE-918",
+      "detection_requires": ["IPT", "CFG"],
+      "match_definition": "Finding must reference SSRF or unvalidated endpoint_url in boto3/cloud_provider",
+      "language": "python",
+      "description_short": "CVAT SSRF: user-supplied S3 endpoint_url passed to boto3 without validation"
+    },
+    {
+      "cve_id": "CVE-2024-27098",
+      "vulnerable_file": "ajax/dropdownLocation.php",
+      "vulnerable_sink": "new $_REQUEST['itemtype']() — dynamic class instantiation from user input",
+      "cwe_primary": "CWE-918",
+      "detection_requires": ["IPT", "SEM"],
+      "match_definition": "Finding must reference SSRF or unsafe dynamic class instantiation from user input in dropdownLocation.php",
+      "language": "php",
+      "description_short": "GLPI SSRF: arbitrary class instantiated from user-supplied itemtype param"
+    },
+    {
+      "cve_id": "CVE-2024-31993",
+      "vulnerable_file": "docs/docs/documentation/getting-started/installation/backend-config.md",
+      "vulnerable_sink": "OIDC_CONFIGURATION_URL env var fetched via HTTP without SSRF protection",
+      "cwe_primary": "CWE-918",
+      "detection_requires": ["CFG", "SEM"],
+      "match_definition": "Finding must reference SSRF or unvalidated URL fetch from OIDC configuration",
+      "language": "python",
+      "description_short": "Mealie SSRF: OIDC discovery URL fetched without network egress restrictions"
+    },
+    {
+      "cve_id": "CVE-2023-26153",
+      "vulnerable_file": "lib/geokit-rails/ip_geocode_lookup.rb",
+      "vulnerable_sink": "YAML.load(cookies[:geo_location]) line 37",
+      "cwe_primary": "CWE-502",
+      "detection_requires": ["PAT", "SEM"],
+      "match_definition": "Finding must reference unsafe YAML.load or deserialization of cookie data in ip_geocode_lookup",
+      "language": "ruby",
+      "description_short": "geokit-rails: YAML.load on attacker-controlled cookie enables RCE via deserialization"
+    }
+  ]
+}

@@ -34,7 +34,7 @@ class FalsificationResult:
     details: str = ""
 
 
-def test_blind_spot_existence(
+def check_blind_spot_existence(
     blind_spot_rate: float,
     min_rate: float = 0.05,
 ) -> FalsificationResult:
@@ -68,7 +68,7 @@ def test_blind_spot_existence(
     )
 
 
-def test_systematicity(
+def check_systematicity(
     cwe_clusters: dict[str, list[str]],
     min_clusters: int = 3,
     min_per_cluster: int = 3,
@@ -109,7 +109,7 @@ def test_systematicity(
     )
 
 
-def test_non_triviality(
+def check_non_triviality(
     trivial_count: int,
     total_count: int,
     max_trivial_rate: float = 0.80,
@@ -139,7 +139,7 @@ def test_non_triviality(
     )
 
 
-def test_reproducibility(
+def check_reproducibility(
     subsample_rates: list[float],
     max_cv: float = 0.20,
 ) -> FalsificationResult:
@@ -187,10 +187,10 @@ def run_all_falsification_tests(
 ) -> list[FalsificationResult]:
     """Run all 4 falsification tests and return results."""
     results = [
-        test_blind_spot_existence(blind_spot_rate),
-        test_systematicity(cwe_clusters),
-        test_non_triviality(trivial_count, total_blind_spots),
-        test_reproducibility(subsample_rates or []),
+        check_blind_spot_existence(blind_spot_rate),
+        check_systematicity(cwe_clusters),
+        check_non_triviality(trivial_count, total_blind_spots),
+        check_reproducibility(subsample_rates or []),
     ]
 
     passed = sum(1 for r in results if r.verdict == Verdict.PASS)

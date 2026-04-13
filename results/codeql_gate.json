@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "gate": "CodeQL Decision Gate",
+    "scanner": "Semgrep Baseline C (max coverage)",
+    "total": 5,
+    "found": 2,
+    "blind": 3,
+    "blind_rate": 0.6,
+    "conclusion": "STRONG: blind spots persist even with maximum scanner coverage"
+  },
+  "results": [
+    {
+      "cve_id": "CVE-2024-2928",
+      "cwe": "CWE-22",
+      "language": "python",
+      "status": "scanned",
+      "total_findings": 3,
+      "security_findings": 3,
+      "verdict": "FOUND",
+      "finding_details": [
+        {
+          "rule_id": "python.django.security.injection.ssrf.ssrf-injection-requests.ssrf-injection-requests",
+          "severity": "ERROR",
+          "message": "Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist,",
+          "file": "corpus\\fullcode\\CVE-2024-2928\\mlflow__server__handlers.py",
+          "line": 1273,
+          "cwe": "CWE-918",
+          "config": "r/python.django.security"
+        },
+        {
+          "rule_id": "python.django.security.injection.request-data-write.request-data-write",
+          "severity": "WARNING",
+          "message": "Found user-controlled request data passed into '.write(...)'. This could be dangerous if a malicious actor is able to control data into sensitive files. For example, a malicious actor could force roll",
+          "file": "corpus\\fullcode\\CVE-2024-2928\\mlflow__server__handlers.py",
+          "line": 1380,
+          "cwe": "CWE-93",
+          "config": "r/python.django.security"
+        },
+        {
+          "rule_id": "python.flask.security.injection.ssrf-requests.ssrf-requests",
+          "severity": "ERROR",
+          "message": "Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist,",
+          "file": "corpus\\fullcode\\CVE-2024-2928\\mlflow__server__handlers.py",
+          "line": 1276,
+          "cwe": "CWE-918",
+          "config": "r/python.flask.security"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-21514",
+      "cwe": "CWE-89",
+      "language": "php",
+      "status": "scanned",
+      "total_findings": 0,
+      "security_findings": 0,
+      "verdict": "BLIND",
+      "finding_details": []
+    },
+    {
+      "cve_id": "CVE-2024-42362",
+      "cwe": "CWE-502",
+      "language": "java",
+      "status": "scanned",
+      "total_findings": 1,
+      "security_findings": 1,
+      "verdict": "FOUND",
+      "finding_details": [
+        {
+          "rule_id": "java.lang.security.use-snakeyaml-constructor.use-snakeyaml-constructor",
+          "severity": "WARNING",
+          "message": "Used SnakeYAML org.yaml.snakeyaml.Yaml() constructor with no arguments, which is vulnerable to deserialization attacks. Use the one-argument Yaml(...) constructor instead, with SafeConstructor or a cu",
+          "file": "corpus\\fullcode\\CVE-2024-42362\\manager__src__main__java__org__dromara__hertzbeat__manager__service__impl__YamlImExportSer.java",
+          "line": 76,
+          "cwe": "CWE-502",
+          "config": "r/java.lang.security"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-45390",
+      "cwe": "CWE-94",
+      "language": "javascript",
+      "status": "scanned",
+      "total_findings": 0,
+      "security_findings": 0,
+      "verdict": "BLIND",
+      "finding_details": []
+    },
+    {
+      "cve_id": "CVE-2024-24759",
+      "cwe": "CWE-918",
+      "language": "python",
+      "status": "scanned",
+      "total_findings": 0,
+      "security_findings": 0,
+      "verdict": "BLIND",
+      "finding_details": []
+    }
+  ]
+}
