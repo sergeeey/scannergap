@@ -53,6 +53,7 @@ Now: make claim defendable — reproducibility + targeted cluster expansion.
 4. Consider: real CodeQL CLI on the 3 BLIND CVEs as final verification
 
 ## Auto-commit log
+- [2026-04-13 19:58] `addc139`: docs: update activeContext with CodeQL gate results
 - [2026-04-13 19:56] `59db94d`: feat: CodeQL decision gate STRONG — 4/5 blind CVEs persist with max coverage
 - [2026-04-13 19:47] `1350706`: feat: all 4 kill criteria passed — 56% blind spot rate on 23 CVEs
 - [2026-04-13 19:20] `c8cca4b`: feat: gold subset evaluation — 55% blind spot rate on 20 annotated CVEs
