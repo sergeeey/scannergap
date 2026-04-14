@@ -212,4 +212,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions and guidelines.
 
 ## License
 
-MIT
+Apache 2.0
