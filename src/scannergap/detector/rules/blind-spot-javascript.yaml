@@ -71,3 +71,31 @@ rules:
       - pattern: axios.get(`...${$VAR}...`, ...)
       - pattern: axios.post(`...${$VAR}...`, ...)
       - pattern: axios(`...${$VAR}...`, ...)
+
+  - id: blindspot-js-eval-variable
+    message: >
+      eval() called with a non-literal argument. If the argument is derived
+      from user input, this enables arbitrary code execution.
+    severity: ERROR
+    languages: [javascript, typescript]
+    metadata:
+      cwe: "CWE-94"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    patterns:
+      - pattern: eval($CODE)
+      - pattern-not: eval("...")
+
+  - id: blindspot-js-dangerouslysetinnerhtml
+    message: >
+      React dangerouslySetInnerHTML set with a variable value. If the value
+      contains user input, this enables stored XSS. Standard React XSS
+      rules may miss this when the value passes through helper functions.
+    severity: ERROR
+    languages: [javascript, typescript]
+    metadata:
+      cwe: "CWE-79"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern: |
+      <$EL dangerouslySetInnerHTML={{__html: $VAR}} />

@@ -1,0 +1,51 @@
+rules:
+  # ============================================================
+  # ScannerGap Custom Rules — Go
+  # Detects patterns that standard Semgrep/CodeQL rules miss
+  # ============================================================
+
+  - id: blindspot-go-text-template-html
+    message: >
+      text/template used to render HTML content. Unlike html/template,
+      text/template does NOT auto-escape HTML entities, enabling XSS.
+      Use html/template for any output rendered in a browser.
+    severity: ERROR
+    languages: [go]
+    metadata:
+      cwe: "CWE-79"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    pattern-either:
+      - pattern: |
+          import "text/template"
+      - pattern: template.New($NAME).Parse($TPL)
+
+  - id: blindspot-go-sql-string-concat
+    message: >
+      SQL query constructed via string concatenation or fmt.Sprintf.
+      Use parameterized queries (db.Query("... $1", arg)) instead.
+    severity: ERROR
+    languages: [go]
+    metadata:
+      cwe: "CWE-89"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: $DB.Query("..." + $VAR + "...", ...)
+      - pattern: $DB.Exec("..." + $VAR + "...", ...)
+      - pattern: $DB.Query(fmt.Sprintf("...", $ARGS), ...)
+      - pattern: $DB.Exec(fmt.Sprintf("...", $ARGS), ...)
+
+  - id: blindspot-go-exec-command-variable
+    message: >
+      exec.Command called with a variable command or argument that may
+      be user-controlled. This enables OS command injection.
+    severity: WARNING
+    languages: [go]
+    metadata:
+      cwe: "CWE-78"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    patterns:
+      - pattern: exec.Command($CMD, ...)
+      - pattern-not: exec.Command("...", ...)

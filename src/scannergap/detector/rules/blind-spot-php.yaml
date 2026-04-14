@@ -68,3 +68,24 @@ rules:
     patterns:
       - pattern: $COMPILER->raw($VAR)
       - pattern-not: $COMPILER->raw("...")
+
+  - id: blindspot-php-unserialize-input
+    message: >
+      unserialize() called on data from user input ($_GET, $_POST, $_REQUEST,
+      $_COOKIE). PHP unserialize enables arbitrary object injection via
+      __wakeup/__destruct gadget chains.
+    severity: ERROR
+    languages: [php]
+    metadata:
+      cwe: "CWE-502"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    pattern-either:
+      - pattern: unserialize($_GET[$KEY])
+      - pattern: unserialize($_POST[$KEY])
+      - pattern: unserialize($_REQUEST[$KEY])
+      - pattern: unserialize($_COOKIE[$KEY])
+      - pattern: |
+          $DATA = $_REQUEST[$KEY];
+          ...
+          unserialize($DATA);

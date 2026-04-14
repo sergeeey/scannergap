@@ -1,0 +1,58 @@
+{
+  "name": "txtdot",
+  "version": "1.6.0",
+  "private": true,
+  "description": "txtdot is an HTTP proxy that parses only text, links and pictures from pages reducing internet bandwidth usage, removing ads and heavy scripts",
+  "main": "dist/app.js",
+  "dependencies": {
+    "@fastify/static": "^6.12.0",
+    "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^2.1.0",
+    "@fastify/view": "^9.0.0",
+    "@mozilla/readability": "^0.5.0",
+    "axios": "^1.6.5",
+    "dompurify": "^3.0.8",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "fastify": "^4.25.2",
+    "iconv-lite": "^0.6.3",
+    "ip-range-check": "^0.2.0",
+    "json-schema-to-ts": "^3.0.0",
+    "linkedom": "^0.16.8",
+    "micromatch": "^4.0.5",
+    "route-parser": "^0.0.5"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.0.5",
+    "@types/ejs": "^3.1.5",
+    "@types/jsdom": "^21.1.6",
+    "@types/micromatch": "^4.0.6",
+    "@types/node": "^20.11.20",
+    "@types/route-parser": "^0.1.7",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "clean-css-cli": "^5.6.3",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean-css && copyfiles ./templates/*.ejs ./templates/**/*.ejs .env ./dist/ && tsc",
+    "start": "cd ./dist && node ./src/app.js",
+    "start:docker": "node ./src/app.js",
+    "clean-css": "cleancss --batch static/*.css -o dist/static --batch-suffix \"\"",
+    "dev": "tsc-watch --onSuccess \"node ./dist/src/app.js\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [],
+  "authors": [
+    "Artemy Egorov <me@artegoser.ru> https://github.com/artegoser",
+    "DarkCat09 <darkcat09@vivaldi.net> https://dc09.ru/",
+    "megahomyak https://github.com/megahomyak"
+  ],
+  "license": "MIT"
+}
