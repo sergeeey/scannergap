@@ -1,4 +1,4 @@
-# PROJECT CANON — BlindSpotSec
+# PROJECT CANON — ScannerGap
 
 ## Claim Governance
 Adapted from ARCHCODE: every public claim must pass through governance.

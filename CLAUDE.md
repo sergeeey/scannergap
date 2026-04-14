@@ -1,7 +1,7 @@
-# BlindSpotSec — Security Blind Spot Scanner
+# ScannerGap — Security Blind Spot Scanner
 
 ## IDENTITY
-Project: BlindSpotSec v0.1.0
+Project: ScannerGap v0.1.0
 Domain: Code Security / Meta-Scanner / Benchmark
 Goal: Find vulnerability classes that ALL existing SAST scanners systematically miss
 Methodology: Transferred from ARCHCODE genomics (blind spot detection via orthogonal analysis)
@@ -27,7 +27,7 @@ Methodology: Transferred from ARCHCODE genomics (blind spot detection via orthog
 
 ## ARCHITECTURE
 ```
-src/blindspotsec/
+src/scannergap/
 ├── corpus/        # CVE collection + vulnerable code samples
 ├── scanners/      # Wrappers: CodeQL, Semgrep, Snyk, Bandit
 ├── quadrant/      # Coverage matrix + blind spot detection

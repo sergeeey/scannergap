@@ -1,8 +1,8 @@
-# BlindSpotSec
+# ScannerGap
 
 **Security Blind Spot Benchmark — what your SAST scanners don't see.**
 
-BlindSpotSec is not a scanner. It's a benchmark that shows where static analysis tools systematically fail on real-world vulnerabilities.
+ScannerGap is not a scanner. It's a benchmark that shows where static analysis tools systematically fail on real-world vulnerabilities.
 
 ## Key Finding
 
@@ -22,10 +22,10 @@ BlindSpotSec is not a scanner. It's a benchmark that shows where static analysis
 pip install -e ".[dev]"
 
 # Run full pipeline on corpus
-blindspotsec pipeline corpus/fullcode -o results/output
+scannergap pipeline corpus/fullcode -o results/output
 
 # Run with custom detector rules (catches 30% more blind spots)
-semgrep scan --config src/blindspotsec/detector/rules/ corpus/fullcode/
+semgrep scan --config src/scannergap/detector/rules/ corpus/fullcode/
 
 # Expand corpus to 100+ CVEs
 python scripts/expand_corpus.py
@@ -72,13 +72,13 @@ CVE Corpus (NVD)          Scanner Execution         Quadrant Analysis
 
 ```bash
 # Run detector on any codebase
-semgrep scan --config src/blindspotsec/detector/rules/ /path/to/code
+semgrep scan --config src/scannergap/detector/rules/ /path/to/code
 ```
 
 ## Project Structure
 
 ```
-src/blindspotsec/
+src/scannergap/
 ├── cli.py                  # CLI: scan, quadrant, benchmark, pipeline
 ├── corpus/nvd_client.py    # NVD API client
 ├── scanners/               # Semgrep + Bandit wrappers

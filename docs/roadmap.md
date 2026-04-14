@@ -1,4 +1,4 @@
-# BlindSpotSec — 30-Day MVP Roadmap
+# ScannerGap — 30-Day MVP Roadmap
 
 ## Week 1: Corpus Collection (Apr 14-20, 2026)
 - [ ] Set up NVD API client

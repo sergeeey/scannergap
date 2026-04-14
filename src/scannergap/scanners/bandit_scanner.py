@@ -7,7 +7,7 @@ from pathlib import Path
 
 import structlog
 
-from blindspotsec.scanners.base import BaseScanner, Finding, ScanResult
+from scannergap.scanners.base import BaseScanner, Finding, ScanResult
 
 log = structlog.get_logger()
 

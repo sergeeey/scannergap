@@ -1,4 +1,4 @@
-"""CLI entry point for BlindSpotSec."""
+"""CLI entry point for ScannerGap."""
 
 import json
 from pathlib import Path
@@ -6,7 +6,7 @@ from pathlib import Path
 import click
 import structlog
 
-from blindspotsec import __version__
+from scannergap import __version__
 
 log = structlog.get_logger()
 
@@ -14,7 +14,7 @@ log = structlog.get_logger()
 @click.group()
 @click.version_option(version=__version__)
 def main() -> None:
-    """BlindSpotSec — find what all SAST scanners miss."""
+    """ScannerGap — find what all SAST scanners miss."""
     structlog.configure(
         processors=[
             structlog.processors.TimeStamper(fmt="iso"),
@@ -29,8 +29,8 @@ def main() -> None:
 @click.option("--output", "-o", type=click.Path(), default="results/scan_results.json")
 def scan(corpus_dir: str, scanners: tuple[str, ...], output: str) -> None:
     """Stage 1: Run all scanners on the corpus."""
-    from blindspotsec.scanners.bandit_scanner import BanditScanner
-    from blindspotsec.scanners.semgrep_scanner import SemgrepScanner
+    from scannergap.scanners.bandit_scanner import BanditScanner
+    from scannergap.scanners.semgrep_scanner import SemgrepScanner
 
     scanner_map = {
         "bandit": BanditScanner,
@@ -83,7 +83,7 @@ def scan(corpus_dir: str, scanners: tuple[str, ...], output: str) -> None:
 @click.option("--output", "-o", type=click.Path(), default="results/quadrant.json")
 def quadrant(scan_results: str, corpus_dir: str, output: str) -> None:
     """Stage 2: Build quadrant matrix — who found what, who missed what."""
-    from blindspotsec.quadrant.analysis import (
+    from scannergap.quadrant.analysis import (
         analyze_blind_spot_patterns,
         build_coverage_matrix,
         classify_quadrants,
@@ -129,9 +129,9 @@ def quadrant(scan_results: str, corpus_dir: str, output: str) -> None:
 @click.option("--output", "-o", type=click.Path(), default="results/report.json")
 def benchmark(quadrant_file: str, output: str) -> None:
     """Stage 3: Run falsification tests and generate benchmark report."""
-    from blindspotsec.benchmark.falsification import run_all_falsification_tests
-    from blindspotsec.benchmark.report import generate_report
-    from blindspotsec.quadrant.analysis import QuadrantResult
+    from scannergap.benchmark.falsification import run_all_falsification_tests
+    from scannergap.benchmark.report import generate_report
+    from scannergap.quadrant.analysis import QuadrantResult
 
     raw = json.loads(Path(quadrant_file).read_text(encoding="utf-8"))
     summary = raw["quadrant_summary"]
@@ -175,15 +175,15 @@ def benchmark(quadrant_file: str, output: str) -> None:
 @click.option("--output-dir", "-o", type=click.Path(), default="results")
 def pipeline(corpus_dir: str, scanners: tuple[str, ...], output_dir: str) -> None:
     """Run full pipeline: scan -> quadrant -> benchmark in one command."""
-    from blindspotsec.benchmark.falsification import run_all_falsification_tests
-    from blindspotsec.benchmark.report import generate_report
-    from blindspotsec.quadrant.analysis import (
+    from scannergap.benchmark.falsification import run_all_falsification_tests
+    from scannergap.benchmark.report import generate_report
+    from scannergap.quadrant.analysis import (
         analyze_blind_spot_patterns,
         build_coverage_matrix,
         classify_quadrants,
     )
-    from blindspotsec.scanners.bandit_scanner import BanditScanner
-    from blindspotsec.scanners.semgrep_scanner import SemgrepScanner
+    from scannergap.scanners.bandit_scanner import BanditScanner
+    from scannergap.scanners.semgrep_scanner import SemgrepScanner
 
     scanner_map = {
         "bandit": BanditScanner,

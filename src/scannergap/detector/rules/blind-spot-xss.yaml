@@ -1,6 +1,6 @@
 rules:
   # ============================================================
-  # BlindSpotSec Custom Rules — Cross-Site Scripting (CWE-79)
+  # ScannerGap Custom Rules — Cross-Site Scripting (CWE-79)
   # Patterns that standard XSS rules miss
   # ============================================================
 

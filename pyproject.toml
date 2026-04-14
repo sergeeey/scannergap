@@ -1,10 +1,10 @@
 [project]
-name = "blindspotsec"
+name = "scannergap"
 version = "0.1.0"
 description = "Security Blind Spot Scanner — meta-scanner that finds what CodeQL, Semgrep, Snyk, and Bandit systematically miss"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "BlindSpotSec Team"}]
+authors = [{name = "ScannerGap Team"}]
 
 dependencies = [
     "click>=8.1",
@@ -29,7 +29,7 @@ scanners = [
 ]
 
 [project.scripts]
-blindspotsec = "blindspotsec.cli:main"
+scannergap = "scannergap.cli:main"
 
 [build-system]
 requires = ["setuptools>=69.0"]
@@ -47,7 +47,7 @@ quote-style = "double"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov=blindspotsec --cov-report=term-missing"
+addopts = "--cov=scannergap --cov-report=term-missing"
 
 [tool.mypy]
 python_version = "3.11"

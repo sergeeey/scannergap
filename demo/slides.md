@@ -1,4 +1,4 @@
-# BlindSpotSec
+# ScannerGap
 ## What Your SAST Scanner Doesn't See
 
 ---
@@ -59,7 +59,7 @@ semgrep scan --config auto ./example-app
 # Result: 12 findings
 
 # 2. What it MISSES (our blind spot rules)
-semgrep scan --config blindspotsec/detector/rules/ ./example-app
+semgrep scan --config scannergap/detector/rules/ ./example-app
 # Result: 5 NEW findings your scanner never reported
 ```
 
@@ -90,13 +90,13 @@ Scanner sees the fix... on a different code path.
 
 ## Slide 6: What We Built
 
-**BlindSpotSec** = Benchmark + Detector
+**ScannerGap** = Benchmark + Detector
 
 | Component | What it does |
 |-----------|-------------|
 | Benchmark | 135 CVEs with strict scoring rubric |
 | 26 Semgrep rules | Catches patterns standard rules miss |
-| Pipeline CLI | `blindspotsec pipeline ./code` — one command |
+| Pipeline CLI | `scannergap pipeline ./code` — one command |
 | Methodology | Transferred from genomics research (ARCHCODE) |
 
 Detector closes **30% of blind spots** with zero configuration.
@@ -123,5 +123,5 @@ Remaining 70% require next-gen analysis (interprocedural + semantic).
 ## Questions?
 
 Full report: `docs/findings.md`
-Rules: `src/blindspotsec/detector/rules/`
+Rules: `src/scannergap/detector/rules/`
 Run: `semgrep scan --config detector/rules/ /path/to/code`

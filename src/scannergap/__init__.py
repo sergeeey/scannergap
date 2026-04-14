@@ -1,4 +1,4 @@
-"""BlindSpotSec — Security Blind Spot Scanner.
+"""ScannerGap — Security Blind Spot Scanner.
 
 Meta-scanner that finds vulnerability classes systematically missed
 by ALL standard SAST scanners (CodeQL, Semgrep, Snyk, Bandit).

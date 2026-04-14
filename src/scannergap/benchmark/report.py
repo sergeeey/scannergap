@@ -14,8 +14,8 @@ from pathlib import Path
 
 import structlog
 
-from blindspotsec.benchmark.falsification import FalsificationResult, Verdict
-from blindspotsec.quadrant.analysis import QuadrantResult
+from scannergap.benchmark.falsification import FalsificationResult, Verdict
+from scannergap.quadrant.analysis import QuadrantResult
 
 log = structlog.get_logger()
 
@@ -38,7 +38,7 @@ def generate_report(
     date_str = datetime.now(timezone.utc).strftime("%Y%m%d")
 
     report = {
-        "benchmark": "BlindSpotSec Security Blind Spot Benchmark",
+        "benchmark": "ScannerGap Security Blind Spot Benchmark",
         "version": "0.1.0",
         "generated_at": timestamp,
         "corpus": {

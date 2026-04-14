@@ -6,7 +6,7 @@ Identifies Q2 (blind spots) — vulnerabilities missed by ALL scanners.
 Methodology from ARCHCODE:
   ARCHCODE used Q2 = "LSSIM < threshold AND VEP < threshold"
   (structural disruption invisible to sequence predictors).
-  BlindSpotSec uses Q2 = "CVE confirmed AND no scanner found it".
+  ScannerGap uses Q2 = "CVE confirmed AND no scanner found it".
 """
 
 from dataclasses import dataclass, field

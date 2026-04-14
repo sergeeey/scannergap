@@ -1,5 +1,5 @@
 {
-  "benchmark": "BlindSpotSec Security Blind Spot Benchmark",
+  "benchmark": "ScannerGap Security Blind Spot Benchmark",
   "version": "0.1.0",
   "generated_at": "2026-04-13T19:26:42.376319+00:00",
   "corpus": {

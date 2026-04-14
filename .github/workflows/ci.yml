@@ -31,10 +31,10 @@ jobs:
         run: ruff format --check src/ tests/ scripts/
 
       - name: Run tests
-        run: pytest tests/ -v --cov=blindspotsec --cov-report=term-missing
+        run: pytest tests/ -v --cov=scannergap --cov-report=term-missing
 
       - name: Type check
-        run: mypy src/blindspotsec/ --ignore-missing-imports
+        run: mypy src/scannergap/ --ignore-missing-imports
 
   validate-rules:
     runs-on: ubuntu-latest
@@ -50,4 +50,4 @@ jobs:
         run: pip install semgrep
 
       - name: Validate detector rules
-        run: semgrep scan --config src/blindspotsec/detector/rules/ --validate
+        run: semgrep scan --config src/scannergap/detector/rules/ --validate

@@ -1,8 +1,8 @@
-# Architectural Decisions — BlindSpotSec
+# Architectural Decisions — ScannerGap
 
 ## ADR-001: Standalone Project
 **Date:** 2026-04-13
-**Decision:** BlindSpotSec is a standalone project, not an extension of ARCHCODE or CCBM.
+**Decision:** ScannerGap is a standalone project, not an extension of ARCHCODE or CCBM.
 **Why:** Different domain (code security vs genomics), different customers, different publication venue.
 Mixing them would dilute both. ARCHCODE methodology transfers conceptually, not as code.
 

@@ -1,4 +1,4 @@
-# BlindSpotSec Security Blind Spot Benchmark v0.1.0
+# ScannerGap Security Blind Spot Benchmark v0.1.0
 Generated: 2026-04-13T19:26:42.376319+00:00
 
 ## Summary

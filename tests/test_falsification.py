@@ -2,7 +2,7 @@
 
 import pytest
 
-from blindspotsec.benchmark.falsification import (
+from scannergap.benchmark.falsification import (
     Verdict,
     check_blind_spot_existence,
     check_non_triviality,
