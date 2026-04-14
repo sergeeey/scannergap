@@ -1,0 +1,70 @@
+rules:
+  # ============================================================
+  # ScannerGap Custom Rules — Authentication & Authorization
+  # JWT, session, CORS, credential management
+  # ============================================================
+
+  - id: blindspot-jwt-no-expiry-check
+    message: >
+      JWT decoded without verifying expiration. If the token has no exp
+      claim or exp is not validated, stolen tokens work forever.
+      Use options={"require": ["exp"]} or verify_exp=True.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-613"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    pattern: jwt.decode($TOKEN, ...)
+
+  - id: blindspot-jwt-no-verify
+    message: >
+      JWT decoded with verification disabled. This accepts any token,
+      including forged ones. Never use verify=False in production.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-345"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    pattern-either:
+      - pattern: |
+          jwt.decode($TOKEN, ..., options={"verify_signature": False}, ...)
+      - pattern: jwt.decode($TOKEN, ..., verify=False, ...)
+
+  - id: blindspot-hardcoded-secret-assignment
+    message: >
+      Secret or credential assigned as a string literal. Use environment
+      variables or a secrets manager. Hardcoded secrets end up in git
+      history and are the #1 real-world security finding.
+    severity: ERROR
+    languages: [python, javascript, typescript]
+    metadata:
+      cwe: "CWE-798"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    pattern-either:
+      - pattern: SECRET_KEY = "..."
+      - pattern: secret_key = "..."
+      - pattern: DATABASE_PASSWORD = "..."
+      - pattern: DB_PASSWORD = "..."
+      - pattern: PRIVATE_KEY = "..."
+
+  - id: blindspot-js-cors-wildcard
+    message: >
+      CORS configured with wildcard origin (*) and credentials enabled.
+      This allows any website to make authenticated cross-origin requests.
+    severity: ERROR
+    languages: [javascript, typescript]
+    metadata:
+      cwe: "CWE-942"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    pattern-either:
+      - pattern: "cors({ origin: '*', credentials: true })"
+      - pattern: |
+          app.use(cors({
+            origin: '*',
+            credentials: true,
+            ...
+          }))
