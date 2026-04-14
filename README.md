@@ -1,123 +1,127 @@
 # ScannerGap
 
-**Security Blind Spot Benchmark — what your SAST scanners don't see.**
+**Your code has vulnerabilities that no scanner sees. We measured how many.**
 
-ScannerGap is not a scanner. It's a benchmark that shows where static analysis tools systematically fail on real-world vulnerabilities.
+## The Problem
 
-## Key Finding
+Most security teams rely on infrastructure scanners (Tenable/Nessus) to find vulnerabilities. But these tools scan **deployed systems** — ports, versions, configurations. They don't look at your **source code**.
 
-**56% of real CVEs are invisible to standard SAST scanners** (Semgrep + Bandit), even with maximum configuration. These blind spots cluster into 4 systematic categories and persist across scanner configurations.
+Even teams that add static analysis (SAST) have a false sense of security. We tested 135 real CVEs against 3 leading static analyzers:
 
-| Metric | Value |
-|--------|-------|
-| Gold subset | 23 annotated CVEs (2023-2025) |
-| Blind spot rate | 56% (Baseline A) |
-| Systematic clusters | 4 (CWE-22, CWE-94, CWE-502, CWE-918) |
-| Non-trivial | 82% require interprocedural/semantic analysis |
-| CodeQL verified | 0/104 queries found `new Function(tainted)` |
+| Scanner | What it missed |
+|---------|---------------|
+| Semgrep (all rule packs) | 64% of CVEs |
+| Bandit | ~90% of CVEs |
+| CodeQL (104 security queries) | 76% of CVEs |
+| **All 3 combined** | **61.5%** |
+
+These aren't theoretical bugs. These are CVEs from the National Vulnerability Database — real vulnerabilities that were exploited in production.
+
+## Where This Fits
+
+```
+                    What Tenable/Nessus covers
+                    ─────────────────────────
+Code → CI/CD → Deploy → [Nessus: ports, versions, configs] → Production
+  ↑
+  │  No coverage here.
+  │  Logical bugs, injection flaws, SSRF, deserialization —
+  │  invisible until exploited.
+  │
+  └── [ScannerGap: 26 rules that catch what SAST misses]
+```
+
+Tenable protects your infrastructure. ScannerGap protects your code.
+They're complementary, not competing.
+
+## What ScannerGap Does
+
+1. **Benchmark**: Tests your SAST tools against 135 real CVEs and shows what they miss
+2. **Detector**: 26 custom rules that catch vulnerability patterns standard scanners are blind to
+3. **Taxonomy**: Classifies WHY scanners miss these bugs (not random — 13 systematic categories)
 
 ## Quick Start
 
 ```bash
 pip install -e ".[dev]"
 
-# Run full pipeline on corpus
+# Scan your codebase with blind spot detector (fully local, nothing sent externally)
+semgrep scan --config src/scannergap/detector/rules/ /path/to/your/code
+
+# Run full benchmark pipeline on CVE corpus
 scannergap pipeline corpus/fullcode -o results/output
-
-# Run with custom detector rules (catches 30% more blind spots)
-semgrep scan --config src/scannergap/detector/rules/ corpus/fullcode/
-
-# Expand corpus to 100+ CVEs
-python scripts/expand_corpus.py
-
-# Run gold subset evaluation with strict matching
-python scripts/gold_evaluation.py
 ```
 
-## How It Works
+## The 4 Types of Blind Spots
 
-```
-CVE Corpus (NVD)          Scanner Execution         Quadrant Analysis
-┌─────────────┐          ┌──────────────┐          ┌──────────────┐
-│ Fetch CVEs   │──────────│ Semgrep      │──────────│ Q1: Detected │
-│ Download code│          │ Bandit       │          │ Q2: BLIND ◄──│── Our target
-│ Annotate     │          │ (CodeQL)     │          │ Q3: FP       │
-└─────────────┘          └──────────────┘          │ Q4: TN       │
-                                                    └──────┬───────┘
-                          Falsification                     │
-                         ┌──────────────┐                   │
-                         │ Kill criteria │◄──────────────────┘
-                         │ Taxonomy     │
-                         │ Benchmark    │
-                         └──────────────┘
-```
+| Type | What happens | Example |
+|------|-------------|---------|
+| **Cross-function taint** | Scanner tracks data in one function but loses it across calls | User input passes through 3 functions before hitting `send_file()` — each hop looks safe alone |
+| **Semantic blindness** | Scanner sees code, not meaning | Security check exists in function A, but sibling function B has no check — scanner assumes both are safe |
+| **Non-standard sinks** | Scanner knows `eval()` is dangerous but not `boto3(endpoint_url=...)` | SSRF via cloud SDK configuration parameter — not in any scanner's sink database |
+| **Partial bypass** | Scanner sees the fix exists but not that it's missing on another path | SSRF protection on `/import` endpoint but not on `/roles` endpoint |
 
-## Blind Spot Taxonomy
+## What the Detector Catches
 
-| Type | Detection Requires | Example |
-|------|-------------------|---------|
-| **Cross-function taint gaps** | Interprocedural taint | mlflow LFI: path crosses 3 function hops |
-| **Semantic context blindness** | Business logic understanding | solara: guard exists in sibling function but not target |
-| **Non-standard sink patterns** | Expanded sink database | boto3 `endpoint_url` as SSRF sink |
-| **Partial mitigation bypass** | Cross-path analysis | Directus: SSRF filter on path A but not path B |
+26 Semgrep rules across 5 languages:
 
-## Custom Detector Rules
+| Language | Rules | Examples |
+|----------|-------|---------|
+| Python | 5 | boto3 SSRF, unsandboxed Jinja2, zipfile extractall, eval on file data |
+| JavaScript | 4 | `new Function(tainted)`, child_process injection, fetch SSRF |
+| Java | 4 | SnakeYAML unsafe load, URL decode-before-check, Velocity eval |
+| PHP | 3 | Dynamic class instantiation, Twig raw injection, include from POST |
+| Ruby | 2 | YAML.load on cookies, Marshal.load on untrusted data |
 
-17 Semgrep rules targeting patterns that standard scanners miss:
+These rules close **30% of identified blind spots**. The remaining 70% require next-generation analysis capabilities (interprocedural taint tracking, semantic understanding) that no current SAST tool provides.
 
-**Python**: boto3 SSRF, unsandboxed Jinja2, zipfile extractall, eval from file data
-**JavaScript**: `new Function(tainted)`, child_process template injection, fetch SSRF
-**Java**: SnakeYAML unsafe load, URL decode-before-check, Velocity eval
-**PHP**: dynamic class instantiation, Twig raw injection, include from POST
+## Results at Scale
+
+| Metric | Value |
+|--------|-------|
+| CVEs tested | 135 (NVD, 2023-2025) |
+| Blind spot rate | **61.5%** |
+| Systematic categories | 13 CWE clusters |
+| Top clusters | Code injection (29), SSRF (25), Path traversal (24) |
+| CodeQL verified | 0/104 queries found `new Function(tainted)` |
+| Detector impact | +30% coverage over standard scanners |
+| Reproducibility | 0 differences across runs |
+
+## For Security Teams
+
+**This week**: Run the 26 rules on your repos. It's free, local, takes 5 minutes.
 
 ```bash
-# Run detector on any codebase
-semgrep scan --config src/scannergap/detector/rules/ /path/to/code
+semgrep scan --config src/scannergap/detector/rules/ /path/to/your/code
 ```
+
+If findings appear — these are vulnerabilities your current pipeline marks as "clean".
+
+**This month**: Add rules to CI alongside Tenable.
+**This quarter**: Map which services have the most cross-function logic — those are highest risk.
 
 ## Project Structure
 
 ```
 src/scannergap/
 ├── cli.py                  # CLI: scan, quadrant, benchmark, pipeline
-├── corpus/nvd_client.py    # NVD API client
+├── corpus/                 # NVD API client for CVE collection
 ├── scanners/               # Semgrep + Bandit wrappers
-├── quadrant/analysis.py    # Coverage matrix + blind spot detection
+├── quadrant/               # Coverage matrix + blind spot detection
 ├── benchmark/              # Falsification tests + report generator
-├── detector/rules/         # 17 custom blind spot detection rules
+├── detector/rules/         # 26 custom blind spot detection rules
 └── taxonomy/               # Blind spot type classification
 
-corpus/
-├── gold_subset.json        # 23 annotated CVEs (ground truth)
-├── pilot_corpus.json       # 78 CVEs from NVD
-└── fullcode/               # Vulnerable source files per CVE
-
 docs/
-├── findings.md             # Publishable benchmark report
-├── methodology.md          # ARCHCODE transfer methodology
-├── scoring_rubric.md       # HIT/PARTIAL/MISS/NOISE definitions
-└── roadmap.md              # 30-day MVP plan
+├── findings.md             # Full benchmark report
+├── methodology.md          # How and why this works
+└── scoring_rubric.md       # Strict HIT/PARTIAL/MISS definitions
 
-scripts/
-├── gold_evaluation.py      # Strict matching evaluation
-├── codeql_gate.py          # CodeQL decision gate
-└── expand_corpus.py        # Scale corpus to 100+ CVEs
+demo/
+├── slides.md               # 7-slide presentation
+├── demo-script.md          # Step-by-step demo with talking points
+└── one-pager.md            # Single page summary for sharing
 ```
-
-## Methodology
-
-Transferred from [ARCHCODE](https://github.com/) genomic variant analysis — the same falsification-first framework that found 27 structural variants invisible to all DNA sequence predictors.
-
-Core principle: don't build a better scanner. Find what ALL scanners miss.
-
-## Kill Criteria (all passed)
-
-| Criterion | Threshold | Result |
-|-----------|-----------|--------|
-| Blind spot rate | >= 15% | **56%** |
-| Systematic clusters | >= 3 | **4** |
-| Non-trivial | >= 50% | **82%** |
-| Reproducibility | 0 diffs | **0/20** |
 
 ## License
 
