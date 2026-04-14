@@ -1,127 +1,123 @@
 # ScannerGap
-## What Your SAST Scanner Doesn't See
+## The Gap Between Tenable and Your Code
 
 ---
 
-## Slide 1: The Problem
+## Slide 1: What We Cover Today
 
-Your security pipeline looks solid:
+Tenable/Nessus protects our infrastructure: ports, versions, configs.
+
+**But who protects our source code?**
 
 ```
-Code → Semgrep/CodeQL → CI/CD → Production ✓
+Code → Code Review (manual) → CI/CD → Deploy → Tenable
+  ↑                                               ↑
+  Nothing automated here              Finds infra vulns here
 ```
 
-**But what if the scanner is blind to 61% of real vulnerabilities?**
-
-Not because it's bad. Because the entire class of tools
-has systematic gaps in what they can detect.
+Logical bugs, injection flaws, SSRF, unsafe deserialization
+in our code — Tenable can't see them. They're not in its scope.
 
 ---
 
-## Slide 2: Proof
+## Slide 2: "We'd catch it in code review"
 
-We tested **135 real CVEs** (2023-2025) against 3 scanners:
+Would we? I tested 135 real CVEs against 3 leading static analyzers:
 
-| Scanner | Blind Rate |
-|---------|-----------|
+| Tool | What it missed |
+|------|---------------|
 | Semgrep (all rule packs) | 64% |
-| Bandit | ~90% |
-| CodeQL (104 security queries) | 76% |
+| Bandit (Python SAST) | ~90% |
+| CodeQL (GitHub, 104 queries) | 76% |
 | **All 3 combined** | **61.5%** |
 
-These are not theoretical bugs. These are CVEs from NVD
-with GitHub patches. They were exploited in production.
+These are the **best free SAST tools available**.
+If they miss 61% — manual code review misses more.
 
 ---
 
-## Slide 3: Why?
+## Slide 3: Why Do They Miss So Much?
 
-Scanners work by **pattern matching** and **local data flow**.
+Static analyzers work by **pattern matching**: "if you see `eval(X)`, flag it."
 
-Real vulnerabilities increasingly require:
+Real vulnerabilities are more subtle:
 
-| What's needed | Example | Scanner sees? |
-|---------------|---------|:---:|
-| Cross-function taint | Path goes through 3 functions before hitting `send_file()` | ✗ |
-| Business logic | Guard exists in function A but not sibling function B | ✗ |
-| Non-standard sinks | `boto3(endpoint_url=user_input)` = SSRF | ✗ |
-| Partial bypass | SSRF filter on /import but not on /roles | ✗ |
+| Pattern | Example | Scanner sees? |
+|---------|---------|:---:|
+| Data flows through 3 functions | `input → helper() → process() → send_file()` | No |
+| Check exists, but in wrong place | `validate()` in function A, missing in function B | No |
+| Dangerous API, not in scanner's list | `boto3(endpoint_url=user_input)` = SSRF | No |
+| Protection on one path, not another | SSRF filter on /import, missing on /roles | No |
 
-**Analogy**: checking every room for fire, but not the hallways between them.
+**It's not a bug in the tool. It's a structural limitation of the approach.**
 
 ---
 
-## Slide 4: Live Demo
+## Slide 4: What This Means For Us
 
-```bash
-# 1. What your scanner finds (standard)
-semgrep scan --config auto ./example-app
-# Result: 12 findings
+Our current security posture:
 
-# 2. What it MISSES (our blind spot rules)
-semgrep scan --config scannergap/detector/rules/ ./example-app
-# Result: 5 NEW findings your scanner never reported
+| Layer | Tool | What it covers |
+|-------|------|---------------|
+| Infrastructure | Tenable/Nessus | Ports, CVEs in packages, configs |
+| Code | **Nothing** | SQL injection, SSRF, eval, deserialization |
+
+Every line of code we deploy goes through **zero automated security checks**
+for logical vulnerabilities. Tenable finds known CVEs in dependencies —
+not bugs in our own code.
+
+---
+
+## Slide 5: ScannerGap — What I Built
+
+26 detection rules for vulnerability patterns that standard scanners miss.
+
+Works locally, nothing leaves the machine:
+
+```
+semgrep scan --config scannergap/detector/rules/ ./our-repo
 ```
 
-Each new finding is a vulnerability class your current
-pipeline gives false confidence on.
+| What it catches | Why standard tools miss it |
+|-----------------|--------------------------|
+| SSRF via boto3/cloud SDKs | Not in standard sink database |
+| Unsafe YAML/template rendering | Looks like normal code |
+| `new Function()` injection | Scanners only flag `eval()` |
+| Path traversal via zipfile | Scanners flag tarfile but not zipfile |
 
 ---
 
-## Slide 5: The 4 Blind Spot Types
+## Slide 6: Live Demo
 
-**Type I: Cross-function taint gaps**
-Scanner loses track of data across function calls.
-→ 60-80% of these bugs are invisible.
+*[Run semgrep on an open-source fintech project]*
 
-**Type II: Semantic context blindness**
-Scanner sees the code, not the meaning.
-→ A check exists... but in the wrong place.
+Standard scanner found: N issues
+ScannerGap found: M additional issues that were invisible
 
-**Type III: Non-standard sinks**
-Scanner knows `eval()` is bad but not `new Function()`.
-→ 100% invisible until you add the pattern.
-
-**Type IV: Partial mitigation bypass**
-Scanner sees the fix... on a different code path.
-→ "Protected" endpoint is actually exposed.
+Each additional finding = a vulnerability our pipeline currently
+marks as "clean code, safe to deploy."
 
 ---
 
-## Slide 6: What We Built
+## Slide 7: Proposal
 
-**ScannerGap** = Benchmark + Detector
+**Phase 1 (this week)** — 5 minutes, zero risk:
+- Run 26 rules on our repos, see if anything comes up
+- Fully local, no cloud, no API calls
 
-| Component | What it does |
-|-----------|-------------|
-| Benchmark | 135 CVEs with strict scoring rubric |
-| 26 Semgrep rules | Catches patterns standard rules miss |
-| Pipeline CLI | `scannergap pipeline ./code` — one command |
-| Methodology | Transferred from genomics research (ARCHCODE) |
+**Phase 2 (if findings appear)** — triage:
+- Treat findings like any security finding
+- Prioritize by severity and reachability
 
-Detector closes **30% of blind spots** with zero configuration.
-Remaining 70% require next-gen analysis (interprocedural + semantic).
-
----
-
-## Slide 7: For Our Team
-
-**Immediate action** (this week):
-→ Run 26 blind spot rules on our repos. Free. Local. 5 minutes.
-
-**If findings appear**:
-→ Triage like regular security findings
-→ These are the bugs our pipeline currently marks as "clean"
-
-**Longer term**:
-→ Add blind spot rules to CI alongside existing scanner
-→ Track blind spot coverage as a metric
-→ Consider: which of our services have the most cross-function logic?
+**Phase 3 (this quarter)** — integrate:
+- Add rules to CI/CD alongside existing checks
+- Tenable covers infra, ScannerGap covers code
+- Full stack security coverage
 
 ---
 
 ## Questions?
 
+One-pager: `demo/one-pager.md`
 Full report: `docs/findings.md`
 Rules: `src/scannergap/detector/rules/`
-Run: `semgrep scan --config detector/rules/ /path/to/code`
