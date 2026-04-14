@@ -157,3 +157,95 @@ rules:
       - pattern: yaml.load($DATA)
       - pattern-not: yaml.load($DATA, Loader=yaml.SafeLoader)
       - pattern-not: yaml.load($DATA, Loader=SafeLoader)
+
+  # --- Rules added from LLM-agent comparison audit ---
+
+  - id: blindspot-python-hardcoded-password
+    message: >
+      Hardcoded password or secret in source code. Credentials should be
+      loaded from environment variables or a secrets manager, never embedded
+      in code. This is the #1 finding in real-world security audits.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-798"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    pattern-either:
+      - pattern: password = "..."
+      - pattern: PASSWORD = "..."
+      - pattern: passwd = "..."
+      - pattern: secret = "..."
+      - pattern: SECRET_KEY = "..."
+      - pattern: api_key = "..."
+      - pattern: API_KEY = "..."
+      - pattern: token = "..."
+      - pattern: auth_password = "..."
+
+  - id: blindspot-python-cors-wildcard-credentials
+    message: >
+      CORS configured with allow_origins=["*"] combined with
+      allow_credentials=True. This allows any website to make
+      authenticated requests to your API, enabling CSRF-like attacks.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-942"
+      category: security
+      blindspot_type: "Type II: Semantic context blindness"
+    patterns:
+      - pattern: |
+          CORSMiddleware(
+              ...,
+              allow_origins=["*"],
+              ...,
+              allow_credentials=True,
+              ...
+          )
+
+  - id: blindspot-python-md5-usage
+    message: >
+      MD5 is cryptographically broken. Do not use for checksums, integrity
+      verification, or any security purpose. Use SHA-256 or SHA-3 instead.
+    severity: WARNING
+    languages: [python]
+    metadata:
+      cwe: "CWE-328"
+      category: security
+      blindspot_type: "Type III: Non-standard sink"
+    pattern-either:
+      - pattern: hashlib.md5(...)
+      - pattern: md5(...)
+
+  - id: blindspot-python-sql-fstring
+    message: >
+      SQL query constructed via f-string or format(). This enables SQL
+      injection if any variable contains user input. Use parameterized
+      queries: cursor.execute("SELECT ... WHERE id = %s", (user_id,))
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-89"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: $CURSOR.execute(f"...")
+      - pattern: $CURSOR.execute("...".format(...))
+      - pattern: $CURSOR.execute("..." + $VAR + "...")
+      - pattern: $CURSOR.execute("..." % ...)
+
+  - id: blindspot-python-path-traversal-no-validate
+    message: >
+      User-controlled path component used in file operations without
+      validation. An attacker can use "../" to access files outside the
+      intended directory. Validate with os.path.normpath and check prefix.
+    severity: WARNING
+    languages: [python]
+    metadata:
+      cwe: "CWE-22"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: open(f".../{$VAR}/...", ...)
+      - pattern: Path(f".../{$VAR}/...")
+      - pattern: os.path.join($BASE, $VAR)

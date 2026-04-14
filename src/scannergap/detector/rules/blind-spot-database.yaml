@@ -1,0 +1,53 @@
+rules:
+  # ============================================================
+  # ScannerGap Custom Rules — Database Injection
+  # Cypher (Neo4j), SQL, NoSQL injection patterns
+  # ============================================================
+
+  - id: blindspot-cypher-injection-fstring
+    message: >
+      Cypher query constructed via f-string. If any variable contains
+      user input, this enables Cypher injection in Neo4j. Use parameterized
+      queries: tx.run("MATCH (n) WHERE n.id = $id", id=user_id)
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-943"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: $TX.run(f"...", ...)
+      - pattern: $SESSION.run(f"...", ...)
+      - pattern: $DRIVER.execute_query(f"...", ...)
+      - pattern: graph.run(f"...", ...)
+
+  - id: blindspot-cypher-injection-format
+    message: >
+      Cypher query constructed via .format(). Same risk as f-string injection.
+      Use parameterized queries instead.
+    severity: ERROR
+    languages: [python]
+    metadata:
+      cwe: "CWE-943"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: $TX.run("...".format(...), ...)
+      - pattern: $SESSION.run("...".format(...), ...)
+
+  - id: blindspot-mongo-injection
+    message: >
+      MongoDB query constructed with user-controlled dict/variable.
+      If input is not validated, attacker can inject operators like
+      $gt, $ne, $regex to bypass authentication or extract data.
+    severity: WARNING
+    languages: [python]
+    metadata:
+      cwe: "CWE-943"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: |
+          $COLLECTION.find({...: $VAR, ...})
+      - pattern: |
+          $COLLECTION.find_one({...: $VAR, ...})

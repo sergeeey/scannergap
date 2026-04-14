@@ -28,6 +28,7 @@ MVP complete. Benchmark validated, documented, CLI working end-to-end. All merge
 5. Wire CWE metadata into pipeline
 
 ## Auto-commit log
+- [2026-04-14 12:26] `c74694e`: merge: 41 tests + 37 rules
 - [2026-04-14 12:06] `934dfbf`: merge: Apache 2.0 license
 - [2026-04-14 11:39] `545ce95`: merge: visual polish
 - [2026-04-14 11:04] `383d9d5`: merge: Tenable-adapted README and slides
