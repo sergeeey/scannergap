@@ -1,0 +1,77 @@
+{
+  "name": "@nuxt/webpack-builder",
+  "version": "3.4.2",
+  "repository": "nuxt/nuxt",
+  "license": "MIT",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "unbuild"
+  },
+  "dependencies": {
+    "@nuxt/friendly-errors-webpack-plugin": "^2.5.2",
+    "@nuxt/kit": "workspace:../kit",
+    "autoprefixer": "^10.4.14",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "cssnano": "^6.0.0",
+    "esbuild-loader": "^3.0.1",
+    "escape-string-regexp": "^5.0.0",
+    "estree-walker": "^3.0.3",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "fs-extra": "^11.1.1",
+    "h3": "^1.6.4",
+    "hash-sum": "^2.0.0",
+    "lodash-es": "^4.17.21",
+    "magic-string": "^0.30.0",
+    "memfs": "^3.5.1",
+    "mini-css-extract-plugin": "^2.7.5",
+    "mlly": "^1.2.0",
+    "ohash": "^1.1.2",
+    "pathe": "^1.1.0",
+    "pify": "^6.1.0",
+    "postcss": "^8.4.23",
+    "postcss-import": "^15.1.0",
+    "postcss-loader": "^7.2.4",
+    "postcss-url": "^10.1.3",
+    "time-fix-plugin": "^2.0.7",
+    "ufo": "^1.1.1",
+    "unplugin": "^1.3.1",
+    "url-loader": "^4.1.1",
+    "vue-bundle-renderer": "^1.0.3",
+    "vue-loader": "^17.0.1",
+    "webpack": "^5.80.0",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-dev-middleware": "^6.0.2",
+    "webpack-hot-middleware": "^2.25.3",
+    "webpack-virtual-modules": "^0.5.0",
+    "webpackbar": "^5.0.2"
+  },
+  "devDependencies": {
+    "@nuxt/schema": "workspace:../schema",
+    "@types/lodash-es": "^4.17.7",
+    "@types/pify": "^5.0.1",
+    "@types/webpack-bundle-analyzer": "^4.6.0",
+    "@types/webpack-hot-middleware": "^2.25.6",
+    "@types/webpack-virtual-modules": "^0.1.1",
+    "unbuild": "latest",
+    "vue": "3.2.47"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.47"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.10.0"
+  }
+}

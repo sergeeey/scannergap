@@ -77,3 +77,31 @@ rules:
       - pattern: Velocity.evaluate($CTX, ..., $TEMPLATE, ...)
       - pattern: $ENGINE.evaluate($CTX, ..., $TEMPLATE, ...)
       - pattern: $VE.mergeTemplate($TEMPLATE, ...)
+
+  - id: blindspot-java-runtime-exec-variable
+    message: >
+      Runtime.exec() called with a variable command string. If the command
+      is constructed from user input, this enables OS command injection.
+    severity: ERROR
+    languages: [java]
+    metadata:
+      cwe: "CWE-78"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    patterns:
+      - pattern: Runtime.getRuntime().exec($CMD)
+      - pattern-not: Runtime.getRuntime().exec("...")
+
+  - id: blindspot-java-xpath-injection
+    message: >
+      XPath expression compiled or evaluated with user-controlled string.
+      XPath injection can bypass authentication or extract sensitive data.
+    severity: ERROR
+    languages: [java]
+    metadata:
+      cwe: "CWE-643"
+      category: security
+      blindspot_type: "Type I: Cross-function taint gap"
+    pattern-either:
+      - pattern: $XPATH.compile($EXPR)
+      - pattern: $XPATH.evaluate($EXPR, ...)
