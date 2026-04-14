@@ -1,4 +1,4 @@
-# BlindSpotSec Methodology
+# ScannerGap Methodology
 
 ## Origin: ARCHCODE Transfer
 
@@ -21,7 +21,7 @@ and local data flow. They systematically miss vulnerability classes that require
 
 ### Methodology Transfer Table
 
-| ARCHCODE (Genomics) | BlindSpotSec (Security) |
+| ARCHCODE (Genomics) | ScannerGap (Security) |
 |---------------------|-------------------------|
 | Sequence predictors (VEP, CADD) | SAST scanners (CodeQL, Semgrep, Snyk, Bandit) |
 | 3D structural analysis (LSSIM) | Semantic/flow analysis |

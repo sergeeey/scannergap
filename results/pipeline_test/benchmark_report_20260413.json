@@ -1,0 +1,72 @@
+{
+  "benchmark": "ScannerGap Security Blind Spot Benchmark",
+  "version": "0.1.0",
+  "generated_at": "2026-04-13T18:11:00.636226+00:00",
+  "corpus": {
+    "total_cves": 38,
+    "confirmed_vulnerabilities": 38
+  },
+  "scanners": [
+    "semgrep",
+    "bandit"
+  ],
+  "quadrant_summary": {
+    "q1_detected": 17,
+    "q2_blind_spot": 21,
+    "q3_false_positive": 0,
+    "q4_true_negative": 0,
+    "blind_spot_rate": 0.5526
+  },
+  "blind_spot_taxonomy": {
+    "CWE-UNKNOWN": {
+      "count": 21,
+      "cve_ids": [
+        "CVE-2023-49793",
+        "CVE-2024-21514",
+        "CVE-2024-24749",
+        "CVE-2024-2548",
+        "CVE-2024-2624",
+        "CVE-2024-31993",
+        "CVE-2024-34068",
+        "CVE-2024-36116",
+        "CVE-2024-37157",
+        "CVE-2024-37164"
+      ]
+    }
+  },
+  "falsification_tests": [
+    {
+      "test": "blind_spot_existence",
+      "verdict": "PASS",
+      "metric": "blind_spot_rate",
+      "value": 0.5526,
+      "threshold": 0.05,
+      "details": "Rate 55.3%: sufficient blind spots"
+    },
+    {
+      "test": "systematicity",
+      "verdict": "FAIL",
+      "metric": "qualifying_cluster_count",
+      "value": 1.0,
+      "threshold": 3.0,
+      "details": "1 categories with >=3 CVEs: ['CWE-UNKNOWN']"
+    },
+    {
+      "test": "non_triviality",
+      "verdict": "PASS",
+      "metric": "trivial_rate",
+      "value": 0.0,
+      "threshold": 0.8,
+      "details": "0/21 blind spots are trivially detectable"
+    },
+    {
+      "test": "reproducibility",
+      "verdict": "SKIPPED",
+      "metric": "cv",
+      "value": 0.0,
+      "threshold": 0.2,
+      "details": "Need >= 2 subsample runs"
+    }
+  ],
+  "overall_verdict": "KILL"
+}

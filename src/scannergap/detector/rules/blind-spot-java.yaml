@@ -1,6 +1,6 @@
 rules:
   # ============================================================
-  # BlindSpotSec Custom Rules — Java
+  # ScannerGap Custom Rules — Java
   # Detects patterns that standard Semgrep/CodeQL rules miss
   # ============================================================
 

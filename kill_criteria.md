@@ -1,4 +1,4 @@
-# Kill Criteria — BlindSpotSec
+# Kill Criteria — ScannerGap
 **Created:** 2026-04-13
 **Status:** PRE-ANALYSIS (commit BEFORE running any scans)
 

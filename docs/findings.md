@@ -1,4 +1,4 @@
-# BlindSpotSec: Security Blind Spot Benchmark v0.1
+# ScannerGap: Security Blind Spot Benchmark v0.1
 
 ## What Standard SAST Scanners Systematically Miss
 
@@ -187,6 +187,6 @@ Verified: two independent runs produced 0/20 differences.
 
 ---
 
-*BlindSpotSec is not a scanner. It's a benchmark that shows where your scanners stop seeing.*
+*ScannerGap is not a scanner. It's a benchmark that shows where your scanners stop seeing.*
 
 *Methodology transferred from ARCHCODE genomic variant analysis — the same framework that found 27 structural variants invisible to all sequence predictors.*

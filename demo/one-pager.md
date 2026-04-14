@@ -1,4 +1,4 @@
-# BlindSpotSec — Security Blind Spot Benchmark
+# ScannerGap — Security Blind Spot Benchmark
 
 ## One-Pager
 
@@ -54,7 +54,7 @@ Covers Python, JavaScript, Java, PHP, Ruby.
 
 ```bash
 # Run on any codebase — local only, nothing sent externally
-semgrep scan --config blindspotsec/detector/rules/ /path/to/code
+semgrep scan --config scannergap/detector/rules/ /path/to/code
 ```
 
 **Impact**: closes 30% of identified blind spots with zero configuration.
@@ -79,4 +79,4 @@ All data, rules, and evaluation scripts are open source and reproducible.
 
 ---
 
-*BlindSpotSec is not a scanner. It's a benchmark that shows where your scanners stop seeing.*
+*ScannerGap is not a scanner. It's a benchmark that shows where your scanners stop seeing.*

@@ -1,6 +1,6 @@
 rules:
   # ============================================================
-  # BlindSpotSec Custom Rules — Template Injection (CWE-1336)
+  # ScannerGap Custom Rules — Template Injection (CWE-1336)
   # Server-Side Template Injection patterns across frameworks
   # ============================================================
 

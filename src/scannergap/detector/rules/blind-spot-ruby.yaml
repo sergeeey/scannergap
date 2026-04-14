@@ -1,6 +1,6 @@
 rules:
   # ============================================================
-  # BlindSpotSec Custom Rules — Ruby
+  # ScannerGap Custom Rules — Ruby
   # Detects patterns that standard Semgrep rules miss
   # ============================================================
 

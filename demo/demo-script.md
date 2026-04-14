@@ -1,12 +1,12 @@
-# Demo Script — BlindSpotSec
+# Demo Script — ScannerGap
 
 ## Before the demo (5 min prep)
 
 ```bash
 # Clone the project
 cd /path/to/workspace
-git clone <repo-url> blindspotsec
-cd blindspotsec
+git clone <repo-url> scannergap
+cd scannergap
 pip install -e .
 
 # Pick a target for demo (open-source project similar to your stack)
@@ -32,10 +32,10 @@ semgrep scan --config auto /tmp/demo-target --json --quiet \
 
 ## Part 2: "What your scanner misses" (3 min)
 
-**Say**: "Now I'll run the same code through BlindSpotSec — 26 rules for patterns that standard Semgrep doesn't have."
+**Say**: "Now I'll run the same code through ScannerGap — 26 rules for patterns that standard Semgrep doesn't have."
 
 ```bash
-semgrep scan --config src/blindspotsec/detector/rules/ /tmp/demo-target
+semgrep scan --config src/scannergap/detector/rules/ /tmp/demo-target
 ```
 
 **Pause. Let findings appear on screen.**
@@ -70,7 +70,7 @@ Not random — 13 systematic categories of blind spots.
 1. **Today**: Add these 26 rules to our CI. One YAML config change.
    ```yaml
    # In your CI config, add alongside existing semgrep:
-   - semgrep scan --config blindspotsec/detector/rules/ ./src
+   - semgrep scan --config scannergap/detector/rules/ ./src
    ```
 
 2. **This sprint**: Triage the findings from Part 2.

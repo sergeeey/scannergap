@@ -2,7 +2,7 @@
 
 import pytest
 
-from blindspotsec.quadrant.analysis import (
+from scannergap.quadrant.analysis import (
     QuadrantResult,
     analyze_blind_spot_patterns,
     build_coverage_matrix,

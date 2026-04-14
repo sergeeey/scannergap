@@ -1,0 +1,210 @@
+{
+  "benchmark": "ScannerGap Security Blind Spot Benchmark",
+  "version": "0.1.0",
+  "generated_at": "2026-04-13T18:46:14.798260+00:00",
+  "corpus": {
+    "total_cves": 56,
+    "confirmed_vulnerabilities": 56
+  },
+  "scanners": [
+    "semgrep",
+    "bandit"
+  ],
+  "quadrant_summary": {
+    "q1_detected": 23,
+    "q2_blind_spot": 33,
+    "q3_false_positive": 0,
+    "q4_true_negative": 0,
+    "blind_spot_rate": 0.5893
+  },
+  "blind_spot_taxonomy": {
+    "CWE-94": {
+      "count": 12,
+      "cve_ids": [
+        "CVE-2023-34252",
+        "CVE-2023-34253",
+        "CVE-2023-34448",
+        "CVE-2023-35926",
+        "CVE-2023-35926",
+        "CVE-2024-37899",
+        "CVE-2024-37899",
+        "CVE-2024-37901",
+        "CVE-2024-41127",
+        "CVE-2024-42356"
+      ]
+    },
+    "CWE-22": {
+      "count": 11,
+      "cve_ids": [
+        "CVE-2023-35852",
+        "CVE-2023-35947",
+        "CVE-2023-35947",
+        "CVE-2023-49793",
+        "CVE-2023-49793",
+        "CVE-2024-24749",
+        "CVE-2024-24749",
+        "CVE-2024-2548",
+        "CVE-2024-2624",
+        "CVE-2024-36116"
+      ]
+    },
+    "CWE-918": {
+      "count": 11,
+      "cve_ids": [
+        "CVE-2024-31993",
+        "CVE-2024-37157",
+        "CVE-2024-37157",
+        "CVE-2024-37164",
+        "CVE-2024-37164",
+        "CVE-2024-39699",
+        "CVE-2024-39699",
+        "CVE-2024-41812",
+        "CVE-2024-41812",
+        "CVE-2024-43379"
+      ]
+    },
+    "CWE-79": {
+      "count": 8,
+      "cve_ids": [
+        "CVE-2015-10117",
+        "CVE-2015-10117",
+        "CVE-2018-25086",
+        "CVE-2018-25086",
+        "CVE-2023-3085",
+        "CVE-2023-3085",
+        "CVE-2023-3109",
+        "CVE-2023-3109"
+      ]
+    },
+    "CWE-1336": {
+      "count": 4,
+      "cve_ids": [
+        "CVE-2023-34252",
+        "CVE-2023-34253",
+        "CVE-2023-34448",
+        "CVE-2024-42356"
+      ]
+    },
+    "CWE-502": {
+      "count": 4,
+      "cve_ids": [
+        "CVE-2024-8003",
+        "CVE-2024-8003",
+        "CVE-2024-8375",
+        "CVE-2024-8375"
+      ]
+    },
+    "CWE-78": {
+      "count": 3,
+      "cve_ids": [
+        "CVE-2023-35174",
+        "CVE-2023-35174",
+        "CVE-2024-41815"
+      ]
+    },
+    "CWE-UNKNOWN": {
+      "count": 2,
+      "cve_ids": [
+        "CVE-2023-30258",
+        "CVE-2024-34068"
+      ]
+    },
+    "CWE-184": {
+      "count": 2,
+      "cve_ids": [
+        "CVE-2023-34252",
+        "CVE-2023-34253"
+      ]
+    },
+    "CWE-89": {
+      "count": 2,
+      "cve_ids": [
+        "CVE-2024-21514",
+        "CVE-2024-21514"
+      ]
+    },
+    "CWE-20": {
+      "count": 1,
+      "cve_ids": [
+        "CVE-2023-34448"
+      ]
+    },
+    "CWE-36": {
+      "count": 1,
+      "cve_ids": [
+        "CVE-2024-2548"
+      ]
+    },
+    "CWE-29": {
+      "count": 1,
+      "cve_ids": [
+        "CVE-2024-2624"
+      ]
+    },
+    "CWE-95": {
+      "count": 1,
+      "cve_ids": [
+        "CVE-2024-37901"
+      ]
+    },
+    "CWE-862": {
+      "count": 1,
+      "cve_ids": [
+        "CVE-2024-37901"
+      ]
+    },
+    "CWE-74": {
+      "count": 1,
+      "cve_ids": [
+        "CVE-2024-41127"
+      ]
+    },
+    "CWE-77": {
+      "count": 1,
+      "cve_ids": [
+        "CVE-2024-41815"
+      ]
+    },
+    "CWE-416": {
+      "count": 1,
+      "cve_ids": [
+        "CVE-2024-8375"
+      ]
+    }
+  },
+  "falsification_tests": [
+    {
+      "test": "blind_spot_existence",
+      "verdict": "PASS",
+      "metric": "blind_spot_rate",
+      "value": 0.5893,
+      "threshold": 0.05,
+      "details": "Rate 58.9%: sufficient blind spots"
+    },
+    {
+      "test": "systematicity",
+      "verdict": "PASS",
+      "metric": "qualifying_cluster_count",
+      "value": 7.0,
+      "threshold": 3.0,
+      "details": "7 categories with >=3 CVEs: ['CWE-94', 'CWE-22', 'CWE-918', 'CWE-79', 'CWE-1336']"
+    },
+    {
+      "test": "non_triviality",
+      "verdict": "PASS",
+      "metric": "trivial_rate",
+      "value": 0.0,
+      "threshold": 0.8,
+      "details": "0/33 blind spots are trivially detectable"
+    },
+    {
+      "test": "reproducibility",
+      "verdict": "SKIPPED",
+      "metric": "cv",
+      "value": 0.0,
+      "threshold": 0.2,
+      "details": "Need >= 2 subsample runs"
+    }
+  ],
+  "overall_verdict": "ALIVE"
+}
