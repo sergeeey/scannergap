@@ -28,6 +28,7 @@ MVP complete. Benchmark validated, documented, CLI working end-to-end. All merge
 5. Wire CWE metadata into pipeline
 
 ## Auto-commit log
+- [2026-04-14 11:04] `383d9d5`: merge: Tenable-adapted README and slides
 - [2026-04-14 09:25] `ffbe997`: merge: rename BlindSpotSec -> ScannerGap
 - [2026-04-14 00:52] `e907c58`: merge: demo materials for internal presentation
 - [2026-04-14 00:31] `9402fcb`: merge: CodeQL batch — 76% blind confirms SAST class limitation

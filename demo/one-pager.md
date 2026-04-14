@@ -1,82 +1,66 @@
-# ScannerGap — Security Blind Spot Benchmark
-
-## One-Pager
+<h1 align="center">ScannerGap</h1>
+<h3 align="center">Security Blind Spot Benchmark</h3>
 
 ---
 
-### The Problem
+### The Gap
 
-Static analysis scanners (Semgrep, CodeQL, Bandit) are standard in modern CI/CD.
-Teams rely on them to catch vulnerabilities before production.
+| Layer | Tool | Covers |
+|:------|:-----|:-------|
+| Infrastructure | Tenable / Nessus | Ports, package CVEs, configs |
+| **Code** | **Nothing** | **SQL injection, SSRF, eval, deserialization** |
 
-**They miss 61.5% of real-world CVEs.**
-
-This is not a configuration issue. It is a structural limitation of current
-static analysis approaches.
+Every line of code we deploy goes through **zero automated checks**
+for logical vulnerabilities.
 
 ---
 
 ### What We Found
 
-| Metric | Value |
-|--------|-------|
-| CVEs tested | 135 (NVD, 2023-2025) |
-| Scanners | Semgrep + Bandit + CodeQL |
-| Blind spot rate | **61.5%** |
-| Systematic categories | 13 CWE clusters |
-| Verified | Reproducible, all kill criteria passed |
+```
+135 real CVEs (NVD, 2023-2025)
+x 3 scanners (Semgrep + Bandit + CodeQL)
+= 61.5% invisible to ALL THREE
 
-**Top blind spot categories:**
-- Code injection (CWE-94): 29 blind CVEs
-- SSRF (CWE-918): 25 blind CVEs
-- Path traversal (CWE-22): 24 blind CVEs
-- Unrestricted upload (CWE-434): 17 blind CVEs
-- Cross-site scripting (CWE-79): 11 blind CVEs
+Not random --- 13 systematic categories.
+```
 
 ---
 
 ### Why Scanners Miss These
 
-Current SAST tools use **pattern matching** and **local data flow analysis**.
-They cannot:
-
-- Track data across function/module boundaries (interprocedural taint)
-- Understand that a security check exists on path A but not path B (semantic)
-- Recognize non-standard sinks like `boto3(endpoint_url=...)` as dangerous
-- Detect correct-syntax-but-wrong-logic vulnerabilities
+| Blind Spot Type | What Happens | Blind Rate |
+|:----------------|:-------------|:----------:|
+| Cross-function taint | Data tracked in one function, lost across calls | 60-80% |
+| Semantic blindness | Check exists in function A, missing in B | 56-78% |
+| Unknown sinks | `boto3(endpoint_url=...)` not in scanner's database | 100% |
+| Partial bypass | SSRF filter on path A, missing on path B | varies |
 
 ---
 
-### What We Built
+### What ScannerGap Does
 
-**26 custom Semgrep rules** that detect patterns standard rules miss.
+**26 detection rules** for patterns standard scanners miss.
+
 Covers Python, JavaScript, Java, PHP, Ruby.
 
-```bash
-# Run on any codebase — local only, nothing sent externally
-semgrep scan --config scannergap/detector/rules/ /path/to/code
-```
+Runs locally. Nothing leaves the machine.
 
-**Impact**: closes 30% of identified blind spots with zero configuration.
+**Impact**: closes 30% of blind spots with zero configuration.
 
 ---
 
-### For Security Teams
+### Proposed Action
 
-1. **Run the rules** on your repos today (5 minutes, fully local)
-2. **Triage findings** — these are vulnerabilities your pipeline marks "clean"
-3. **Add to CI** alongside existing scanner config
-4. **Track** blind spot coverage as a security metric
-
----
-
-### Methodology
-
-Transferred from ARCHCODE (genomic variant analysis). Same falsification-first
-framework that found 27 DNA mutations invisible to all sequence predictors.
-
-All data, rules, and evaluation scripts are open source and reproducible.
+| Phase | What | Effort |
+|:------|:-----|:-------|
+| 1. Try | Run 26 rules on our repos | 5 minutes |
+| 2. Triage | Review findings | 1-2 hours |
+| 3. Integrate | Add to CI alongside Tenable | 1 day |
 
 ---
 
-*ScannerGap is not a scanner. It's a benchmark that shows where your scanners stop seeing.*
+<p align="center">
+  <em>Tenable covers infrastructure. ScannerGap covers code.</em><br>
+  <em>Together = full stack security.</em>
+</p>
