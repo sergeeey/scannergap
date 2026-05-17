@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScannerGap — Security Blind Spot Benchmark</title>
+    <meta name="description" content="We found 61.5% of CVEs invisible to all SAST scanners. Measure what your security tools don't see.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">
+                Scanner<span class="gradient-text">Gap</span>
+            </h1>
+            <p class="text-2xl text-gray-600 mb-8">Security Blind Spot Benchmark</p>
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border-2 border-red-500 rounded-lg mb-8">
+                <span class="text-4xl font-bold text-red-600">61.5%</span>
+                <span class="text-gray-700">of CVEs invisible to all SAST scanners</span>
+            </div>
+
+            <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                We tested <strong>135 real CVEs</strong> (NVD 2023-2025) against<br>
+                Semgrep, Bandit, and CodeQL.<br>
+                <strong>61.5% were missed by all three.</strong>
+            </p>
+
+            <div class="flex gap-4 justify-center">
+                <a href="https://github.com/sergeeey/scannergap" class="px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+                <a href="findings.md" class="px-6 py-3 border-2 border-gray-900 text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition">
+                    Read Full Report
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Gap -->
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">The Gap in Your Security Stack</h2>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <table class="w-full">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Layer</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Tool</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Covers</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-6 py-4 text-gray-900">Infrastructure</td>
+                        <td class="px-6 py-4 text-gray-600">Tenable / Nessus</td>
+                        <td class="px-6 py-4 text-gray-600">Ports, package CVEs, configs</td>
+                    </tr>
+                    <tr class="bg-red-50">
+                        <td class="px-6 py-4 font-bold text-gray-900">Code</td>
+                        <td class="px-6 py-4 font-bold text-red-600">Gap → 61.5% blind</td>
+                        <td class="px-6 py-4 font-bold text-gray-900">SQL injection, SSRF, eval, deserialization</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="text-center text-gray-600 mt-6">
+            Every line of code you deploy goes through <strong>zero automated checks</strong> for logical vulnerabilities.
+        </p>
+    </div>
+
+    <!-- 4 Blind Spot Types -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">The 4 Types of Blind Spots</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Type I -->
+                <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-red-500 transition">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Type I: Cross-Function Taint</h3>
+                    <p class="text-gray-600 mb-4">
+                        Scanner tracks data flow within one function but loses it across calls.
+                    </p>
+                    <div class="inline-block px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold">
+                        60-80% blind rate
+                    </div>
+                </div>
+
+                <!-- Type II -->
+                <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-red-500 transition">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Type II: Semantic Blindness</h3>
+                    <p class="text-gray-600 mb-4">
+                        Security check exists in function A, but function B has none. Scanner assumes safe.
+                    </p>
+                    <div class="inline-block px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold">
+                        56-78% blind rate
+                    </div>
+                </div>
+
+                <!-- Type III -->
+                <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-red-500 transition">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Type III: Unknown Sinks</h3>
+                    <p class="text-gray-600 mb-4">
+                        Scanner flags <code class="bg-gray-100 px-2 py-1 rounded">eval()</code> but not <code class="bg-gray-100 px-2 py-1 rounded">boto3(endpoint=...)</code>
+                    </p>
+                    <div class="inline-block px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold">
+                        100% blind rate
+                    </div>
+                </div>
+
+                <!-- Type IV -->
+                <div class="border-2 border-gray-200 rounded-lg p-6 hover:border-red-500 transition">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Type IV: Partial Bypass</h3>
+                    <p class="text-gray-600 mb-4">
+                        SSRF filter exists on /import endpoint but not on /roles endpoint.
+                    </p>
+                    <div class="inline-block px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold">
+                        Case-dependent
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What ScannerGap Does -->
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">What ScannerGap Does</h2>
+
+        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-8 text-white mb-8">
+            <div class="text-6xl font-bold mb-4">26</div>
+            <div class="text-2xl mb-4">Detection rules for patterns standard scanners miss</div>
+            <div class="text-gray-300">
+                Covers Python, JavaScript, Java, PHP, Ruby.<br>
+                Runs locally. Nothing leaves the machine.
+            </div>
+        </div>
+
+        <div class="bg-green-50 border-2 border-green-500 rounded-lg p-6 text-center">
+            <div class="text-xl font-bold text-gray-900 mb-2">
+                Closes 30% of blind spots with zero configuration
+            </div>
+            <div class="text-gray-600">
+                Free, open source, Apache 2.0 licensed
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-gray-900 text-white py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Try ScannerGap in 5 Minutes</h2>
+
+            <div class="bg-gray-800 rounded-lg p-6 mb-8 text-left">
+                <pre class="text-green-400 font-mono text-sm overflow-x-auto"><code>pip install -e ".[dev]"
+
+# Scan your codebase with blind spot detector
+semgrep scan --config src/scannergap/detector/rules/ /path/to/your/code
+
+# Fully local --- nothing sent externally</code></pre>
+            </div>
+
+            <div class="text-xl mb-8 text-gray-300">
+                <strong>Tenable covers infrastructure. ScannerGap covers code.</strong><br>
+                Together = full stack security.
+            </div>
+
+            <div class="flex gap-4 justify-center">
+                <a href="https://github.com/sergeeey/scannergap" class="px-8 py-4 bg-white text-gray-900 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                    Get Started →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-white border-t border-gray-200 py-8">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-600">
+            <p class="mb-2">
+                Methodology transferred from ARCHCODE genomic variant analysis
+            </p>
+            <p class="text-sm">
+                Apache 2.0 License |
+                <a href="findings.md" class="text-blue-600 hover:underline">Full Report</a> |
+                <a href="https://github.com/sergeeey/scannergap" class="text-blue-600 hover:underline">GitHub</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
