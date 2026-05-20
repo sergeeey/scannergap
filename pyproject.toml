@@ -1,7 +1,7 @@
 [project]
 name = "scannergap"
 version = "0.1.0"
-description = "Security Blind Spot Scanner — meta-scanner that finds what CodeQL, Semgrep, Snyk, and Bandit systematically miss"
+description = "Benchmark-backed SAST blind-spot audit prototype for scoped scanner coverage review"
 requires-python = ">=3.11"
 license = {text = "Apache-2.0"}
 authors = [{name = "ScannerGap Team"}]

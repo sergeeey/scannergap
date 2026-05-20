@@ -1,7 +1,7 @@
-"""ScannerGap — Security Blind Spot Scanner.
+"""ScannerGap — Security Blind Spot Benchmark.
 
-Meta-scanner that finds vulnerability classes systematically missed
-by ALL standard SAST scanners (CodeQL, Semgrep, Snyk, Bandit).
+Research MVP for finding vulnerability classes that baseline SAST pipelines
+may miss. Current production claims are intentionally scoped in the docs.
 
 Methodology transferred from ARCHCODE genomics project:
 - Quadrant analysis for blind spot detection

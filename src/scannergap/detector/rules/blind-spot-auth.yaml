@@ -6,9 +6,11 @@ rules:
 
   - id: blindspot-jwt-no-expiry-check
     message: >
-      JWT decoded without verifying expiration. If the token has no exp
-      claim or exp is not validated, stolen tokens work forever.
-      Use options={"require": ["exp"]} or verify_exp=True.
+      JWT decode does not explicitly require an exp claim. This is a
+      review prompt, not a confirmed vulnerability: verify that every
+      issued token includes exp and that decode enforces expiration.
+      For stronger hardening, require exp during decode, for example
+      options={"require": ["exp"]}, and never disable verify_exp.
     severity: ERROR
     languages: [python]
     metadata:

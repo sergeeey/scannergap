@@ -1,7 +1,5 @@
 """Tests for falsification framework."""
 
-import pytest
-
 from scannergap.benchmark.falsification import (
     Verdict,
     check_blind_spot_existence,
