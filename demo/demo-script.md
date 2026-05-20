@@ -32,7 +32,7 @@ semgrep scan --config auto /tmp/demo-target --json --quiet \
 
 ## Part 2: "What your scanner misses" (3 min)
 
-**Say**: "Now I'll run the same code through ScannerGap — 26 rules for patterns that standard Semgrep doesn't have."
+**Say**: "Now I'll run the same code through ScannerGap — prototype rules for patterns baseline Semgrep may not cover."
 
 ```bash
 semgrep scan --config src/scannergap/detector/rules/ /tmp/demo-target
@@ -40,7 +40,7 @@ semgrep scan --config src/scannergap/detector/rules/ /tmp/demo-target
 
 **Pause. Let findings appear on screen.**
 
-**Say**: "These N findings are in your codebase RIGHT NOW and your scanner says everything is clean."
+**Say**: "These N findings are prompts for review that the baseline scan did not surface."
 
 **Walk through 1-2 findings:**
 - Show the code
@@ -49,25 +49,25 @@ semgrep scan --config src/scannergap/detector/rules/ /tmp/demo-target
 
 ## Part 3: "This is not just us" (2 min)
 
-**Say**: "We didn't just guess these patterns. We tested 135 real CVEs."
+**Say**: "We didn't just guess these patterns. We built the methodology from real CVE artifacts."
 
 Show the table:
 
 ```
-135 real CVEs (NVD, 2023-2025)
-× 3 scanners (Semgrep + Bandit + CodeQL)
-= 61.5% invisible to ALL THREE
+Exploratory 135-CVE artifact (NVD, 2023-2025)
+Semgrep + Bandit baseline
+= 61.5% missed by both baseline scanners
 
 Not random — 13 systematic categories of blind spots.
 ```
 
-**Say**: "CodeQL — the most advanced free static analyzer from GitHub — missed 76% of these CVEs. This isn't about tool quality. The whole approach has structural limits."
+**Say**: "CodeQL evidence exists as a separate exploratory subset. This is not a production claim against every scanner; it is a way to structure a scanner-gap review."
 
 ## Part 4: "What we do about it" (2 min)
 
 **Say**: "Three immediate actions:"
 
-1. **Today**: Add these 26 rules to our CI. One YAML config change.
+1. **Today**: Run the prototype rules locally and review whether any findings matter.
    ```yaml
    # In your CI config, add alongside existing semgrep:
    - semgrep scan --config scannergap/detector/rules/ ./src
@@ -80,7 +80,7 @@ Not random — 13 systematic categories of blind spots.
 ## Handling Questions
 
 **Q: "Why don't scanner vendors just add these rules?"**
-A: Some patterns (eval, extractall) they could add — and our rules do exactly that. But 70% of blind spots need interprocedural analysis that current SAST architectures can't do. That's a fundamental limitation, not a missing rule.
+A: Some patterns can be added as rules, and some need deeper data-flow or semantic analysis. The audit separates those cases instead of treating every miss as the same kind of gap.
 
 **Q: "Is this just FUD to sell something?"**
 A: Every CVE is public (NVD), every rule is open source, the evaluation script is reproducible. Run it yourself: `python scripts/gold_evaluation.py`

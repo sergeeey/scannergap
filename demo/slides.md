@@ -22,17 +22,17 @@ in our code — Tenable can't see them. They're not in its scope.
 
 ## Slide 2: "We'd catch it in code review"
 
-Would we? I tested 135 real CVEs against 3 leading static analyzers:
+Would we? The current evidence has an exploratory 135-CVE Semgrep + Bandit artifact, plus separate CodeQL subset evidence:
 
 | Tool | What it missed |
 |------|---------------|
 | Semgrep (all rule packs) | 64% |
 | Bandit (Python SAST) | ~90% |
-| CodeQL (GitHub, 104 queries) | 76% |
-| **All 3 combined** | **61.5%** |
+| CodeQL exploratory subset | scoped separately |
+| **Semgrep + Bandit artifact** | **61.5%** |
 
-These are the **best free SAST tools available**.
-If they miss 61% — manual code review misses more.
+These are useful baselines, not a production benchmark across every scanner.
+The demo point is to identify where scanner coverage needs deeper review.
 
 ---
 
@@ -70,7 +70,7 @@ not bugs in our own code.
 
 ## Slide 5: ScannerGap — What I Built
 
-26 detection rules for vulnerability patterns that standard scanners miss.
+49 prototype rule IDs for vulnerability patterns that baseline scanners may miss.
 
 Works locally, nothing leaves the machine:
 
@@ -94,15 +94,14 @@ semgrep scan --config scannergap/detector/rules/ ./our-repo
 Standard scanner found: N issues
 ScannerGap found: M additional issues that were invisible
 
-Each additional finding = a vulnerability our pipeline currently
-marks as "clean code, safe to deploy."
+Each additional finding is a prompt for review, not automatic proof of exploitability.
 
 ---
 
 ## Slide 7: Proposal
 
 **Phase 1 (this week)** — 5 minutes, zero risk:
-- Run 26 rules on our repos, see if anything comes up
+- Run prototype rules on our repos, see if anything comes up
 - Fully local, no cloud, no API calls
 
 **Phase 2 (if findings appear)** — triage:
@@ -111,8 +110,8 @@ marks as "clean code, safe to deploy."
 
 **Phase 3 (this quarter)** — integrate:
 - Add rules to CI/CD alongside existing checks
-- Tenable covers infra, ScannerGap covers code
-- Full stack security coverage
+- Keep existing SAST and infrastructure scanning
+- Add focused blind-spot review where coverage is thin
 
 ---
 

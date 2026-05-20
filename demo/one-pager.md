@@ -8,19 +8,19 @@
 | Layer | Tool | Covers |
 |:------|:-----|:-------|
 | Infrastructure | Tenable / Nessus | Ports, package CVEs, configs |
-| **Code** | **Nothing** | **SQL injection, SSRF, eval, deserialization** |
+| **Code** | **SAST + review** | **Logical bugs still need coverage checks** |
 
-Every line of code we deploy goes through **zero automated checks**
-for logical vulnerabilities.
+Many logical vulnerabilities still require semantic or cross-function review
+beyond baseline pattern checks.
 
 ---
 
 ### What We Found
 
 ```
-135 real CVEs (NVD, 2023-2025)
-x 3 scanners (Semgrep + Bandit + CodeQL)
-= 61.5% invisible to ALL THREE
+Exploratory 135-CVE artifact (NVD, 2023-2025)
+Semgrep + Bandit baseline
+= 61.5% missed by both baseline scanners
 
 Not random --- 13 systematic categories.
 ```
@@ -40,13 +40,13 @@ Not random --- 13 systematic categories.
 
 ### What ScannerGap Does
 
-**26 detection rules** for patterns standard scanners miss.
+**49 prototype Semgrep rule IDs** for blind-spot patterns.
 
 Covers Python, JavaScript, Java, PHP, Ruby.
 
 Runs locally. Nothing leaves the machine.
 
-**Impact**: closes 30% of blind spots with zero configuration.
+Use as a benchmark-backed audit aid, not as a scanner replacement.
 
 ---
 
@@ -54,13 +54,13 @@ Runs locally. Nothing leaves the machine.
 
 | Phase | What | Effort |
 |:------|:-----|:-------|
-| 1. Try | Run 26 rules on our repos | 5 minutes |
+| 1. Try | Run prototype rules on our repos | 5 minutes |
 | 2. Triage | Review findings | 1-2 hours |
 | 3. Integrate | Add to CI alongside Tenable | 1 day |
 
 ---
 
 <p align="center">
-  <em>Tenable covers infrastructure. ScannerGap covers code.</em><br>
-  <em>Together = full stack security.</em>
+  <em>ScannerGap helps review where scanner coverage may be thin.</em><br>
+  <em>It complements existing SAST and security review.</em>
 </p>
