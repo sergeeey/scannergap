@@ -56,7 +56,7 @@ PARTIAL findings (wrong CWE, wrong file, generic warning) do NOT count as detect
 
 ### Blind Spot Clusters
 
-Four systematic categories of vulnerabilities that all scanners miss:
+Four systematic categories of vulnerabilities missed by the selected baseline scanners:
 
 | Cluster | Blind/Total | Example |
 |---------|-------------|---------|

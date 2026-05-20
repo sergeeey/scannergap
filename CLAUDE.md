@@ -3,7 +3,7 @@
 ## IDENTITY
 Project: ScannerGap v0.1.0
 Domain: Code Security / Meta-Scanner / Benchmark
-Goal: Find vulnerability classes that ALL existing SAST scanners systematically miss
+Goal: Find vulnerability classes that selected baseline SAST pipelines may systematically miss
 Methodology: Transferred from ARCHCODE genomics (blind spot detection via orthogonal analysis)
 
 ## STACK
@@ -14,9 +14,9 @@ Methodology: Transferred from ARCHCODE genomics (blind spot detection via orthog
 - Click for CLI
 
 ## KEY CONCEPTS
-- **Blind Spot**: A vulnerability class that NO standard scanner (CodeQL, Semgrep, Snyk, Bandit) detects
-- **Quadrant Analysis**: 2D matrix comparing scanner coverage — Q2 = "missed by ALL" = our target
-- **Security Pearl**: A confirmed vulnerability invisible to all standard scanners (analog of ARCHCODE's 27 pearls)
+- **Blind Spot**: A vulnerability class missed by the selected scanner baseline under test
+- **Quadrant Analysis**: 2D matrix comparing scanner coverage — Q2 = "missed by selected baseline" = our target
+- **Security Pearl**: A confirmed vulnerability missed by the selected baseline scanners (analog of ARCHCODE's 27 pearls)
 - **Kill Criteria**: Pre-defined falsification gates — if failed, project pivots or dies
 
 ## EVIDENCE POLICY
@@ -29,7 +29,7 @@ Methodology: Transferred from ARCHCODE genomics (blind spot detection via orthog
 ```
 src/scannergap/
 ├── corpus/        # CVE collection + vulnerable code samples
-├── scanners/      # Wrappers: CodeQL, Semgrep, Snyk, Bandit
+├── scanners/      # Current wrappers: Semgrep, Bandit
 ├── quadrant/      # Coverage matrix + blind spot detection
 ├── taxonomy/      # Blind spot type classification
 ├── benchmark/     # Reproducible benchmark framework

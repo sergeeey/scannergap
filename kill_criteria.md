@@ -9,7 +9,7 @@ If any kill criterion triggers, pivot or terminate. No exceptions.
 ---
 
 ## Criterion 1: Blind Spot Existence
-**If:** All scanners combined cover >95% of CVEs in corpus
+**If:** Selected baseline scanners combined cover >95% of CVEs in corpus
 **By:** Week 2
 **Then:** Blind spots are too rare to build a product around. KILL.
 **Measurement:** `blind_spot_rate = Q2 / (Q1 + Q2)` from quadrant analysis
@@ -44,7 +44,7 @@ If any kill criterion triggers, pivot or terminate. No exceptions.
 | 4 | Criterion 4 + benchmark draft | If irreproducible: rerun with larger corpus |
 
 ## Survival Criteria (all must pass)
-1. blind_spot_rate >= 15% (at least 1 in 6 CVEs invisible to all scanners)
+1. blind_spot_rate >= 15% (at least 1 in 6 CVEs missed by the selected baseline scanners)
 2. 3+ systematic blind spot categories with 3+ CVEs each
 3. 50%+ of blind spots require semantic/flow analysis (non-trivial)
 4. Results stable across corpus subsamples (variance <20%)

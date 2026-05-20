@@ -21,7 +21,7 @@ Adapted from ARCHCODE: every public claim must pass through governance.
 - Requires: 5+ examples, marked as [EXPLORATORY]
 
 ### BLOCKED (never claim)
-- "Our scanner is better than CodeQL/Semgrep/Snyk"
+- "Our scanner is better than named commercial or open-source SAST tools"
   (we audit, not compete)
 - "These CVEs prove scanners are useless"
   (scanners catch most things — we find the gaps)

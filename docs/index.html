@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScannerGap — Security Blind Spot Benchmark</title>
-    <meta name="description" content="We found 61.5% of CVEs invisible to all SAST scanners. Measure what your security tools don't see.">
+    <meta name="description" content="Benchmark-backed SAST blind-spot audit prototype. Measure what your security tools may not see.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-text {
@@ -26,13 +26,13 @@
 
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border-2 border-red-500 rounded-lg mb-8">
                 <span class="text-4xl font-bold text-red-600">61.5%</span>
-                <span class="text-gray-700">of CVEs invisible to all SAST scanners</span>
+                <span class="text-gray-700">missed in an exploratory Semgrep + Bandit artifact</span>
             </div>
 
             <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-                We tested <strong>135 real CVEs</strong> (NVD 2023-2025) against<br>
-                Semgrep, Bandit, and CodeQL.<br>
-                <strong>61.5% were missed by all three.</strong>
+                Exploratory artifact: <strong>135 real CVEs</strong> (NVD 2023-2025) against<br>
+                Semgrep and Bandit baseline scanners.<br>
+                <strong>Not yet a production benchmark claim.</strong>
             </p>
 
             <div class="flex gap-4 justify-center">
@@ -67,7 +67,7 @@
                     </tr>
                     <tr class="bg-red-50">
                         <td class="px-6 py-4 font-bold text-gray-900">Code</td>
-                        <td class="px-6 py-4 font-bold text-red-600">Gap → 61.5% blind</td>
+                        <td class="px-6 py-4 font-bold text-red-600">Gap → blind-spot audit</td>
                         <td class="px-6 py-4 font-bold text-gray-900">SQL injection, SSRF, eval, deserialization</td>
                     </tr>
                 </tbody>
@@ -75,7 +75,7 @@
         </div>
 
         <p class="text-center text-gray-600 mt-6">
-            Every line of code you deploy goes through <strong>zero automated checks</strong> for logical vulnerabilities.
+            Many logical vulnerabilities require semantic or cross-function review beyond baseline pattern checks.
         </p>
     </div>
 
@@ -137,8 +137,8 @@
         <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">What ScannerGap Does</h2>
 
         <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-8 text-white mb-8">
-            <div class="text-6xl font-bold mb-4">26</div>
-            <div class="text-2xl mb-4">Detection rules for patterns standard scanners miss</div>
+            <div class="text-6xl font-bold mb-4">49</div>
+            <div class="text-2xl mb-4">Prototype Semgrep rule IDs for blind-spot patterns</div>
             <div class="text-gray-300">
                 Covers Python, JavaScript, Java, PHP, Ruby.<br>
                 Runs locally. Nothing leaves the machine.
@@ -147,7 +147,7 @@
 
         <div class="bg-green-50 border-2 border-green-500 rounded-lg p-6 text-center">
             <div class="text-xl font-bold text-gray-900 mb-2">
-                Closes 30% of blind spots with zero configuration
+                Benchmark-backed prototype for focused blind-spot audits
             </div>
             <div class="text-gray-600">
                 Free, open source, Apache 2.0 licensed
@@ -170,8 +170,8 @@ semgrep scan --config src/scannergap/detector/rules/ /path/to/your/code
             </div>
 
             <div class="text-xl mb-8 text-gray-300">
-                <strong>Tenable covers infrastructure. ScannerGap covers code.</strong><br>
-                Together = full stack security.
+                <strong>This is not a scanner replacement.</strong><br>
+                Use it as evidence for a focused blind-spot review.
             </div>
 
             <div class="flex gap-4 justify-center">

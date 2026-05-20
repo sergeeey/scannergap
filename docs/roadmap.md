@@ -11,7 +11,7 @@
 ## Week 2: Scanner Execution + Quadrant (Apr 21-27, 2026)
 - [ ] Install and configure: Semgrep, Bandit
 - [ ] Set up CodeQL CLI (if feasible)
-- [ ] Run all scanners on corpus
+- [ ] Run selected baseline scanners on corpus
 - [ ] Build coverage matrix
 - [ ] Calculate blind_spot_rate
 - **Kill Gate:** If blind_spot_rate <5% -> KILL project

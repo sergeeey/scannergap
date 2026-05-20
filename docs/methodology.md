@@ -12,7 +12,7 @@ systematically miss structural disruptions visible only in 3D chromatin analysis
 The key was not building a "better predictor" but finding what ALL predictors miss.
 
 **Same principle applied to security:**
-Standard SAST scanners (CodeQL, Semgrep, Snyk, Bandit) operate on pattern matching
+Baseline SAST tools such as Semgrep, Bandit, and CodeQL use a mix of pattern matching
 and local data flow. They systematically miss vulnerability classes that require:
 - Global execution flow understanding
 - Cross-service interaction analysis
@@ -23,7 +23,7 @@ and local data flow. They systematically miss vulnerability classes that require
 
 | ARCHCODE (Genomics) | ScannerGap (Security) |
 |---------------------|-------------------------|
-| Sequence predictors (VEP, CADD) | SAST scanners (CodeQL, Semgrep, Snyk, Bandit) |
+| Sequence predictors (VEP, CADD) | SAST scanner baselines (Semgrep, Bandit, CodeQL) |
 | 3D structural analysis (LSSIM) | Semantic/flow analysis |
 | Variant = mutation in DNA | Vulnerability = CVE in code |
 | Pathogenic vs Benign | Exploitable vs Safe |
