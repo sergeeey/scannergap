@@ -1,5 +1,7 @@
 # Active Context — ScannerGap
 
+**Version:** 0.2.0
+
 ## Current Focus
 MVP complete + release infrastructure added (2026-05-20).
 - Release gates: BENCHMARK_EVIDENCE.md, QUALITY_GATE.md, RELEASE_CHECKLIST.md
