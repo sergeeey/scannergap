@@ -1,0 +1,3949 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-19T12:34:20.262141+00:00",
+  "corpus_dir": "corpus/fullcode",
+  "scope": "current_checked_out_corpus",
+  "notes": [
+    "This manifest reflects the corpus directories present in the current repository state.",
+    "Historical 135-CVE results are exploratory until their exact manifest is restored."
+  ],
+  "cve_count": 131,
+  "entries": [
+    {
+      "cve_id": "CVE-2015-10117",
+      "path": "corpus/fullcode/CVE-2015-10117",
+      "languages": [
+        "php"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 3.5,
+      "patch_url": "https://github.com/wp-plugins/gravity-forms-dps-pxpay/commit/5966a5e6343e3d5610bdfa126a5cfbae95e629b6",
+      "files": [
+        {
+          "path": "gravityforms-dps-pxpay.php",
+          "bytes": 2444,
+          "sha256": "7e951a520e94c6c10406a0038110e41e6175397dacd777c83ef3013027939978"
+        },
+        {
+          "path": "includes__class.GFDpsPxPayAdmin.php",
+          "bytes": 8910,
+          "sha256": "3ee68ff6c3088539cb2c7e7e3b5e8f3b48412ddb120d5a212b38044a4b95d25c"
+        },
+        {
+          "path": "includes__class.GFDpsPxPayFeedAdmin.php",
+          "bytes": 11843,
+          "sha256": "0e565e53ac2af2cba54131b3ab0f18464af670c8690cb359495ed88bdd1c9a42"
+        },
+        {
+          "path": "includes__class.GFDpsPxPayPayment.php",
+          "bytes": 7951,
+          "sha256": "0f17921316c4615e7f3c9969abeb11dda7aeba1bf340df90c4408327dbb7fbad"
+        },
+        {
+          "path": "includes__class.GFDpsPxPayPlugin.php",
+          "bytes": 31404,
+          "sha256": "03da415f40a1ad8286169c158915b8e7fece2c3ca8742b2b8a7e84cd2d6277d3"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2017-20189",
+      "path": "corpus/fullcode/CVE-2017-20189",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/clojure/clojure/commit/271674c9b484d798484d134a5ac40a6df15d3ac3",
+      "files": [
+        {
+          "path": "src__clj__clojure__core_proxy.clj",
+          "bytes": 19905,
+          "sha256": "fe58157b3a89c90fd200b1ca5a6330e71b445920b8b4951a25f1b580cfbacb04"
+        },
+        {
+          "path": "test__clojure__test_clojure__java_interop.clj",
+          "bytes": 15320,
+          "sha256": "3eb4b3f57e11785ab04d79b7f5079bb96047fbfcdcd692ae8bb6f80748a2ad4a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2018-25086",
+      "path": "corpus/fullcode/CVE-2018-25086",
+      "languages": [
+        "php"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 3.5,
+      "patch_url": "https://github.com/sea75300/fanpresscm3/commit/c380d343c2107fcee55ab00eb8d189ce5e03369b",
+      "files": [
+        {
+          "path": "inc__controller__action__system__help.php",
+          "bytes": 2244,
+          "sha256": "14ff0ef51000025d2a245b594d8b74412d6cbfd6058f17e78ac6e527febab3d4"
+        },
+        {
+          "path": "inc__controller__action__system__templatepreview.php",
+          "bytes": 17391,
+          "sha256": "2edd6c6e1c42529b0683019233864ef3c8e306abe2c59781356a54658a4a7fb9"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-26150",
+      "path": "corpus/fullcode/CVE-2023-26150",
+      "languages": [
+        "python"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-287"
+      ],
+      "cvss_score": 6.5,
+      "patch_url": "https://github.com/FreeOpcUa/opcua-asyncio/commit/2be7ce80df05de8d6c6ae1ebce6fa2bb7147844a",
+      "files": [
+        {
+          "path": "tests__test_crypto_connect.py",
+          "bytes": 15091,
+          "sha256": "226d35f04621d1f6787d83c8c0fd59f0448fdec0fbb57e2b94a80a425bed4374"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-26153",
+      "path": "corpus/fullcode/CVE-2023-26153",
+      "languages": [
+        "ruby"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cvss_score": null,
+      "patch_url": null,
+      "files": [
+        {
+          "path": "geokit-rails.gemspec",
+          "bytes": 1692,
+          "sha256": "6629414aecdde9cf23670b3f046007958ad803f29331c6edaca637cf625a6943"
+        },
+        {
+          "path": "lib__geokit-rails__ip_geocode_lookup.rb",
+          "bytes": 1904,
+          "sha256": "7f10d7d090388b73b46acca28a11906e2ed498a51490e606a07d22f91ff7940f"
+        },
+        {
+          "path": "test__ip_geocode_lookup_test.disabled.rb",
+          "bytes": 2064,
+          "sha256": "5b36243f8f408fa5609d4e2660162279cbeb075139104b26f90cfef80dd50eb5"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-3069",
+      "path": "corpus/fullcode/CVE-2023-3069",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-620",
+        "CWE-287"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/tsolucio/corebos/commit/e3dabd74c68646bb54538d66411fc1e633ec454b",
+      "files": [
+        {
+          "path": "modules__Vtiger__ExecuteFunctions.php",
+          "bytes": 30575,
+          "sha256": "f94c805058413b6b218c274d99b494b5eea1568d84840726821c86d1352dc32a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-3071",
+      "path": "corpus/fullcode/CVE-2023-3071",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 5.4,
+      "patch_url": "https://github.com/tsolucio/corebos/commit/5e87fbc4292cf7a96fa5139ede88f4baefad104b",
+      "files": [
+        {
+          "path": "modules__PickList__PickListAction.php",
+          "bytes": 9952,
+          "sha256": "4c25922b409c9e996fe0765fe47468494557fb850632f1dd48135f3f33fc4569"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-3085",
+      "path": "corpus/fullcode/CVE-2023-3085",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 3.5,
+      "patch_url": "https://github.com/x-wrt/luci/commit/24d7da2416b9ab246825c33c213fe939a89b369c",
+      "files": [
+        {
+          "path": "modules__luci-base__ucode__dispatcher.uc",
+          "bytes": 22834,
+          "sha256": "b05f9fc2a9ef2e013f4886b71527ad4a7dc6553d730975f5159a8ba6fbaa4283"
+        },
+        {
+          "path": "modules__luci-base__ucode__template__header.ut",
+          "bytes": 1135,
+          "sha256": "11dd55ea4c48a3c4e91ae9787317dadcb6659c6d694393f5032a7a60f6a12871"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-3109",
+      "path": "corpus/fullcode/CVE-2023-3109",
+      "languages": [
+        "php"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 5.4,
+      "patch_url": "https://github.com/admidio/admidio/commit/a7c211b835cafe1158932fbfcff9e5552e57510a",
+      "files": [
+        {
+          "path": "adm_program__modules__announcements__announcements_new.php",
+          "bytes": 4206,
+          "sha256": "a7839b0890a2ef16c6c16e863634ab7074c34477a4da2bfa00b5619b794b4918"
+        },
+        {
+          "path": "adm_program__modules__categories__categories_new.php",
+          "bytes": 12135,
+          "sha256": "637f12e21ddb06e393160c018f1e2e93c673e04905c3e92c94bb8cd2556f9f23"
+        },
+        {
+          "path": "adm_program__modules__dates__dates_new.php",
+          "bytes": 15621,
+          "sha256": "8f1610a589d14f04919e6ccb5fa36256ffb3e57082e01eed546fce78e41274fb"
+        },
+        {
+          "path": "adm_program__modules__documents-files__rename.php",
+          "bytes": 5100,
+          "sha256": "902bb755017655876f5d34641ec40f7f3d88a747df51bab0e90435880ceea6ea"
+        },
+        {
+          "path": "adm_program__modules__groups-roles__groups_roles_new.php",
+          "bytes": 16679,
+          "sha256": "98a4968780cfe85aef027b9a22da2c1da87a3b7f589fcb16caef304412cdcf95"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-3224",
+      "path": "corpus/fullcode/CVE-2023-3224",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/nuxt/nuxt/commit/65a8f4eb3ef1b249a95fd59e323835a96428baff",
+      "files": [
+        {
+          "path": "packages__nuxt__src__app__components__nuxt-root.vue",
+          "bytes": 2227,
+          "sha256": "be142f8ccde046ba6b5d12b654b96951868ea8f59b2e97c31abcdb311244f360"
+        },
+        {
+          "path": "packages__nuxt__src__app__components__test-component-wrapper.ts",
+          "bytes": 672,
+          "sha256": "7504f4b5610b94144acf97302bdc6aff17a983f34fe6a0415d1d45588280b3b3"
+        },
+        {
+          "path": "packages__nuxt__src__core__templates.ts",
+          "bytes": 12516,
+          "sha256": "2cfd23d9b5ea85907985b042c7794ff5354e0919591425c6c66b9183be80affa"
+        },
+        {
+          "path": "packages__schema__src__config__vite.ts",
+          "bytes": 2393,
+          "sha256": "56d290e141da062748ffc1d0e2861c40f3b2f2d5dca6eca2289697c385fa8b4b"
+        },
+        {
+          "path": "packages__webpack__package.json",
+          "bytes": 2101,
+          "sha256": "4aa6b856d0685b815060efead8b574391a0b969980771e081d34b54115ddcd42"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-32766",
+      "path": "corpus/fullcode/CVE-2023-32766",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 6.1,
+      "patch_url": "https://github.com/gitpod-io/gitpod/commit/6771283c3406586e352337675b79ff2ca50f191b",
+      "files": [
+        {
+          "path": "components__dashboard__src__service__service.tsx",
+          "bytes": 8013,
+          "sha256": "c304aa04d5a5b2cf35b0990df8ef0c3019fadb32d41de9089cdf91e528dd1317"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-33965",
+      "path": "corpus/fullcode/CVE-2023-33965",
+      "languages": [
+        "go"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 9.6,
+      "patch_url": "https://github.com/txthinking/brook/commit/314d7070c37babf6c38a0fe1eada872bb74bf03e",
+      "files": [
+        {
+          "path": "cli__brook__main.go",
+          "bytes": 82848,
+          "sha256": "b2ed7cad2627f35ee7fc9c0c6df71004a400de8f1eacada4d04a5dff53b915de"
+        },
+        {
+          "path": "cli__brook__static__index.html",
+          "bytes": 10777,
+          "sha256": "aba0d93c9a9cbc36bb3f1bf07f8f8ffdba8c9f72b9e69e165e4fc847ec9a6476"
+        },
+        {
+          "path": "go.sum",
+          "bytes": 10145,
+          "sha256": "e8964ef299f67fc781d1ef04524978c325ea4938f1db4af7b1c97d2899223987"
+        },
+        {
+          "path": "quicserver.go",
+          "bytes": 7969,
+          "sha256": "682fca745b390efc67b44170753450e8050d9839e6dca84823db12110f2900dc"
+        },
+        {
+          "path": "streamclient.go",
+          "bytes": 5638,
+          "sha256": "e18ad7b862ea6ce50838a017a07b168760bf45237ff8327c1c4247e1cab344b9"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-34252",
+      "path": "corpus/fullcode/CVE-2023-34252",
+      "languages": [
+        "php"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-184",
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/getgrav/grav/commit/244758d4383034fe4cd292d41e477177870b65ec",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 225251,
+          "sha256": "c3fa2fe5923208e4c0b75adf2af8e7ac9628e48c2770709440c45f9c170e776a"
+        },
+        {
+          "path": "system__src__Grav__Common__Twig__Extension__GravExtension.php",
+          "bytes": 53537,
+          "sha256": "893be3e59d39f683ec9e5da0d353c8e4e482ddc080c2b5b9c31665f0e0403bda"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-34253",
+      "path": "corpus/fullcode/CVE-2023-34253",
+      "languages": [
+        "php"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-184",
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/getgrav/grav/commit/71bbed12f950de8335006d7f91112263d8504f1b",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 225188,
+          "sha256": "b01c792e18172223cf4c37f860958f627f60de25ffd28cf610f8d87ba7b141e5"
+        },
+        {
+          "path": "system__src__Grav__Common__Utils.php",
+          "bytes": 67654,
+          "sha256": "f6690f450035fdf7e5c06c20aa1ca4079f176748cccde52dc6bb92eaf1ec8e8a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-34448",
+      "path": "corpus/fullcode/CVE-2023-34448",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-20",
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/getgrav/grav/commit/8c2c1cb72611a399f13423fc6d0e1d998c03e5c8",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 225116,
+          "sha256": "526402c96eaf5d701b10047cdda8b2cc832a9b4c207726ca6476a20e7d529f77"
+        },
+        {
+          "path": "system__src__Grav__Common__Twig__Extension__GravExtension.php",
+          "bytes": 53473,
+          "sha256": "b44555d459768fc43eb670112753240c3f187c5c8aba1900c36c6f32ee069c87"
+        },
+        {
+          "path": "system__src__Grav__Common__Utils.php",
+          "bytes": 67551,
+          "sha256": "bd063fe5fa0d0d8a319a060278afd471af67bc05565e091257857a4005e14b08"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-34944",
+      "path": "corpus/fullcode/CVE-2023-34944",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/chamilo/chamilo-lms/commit/0d0c88c4806280ac9b70a299d6e3099269c9bc54",
+      "files": [
+        {
+          "path": "main__inc__lib__fileUpload.lib.php",
+          "bytes": 79056,
+          "sha256": "ab5c73dd00e797d2078e80be363cf60b731304fc6329ee92b36657a700e837aa"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-34959",
+      "path": "corpus/fullcode/CVE-2023-34959",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 5.3,
+      "patch_url": "https://github.com/chamilo/chamilo-lms/commit/cc278f01864948b1fb160e03f0a3dc0875d5f81f",
+      "files": [
+        {
+          "path": "main__inc__lib__social.lib.php",
+          "bytes": 136882,
+          "sha256": "6389874d3a3331b82575e2861796be2e24dcdc8ab6c74589d77ce580d73562f7"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35150",
+      "path": "corpus/fullcode/CVE-2023-35150",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/b65220a4d86b8888791c3b643074ebca5c089a3a",
+      "files": [
+        {
+          "path": "xwiki-platform-core__pom.xml",
+          "bytes": 16882,
+          "sha256": "3967ca9f54b4365962a21ee336bfbb960206d9c5cc7207ba5a5f646809c35862"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-extension__xwiki-platform-extension-handlers__xwiki-pl.txt",
+          "bytes": 2131,
+          "sha256": "483583953fad9502c91a7385f422374e26db9b1ef2c71798a4282ff127691367"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-index__pom.xml",
+          "bytes": 1914,
+          "sha256": "343018bc978110fecf3e671c11d70960a030dc24b18ee0b2aba970222d966480"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-index__xwiki-platform-index-api__pom.xml",
+          "bytes": 3918,
+          "sha256": "dcd16a2ae49bff2fa6cc7b96f7d80b09515b637cdb2c95aace0431317a846423"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35174",
+      "path": "corpus/fullcode/CVE-2023-35174",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 8.6,
+      "patch_url": "https://github.com/livebook-dev/livebook/commit/2e11b59f677c6ed3b6aa82dad412a8b3406ffdf1",
+      "files": [
+        {
+          "path": "lib__livebook__utils.ex",
+          "bytes": 14804,
+          "sha256": "24a539c7b28531d8c99ab818b53214c6535fc43ed8a2851324088404573074aa"
+        },
+        {
+          "path": "lib__livebook_app.ex",
+          "bytes": 1051,
+          "sha256": "11c92e2a822223cfaea1e4959da32569ce0965a801540e16a6fbf6e998a5be67"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35840",
+      "path": "corpus/fullcode/CVE-2023-35840",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 6.5,
+      "patch_url": "https://github.com/Studio-42/elFinder/commit/bb9aaa7b096a1b83f2f85657c43f12131ece2891",
+      "files": [
+        {
+          "path": "php__elFinderVolumeLocalFileSystem.class.php",
+          "bytes": 49680,
+          "sha256": "5eb7e36775f83e598abf169956a806329c590c9f1e47d819e1be2f65e79d702b"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35844",
+      "path": "corpus/fullcode/CVE-2023-35844",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/lightdash/lightdash/commit/fcc808c84c2cc3afb343063e32a49440d32a553c",
+      "files": [
+        {
+          "path": "packages__backend__src__routers__projectRouter.ts",
+          "bytes": 21693,
+          "sha256": "d7c394ebdb1415d01aa68fcc09328ff502b08333081274de6316a28a76a4340c"
+        },
+        {
+          "path": "packages__backend__src__routers__slackRouter.ts",
+          "bytes": 5035,
+          "sha256": "4a7896451c4861e21219d8368607271054fffc4068876ea2923dfc8121c10a4b"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35852",
+      "path": "corpus/fullcode/CVE-2023-35852",
+      "languages": [
+        "c"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/OISF/suricata/commit/735f5aa9ca3b28cfacc7a443f93a44387fbacf17",
+      "files": [
+        {
+          "path": "src__detect-dataset.c",
+          "bytes": 14127,
+          "sha256": "41e073d305198546296bab38d6d5686b1052d54a809527f0fd9e4fad6d4ad973"
+        },
+        {
+          "path": "suricata.yaml.in",
+          "bytes": 77754,
+          "sha256": "06572a8f1f8e860ce800a02a7d6279280f4212d0c6df0c399b1f7dbf574851f3"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35926",
+      "path": "corpus/fullcode/CVE-2023-35926",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 8.0,
+      "patch_url": "https://github.com/backstage/backstage/commit/fb7375507d56faedcb7bb3665480070593c8949a",
+      "files": [
+        {
+          "path": "plugins__scaffolder-backend__src__lib__templating__SecureTemplater.ts",
+          "bytes": 5929,
+          "sha256": "e853ef34ec42938012b6cde0e4d619828a44d86dd8c04c68c793bda5c2211381"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-35947",
+      "path": "corpus/fullcode/CVE-2023-35947",
+      "languages": [
+        "java"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 6.9,
+      "patch_url": "https://github.com/gradle/gradle/commit/1096b309520a8c315e3b6109a6526de4eabcb879",
+      "files": [
+        {
+          "path": "subprojects__core__src__main__java__org__gradle__api__internal__file__archive__AbstractArc.java",
+          "bytes": 3405,
+          "sha256": "1585f6a930012336a512fb5b724feb244ae1f43c1ea37a4023258d8bc724820e"
+        },
+        {
+          "path": "subprojects__core__src__main__java__org__gradle__api__internal__file__archive__TarFileTree.java",
+          "bytes": 9249,
+          "sha256": "0bce08299805952d5ab036b0dcbea6fe750d9c7dc191dd85bc2e9cd84cb66db7"
+        },
+        {
+          "path": "subprojects__core__src__main__java__org__gradle__api__internal__file__archive__ZipFileTree.java",
+          "bytes": 6748,
+          "sha256": "1615b99ca357d4fd469aab9969f1777721054ca2164442e679a79861c39e8b86"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-37466",
+      "path": "corpus/fullcode/CVE-2023-37466",
+      "languages": [
+        "javascript"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/patriksimek/vm2/commit/d9a1fde8ec5a5a9c9e5a69bf91d703950859d744",
+      "files": [
+        {
+          "path": ".github__workflows__node-test.yml",
+          "bytes": 951,
+          "sha256": "d80d6c5b8e56ef7aa3db7c6c27f0912563e3f53870be03cf8da2b1c2357a275b"
+        },
+        {
+          "path": "lib__bridge.js",
+          "bytes": 30207,
+          "sha256": "65868e0cbadfaa785c331ead672741e6baefa01c45fe33f8fe829bd33bd31d35"
+        },
+        {
+          "path": "lib__setup-sandbox.js",
+          "bytes": 14976,
+          "sha256": "faa4c9d47aba090befc9662800794a1d57fd9d41c1c09d1cedf45df11d4f2f29"
+        },
+        {
+          "path": "package.json",
+          "bytes": 865,
+          "sha256": "f1295e287f700d95efa39320b6490d547847f14a5c6a21869d0aceab460d4a3e"
+        },
+        {
+          "path": "test__vm.js",
+          "bytes": 40449,
+          "sha256": "8072f4ce872ce61b63652a5142d7d4504d76edb0f40c8fb9833718c79f9222f5"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-37909",
+      "path": "corpus/fullcode/CVE-2023-37909",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/9e8f080094333dec63a8583229a3799208d773be",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-menu__xwiki-platform-menu-ui__pom.xml",
+          "bytes": 5901,
+          "sha256": "8045c58b7b9990b8a9fa7c09b468f66bb44c20c24389b43a055d1fce22ef1c15"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-menu__xwiki-platform-menu-ui__src__main__resources__Me.xml",
+          "bytes": 9418,
+          "sha256": "b79aeb0671d06c5ab30648eb10fa759d31b1ee2903a60c42b9b01f7015853ce9"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-37913",
+      "path": "corpus/fullcode/CVE-2023-37913",
+      "languages": [
+        "java"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-23",
+        "CWE-22"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/45d182a4141ff22f3ff289cf71e4669bdc714544",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-bridge__src__main__java__org__xwiki__bridge__DocumentA.java",
+          "bytes": 41088,
+          "sha256": "5960f19cfaf622ca1148d63865817ef2a35da188e3c972d9647f7491ec56c5c1"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-legacy__xwiki-platform-legacy-office__xwiki-platform-l.aj",
+          "bytes": 2761,
+          "sha256": "57210f0778df6f028a890b38de14733b4b516353c859d27040e1be3659214f85"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-legacy__xwiki-platform-legacy-office__xwiki-platform-l.java",
+          "bytes": 1646,
+          "sha256": "d78d7d85ae9135769626945694bd3797f28dfae7bdc5d1bde9deaed7f7a62954"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-office__xwiki-platform-office-importer__src__main__jav.java",
+          "bytes": 2786,
+          "sha256": "a0c2660866361988f9f8cf90a94a350a684657caecc7b6e6783a1f4fbf8ef46e"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-37918",
+      "path": "corpus/fullcode/CVE-2023-37918",
+      "languages": [
+        "go"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-287"
+      ],
+      "cvss_score": 6.8,
+      "patch_url": "https://github.com/dapr/dapr/commit/83ca1abb11ffe34211db55dcd36d96b94252827a",
+      "files": [
+        {
+          "path": "docs__release_notes__v1.11.2.md",
+          "bytes": 3657,
+          "sha256": "ab80fbe2e0ff392b4c67d9cc0f4a84434d999812ddeb41dec83c92400e514989"
+        },
+        {
+          "path": "go.sum",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "pkg__http__server.go",
+          "bytes": 11122,
+          "sha256": "3bb7934a2e20fd3538177401faa20ce8a0a672618198d268c8bbfe70626fd255"
+        },
+        {
+          "path": "pkg__runtime__security__token.go",
+          "bytes": 1292,
+          "sha256": "71d459b2413838a078e903e4a6f4890a8c7c41f057b392b8c4ec37dcd5f30aca"
+        },
+        {
+          "path": "pkg__runtime__security__token_test.go",
+          "bytes": 2536,
+          "sha256": "e65ee9cb9e10ecffc1002c84d25c12f6585059b201d1f0ed02040f633c5238e6"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-38691",
+      "path": "corpus/fullcode/CVE-2023-38691",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-287"
+      ],
+      "cvss_score": 5.0,
+      "patch_url": "https://github.com/matrix-org/matrix-appservice-bridge/commit/4c6723a5e7beda65cdf1ae5dbb882e8beaac8552",
+      "files": [
+        {
+          "path": "src__provisioning__api.ts",
+          "bytes": 16122,
+          "sha256": "836d1dc15e435f637c433e73f1b8b8fd49431464c01ca21fa58f4cf6defc0e86"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-3981",
+      "path": "corpus/fullcode/CVE-2023-3981",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 4.9,
+      "patch_url": "https://github.com/omeka/omeka-s/commit/dc01ca1b03e845db8a6a6b665d8da36c8dcd2c31",
+      "files": [
+        {
+          "path": "application__src__Controller__Admin__VocabularyController.php",
+          "bytes": 10985,
+          "sha256": "596136328e1f2b69d34e87ccb2d459e1e760255f0f02009934f67ddce8e80ce3"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-42282",
+      "path": "corpus/fullcode/CVE-2023-42282",
+      "languages": [
+        "javascript"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/indutny/node-ip/commit/6a3ada9b471b09d5f0f5be264911ab564bf67894",
+      "files": [
+        {
+          "path": "lib__ip.js",
+          "bytes": 10632,
+          "sha256": "f0b754f8036d91f1ab438322d695219499cef13fe39362dece366cbb34b06a36"
+        },
+        {
+          "path": "test__api-test.js",
+          "bytes": 14206,
+          "sha256": "0ae73294c4b2262eb2055864781297e60d2e12fca1e861126d17a672a790a104"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-42374",
+      "path": "corpus/fullcode/CVE-2023-42374",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/MystenLabs/sui/commit/42d4ad103a21d23fecd7c0271453da41604e71e9",
+      "files": [
+        {
+          "path": "crates__mysten-network__src__codec.rs",
+          "bytes": 6205,
+          "sha256": "7f01c0bf301593907f011a45ab37174dc3f1555d28b1dd7e583f5e82bf23d69a"
+        },
+        {
+          "path": "crates__sui-node__src__lib.rs",
+          "bytes": 61561,
+          "sha256": "d232acd805aa09a34898881c367a3dc297b3f25cf6b9d15b3b75112e580d145a"
+        },
+        {
+          "path": "narwhal__primary__src__primary.rs",
+          "bytes": 43919,
+          "sha256": "7a3ef9db4a19cc216c6a3f32af4ba769d593b6e9e5577801b103c70ab9e371b5"
+        },
+        {
+          "path": "narwhal__worker__src__worker.rs",
+          "bytes": 21510,
+          "sha256": "d9a6be5674b10a03989f7b1b8191085ad14da7f16aa0e3a50aaafb1f5aaeabd4"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-44384",
+      "path": "corpus/fullcode/CVE-2023-44384",
+      "languages": [
+        "ruby"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-691",
+        "CWE-918"
+      ],
+      "cvss_score": 4.1,
+      "patch_url": "https://github.com/discourse/discourse-jira/commit/8a2d3ad228883199fd5f081cc93d173c88e2e48f",
+      "files": [
+        {
+          "path": "app__controllers__discourse_jira__issues_controller.rb",
+          "bytes": 8230,
+          "sha256": "cde746357b6d5d0ad6c9bb6228b46bdd34b82ce95623c2dbcf4df4b244d7872c"
+        },
+        {
+          "path": "lib__discourse_jira__api.rb",
+          "bytes": 2155,
+          "sha256": "255f9e464702fad2771b20365d4c761a61eb865a1de2eccb76c075ee05b15841"
+        },
+        {
+          "path": "spec__lib__api_spec.rb",
+          "bytes": 1217,
+          "sha256": "511eb2d97f5c46d60b3c4400feafc6654ed2df98a8338afc999417523e576c08"
+        },
+        {
+          "path": "spec__requests__issues_controller_spec.rb",
+          "bytes": 16132,
+          "sha256": "366391a03f220985ea1af85bb8d9c36375552262afaca52315ef36d7368a48fd"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-45152",
+      "path": "corpus/fullcode/CVE-2023-45152",
+      "languages": [
+        "php"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 2.0,
+      "patch_url": "https://github.com/engelsystem/engelsystem/commit/ee7d30b33935ea001705f438fec8ffd05734f295",
+      "files": [
+        {
+          "path": "src__Helpers__Schedule__XmlParser.php",
+          "bytes": 5179,
+          "sha256": "9ed61889835d5e39eea2201a5d4dcddb88d1971f619c653e029aa5781504d004"
+        },
+        {
+          "path": "tests__Unit__Helpers__Schedule__XmlParserTest.php",
+          "bytes": 2556,
+          "sha256": "7c91f7ccdd90a8e7f6f9cad532d11ec2eacf1c1a70156252c00957cb3566eed5"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-45158",
+      "path": "corpus/fullcode/CVE-2023-45158",
+      "languages": [
+        "python"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/web2py/web2py/commit/936e2260b0c34c44e2f3674a893e96d2a7fad0a3",
+      "files": [
+        {
+          "path": "gluon__messageboxhandler.py",
+          "bytes": 992,
+          "sha256": "f5a9cc5932b935b8a984f59760431bc2a83a0aa7a0ecc68e89bd6aac4711f555"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-45826",
+      "path": "corpus/fullcode/CVE-2023-45826",
+      "languages": [
+        "php"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-89",
+        "CWE-89"
+      ],
+      "cvss_score": 6.5,
+      "patch_url": "https://github.com/Leantime/leantime/commit/be75f1e0f311d11c00a0bdc7079a62eef3594bf0",
+      "files": [
+        {
+          "path": "app__Core__Bootloader.php",
+          "bytes": 14686,
+          "sha256": "df24a6a58f2b767ce5861451047064df17539e137d3e7182998a419757e72829"
+        },
+        {
+          "path": "app__Core__Environment.php",
+          "bytes": 23507,
+          "sha256": "f284bbeae84bc302ba7f8a9423a8f1660e2086172d1ef60c16a71829d62d4b63"
+        },
+        {
+          "path": "app__Core__Events.php",
+          "bytes": 12593,
+          "sha256": "8b5e53f0ff86750c981bd15644485c0f0a05f99996f54c1343760e03b271098f"
+        },
+        {
+          "path": "app__Domain__Install__Controllers__Update.php",
+          "bytes": 2439,
+          "sha256": "cdffda9277fe988e1d1d1aa4b785bfa6e8a9621e8fe98139ce59d0effeeae72a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46117",
+      "path": "corpus/fullcode/CVE-2023-46117",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/six2dez/reconftw/commit/e639de356c0880fe5fe01a32de9d0c58afb5f086",
+      "files": [
+        {
+          "path": "reconftw.sh",
+          "bytes": 169285,
+          "sha256": "5ac500e610fb1c8936fc847ab3d14720195a0b225fa38fae57b2eb09d324639e"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46119",
+      "path": "corpus/fullcode/CVE-2023-46119",
+      "languages": [
+        "javascript"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-23",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/parse-community/parse-server/commit/686a9f282dc23c31beab3d93e6d21ccd0e1328fe",
+      "files": [
+        {
+          "path": "spec__ParseFile.spec.js",
+          "bytes": 48261,
+          "sha256": "2c789f0c6d38c0597fb209b5d231f8c1d37ca6e5182271f79444f058f0e7e7d1"
+        },
+        {
+          "path": "src__Routers__FilesRouter.js",
+          "bytes": 10531,
+          "sha256": "744646f042688cf5c8150160e0ebd3e2a5301b7161a59ba486a9b5984f8eae51"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46122",
+      "path": "corpus/fullcode/CVE-2023-46122",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 3.9,
+      "patch_url": "https://github.com/sbt/io/commit/124538348db0713c80793cb57b915f97ec13188a",
+      "files": [
+        {
+          "path": "io__src__main__scala__sbt__io__IO.scala",
+          "bytes": 59684,
+          "sha256": "79f9ff6b26de19dc40a2cd325c3b763763a18fc2e66b2fcf1ab3361cece4bab1"
+        },
+        {
+          "path": "io__src__test__scala__sbt__io__FileUtilitiesSpecification.scala",
+          "bytes": 2967,
+          "sha256": "a9247e3294ca664c2bb4f322975a0d16c56a2c1d01154d4d7607de80129df883"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46124",
+      "path": "corpus/fullcode/CVE-2023-46124",
+      "languages": [
+        "python"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 8.2,
+      "patch_url": "https://github.com/ethyca/fides/commit/cd344d016b1441662a61d0759e7913e8228ed1ee",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 117567,
+          "sha256": "6301a900e4f8b02431180f46dd831a8f347a894a8a622023570bae0e1fc2f7a5"
+        },
+        {
+          "path": "src__fides__api__service__connectors__saas__authenticated_client.py",
+          "bytes": 10437,
+          "sha256": "6d1d1b765a0a63bbcde6a15e09999ca74c0357b9c6946fccda0fbef747caff08"
+        },
+        {
+          "path": "src__fides__api__util__saas_util.py",
+          "bytes": 15768,
+          "sha256": "328f7d1bf1235d513e4e22c006f0f3a49726ff6fd98b7656e22e5a31a2ca9602"
+        },
+        {
+          "path": "tests__ops__models__test_saasconfig.py",
+          "bytes": 17647,
+          "sha256": "c84bc9b609a0011743091c1f34e2a5dacf9be60a97702b17fed842dd231cad83"
+        },
+        {
+          "path": "tests__ops__service__connectors__saas__test_authenticated_client.py",
+          "bytes": 5449,
+          "sha256": "6d534e70967e452f2270dd76459c7fe574f9e9929ce5c51dfae427e7a4fdb94c"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46229",
+      "path": "corpus/fullcode/CVE-2023-46229",
+      "languages": [
+        "python"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/langchain-ai/langchain/commit/9ecb7240a480720ec9d739b3877a52f76098a2b8",
+      "files": [
+        {
+          "path": "libs__langchain__langchain__document_loaders__recursive_url_loader.py",
+          "bytes": 10672,
+          "sha256": "8e6f3e298453d62db62c71d02e25d78aacce944e7b95764654ff8686e06ea3e9"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-4624",
+      "path": "corpus/fullcode/CVE-2023-4624",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 2.4,
+      "patch_url": "https://github.com/bookstackapp/bookstack/commit/c324ad928dbdd54ce5b09eb0dabe60ef9de1ea38",
+      "files": [
+        {
+          "path": "app__Activity__DispatchWebhookJob.php",
+          "bytes": 2585,
+          "sha256": "20704835331d0940a26f6eeafe1f5bee55ce8f6dc0eba8b879ad2f7fe3dfa5bb"
+        },
+        {
+          "path": "app__Config__app.php",
+          "bytes": 7609,
+          "sha256": "e0c8ea31b8a6230cf9a3a20c939e0c638d76a2bcba5950866d0dfc5e3f332439"
+        },
+        {
+          "path": "lang__en__errors.php",
+          "bytes": 7830,
+          "sha256": "8e3b18f60c80005bee4418d9d08c277a566043c6f1edbdaede3bf2028155ae66"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46725",
+      "path": "corpus/fullcode/CVE-2023-46725",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-367",
+        "CWE-918"
+      ],
+      "cvss_score": 8.1,
+      "patch_url": "https://github.com/foodcoopshop/foodcoopshop/commit/0d5bec5c4c22e1affe7fd321a30e3f3a4d99e808",
+      "files": [
+        {
+          "path": "plugins__Admin__tests__TestCase__src__Model__Table__ProductsTableTest.php",
+          "bytes": 27054,
+          "sha256": "c37180515df618c0f3eb31fdb07b6ef2204b992d147424a1c7a2eccfe2440213"
+        },
+        {
+          "path": "src__Lib__RemoteFile__RemoteFile.php",
+          "bytes": 1042,
+          "sha256": "635b93e733f80b194e338b10f30e386866450362b69b4546f512d5b0f2c0b42e"
+        },
+        {
+          "path": "src__Model__Table__ProductsTable.php",
+          "bytes": 64773,
+          "sha256": "3191a9de220cfac2f3a47636e6a98bb93500af27c3c6b0d7cc3a8fb3b461c17d"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-46731",
+      "path": "corpus/fullcode/CVE-2023-46731",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 10.0,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/fec8e0e53f9fa2c3f1e568cc15b0e972727c803a",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-administration__xwiki-platform-administration-ui__src_.xml",
+          "bytes": 280263,
+          "sha256": "1aa400a92fab719016e22da7e9efc322b293323596ee811bad6b705f914140e3"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-47127",
+      "path": "corpus/fullcode/CVE-2023-47127",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-302",
+        "CWE-287"
+      ],
+      "cvss_score": 4.2,
+      "patch_url": "https://github.com/TYPO3/typo3/commit/535dfbdc54fd5362e0bc08d911db44eac7f64019",
+      "files": [
+        {
+          "path": "typo3__sysext__core__Classes__Http__SetCookieService.php",
+          "bytes": 7528,
+          "sha256": "5e93ddf5e540354682172fc63fa79e8876e3b15878626d3248aef4bf9b379dd7"
+        },
+        {
+          "path": "typo3__sysext__core__Classes__Session__UserSession.php",
+          "bytes": 8798,
+          "sha256": "2158c2e5b56ba60edbfadb7f056705a3c128714e5dc3ea5cdc3c9cabc5dda4b1"
+        },
+        {
+          "path": "typo3__sysext__core__Classes__Session__UserSessionManager.php",
+          "bytes": 15926,
+          "sha256": "a3d9bcad0c5741c5b1d7ec83e9e20641b9e73d3c61c7a8e97f3fdd58d312fcd3"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-47129",
+      "path": "corpus/fullcode/CVE-2023-47129",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.3,
+      "patch_url": "https://github.com/statamic/cms/commit/098ef8024d97286ca501273c18ae75b646262d75",
+      "files": [
+        {
+          "path": "src__Http__Controllers__FormController.php",
+          "bytes": 6046,
+          "sha256": "488249ee590a728a1b794a3aea7db73da9ecc707d1a935b129db173fbd09dd95"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-47621",
+      "path": "corpus/fullcode/CVE-2023-47621",
+      "languages": [
+        "php"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/duncanmcclean/guest-entries/commit/a8e17b4413bfbbc337a887761a6c858ef1ddb4da",
+      "files": [
+        {
+          "path": "src__Http__Controllers__GuestEntryController.php",
+          "bytes": 11515,
+          "sha256": "6361e7d9921c7e5de6035a8b8d423874cbdcf96f59765a49fdc2e8e283f4dfad"
+        },
+        {
+          "path": "src__Http__Requests__DestroyRequest.php",
+          "bytes": 917,
+          "sha256": "ec081c3c63e006c91d8ced022e713234b4760f6aa76e70fbe9cce9ca7370e9e4"
+        },
+        {
+          "path": "src__Http__Requests__StoreRequest.php",
+          "bytes": 1440,
+          "sha256": "523242c97c5a73d6acf554ef078c9fffefbc07974be108e0362b4ab6b50a5035"
+        },
+        {
+          "path": "src__Http__Requests__UpdateRequest.php",
+          "bytes": 1353,
+          "sha256": "e4498caf390549c98692de7893ab0d864578503e9aeeb4de6101b7cea93fac6c"
+        },
+        {
+          "path": "tests__Http__Controllers__GuestEntryControllerTest.php",
+          "bytes": 72307,
+          "sha256": "33544057008599e6ce92f5437309d7afc1b8826c9e07aff93bb67069503342ca"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-48217",
+      "path": "corpus/fullcode/CVE-2023-48217",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-434"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/statamic/cms/commit/4c6fe041e2203a8033e5949ce4a5d9d6c0ad2411",
+      "files": [
+        {
+          "path": "src__Http__Controllers__CP__Assets__AssetsController.php",
+          "bytes": 2994,
+          "sha256": "a12db7e2419afd33540f28eb8d9fe971cf71123322f2ae7e5435049a4e647c3a"
+        },
+        {
+          "path": "src__Http__Controllers__CP__Fieldtypes__FilesFieldtypeController.php",
+          "bytes": 811,
+          "sha256": "5110bd76a001adfb0cdd8f11d879a23e91abe7033cd97e3000fbc576068e7acf"
+        },
+        {
+          "path": "src__Http__Controllers__FormController.php",
+          "bytes": 6746,
+          "sha256": "aaa8f063ba792a5e6bd7ef71a6fb6f741f490d83fbbd9e5abd701a3917eb4217"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-48240",
+      "path": "corpus/fullcode/CVE-2023-48240",
+      "languages": [
+        "java"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-201",
+        "CWE-281",
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 9.0,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/bff0203e739b6e3eb90af5736f04278c73c2a8bb",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-diff__xwiki-platform-diff-xml__pom.xml",
+          "bytes": 2153,
+          "sha256": "345d41edab1b4680ccc69b157977a9d96c7fa2c937183750fd4410837fea1779"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-diff__xwiki-platform-diff-xml__src__main__java__org__x.java",
+          "bytes": 5621,
+          "sha256": "6d3796834ad5a3de865a4064f695bccc132e6c5b4dabc105bf4eec2dd417c63c"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-49508",
+      "path": "corpus/fullcode/CVE-2023-49508",
+      "languages": [
+        "php"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 6.5,
+      "patch_url": "https://github.com/YetiForceCompany/YetiForceCRM/commit/ba3a348aa6ecdf0a1d8b289cbb679bebcda7a132",
+      "files": [
+        {
+          "path": "config__version.php",
+          "bytes": 116,
+          "sha256": "91e59778b3bb5a2b5804b461b6ffb4873c72f56c3c4cd5dfc74d99b410524365"
+        },
+        {
+          "path": "layouts__basic__modules__Settings__Dependencies__LibraryMoreInfo.tpl",
+          "bytes": 984,
+          "sha256": "f336df7e54b4311faf51bc3a2c28a447b7430addef1b934cd1855a6746890703"
+        },
+        {
+          "path": "modules__Settings__Dependencies__views__LibraryLicense.php",
+          "bytes": 1464,
+          "sha256": "67af7a2e0602dd7787517db28bc424029375a18a01d777ad7dbe0f42ddecb4cd"
+        },
+        {
+          "path": "modules__Settings__Dependencies__views__LibraryMoreInfo.php",
+          "bytes": 2076,
+          "sha256": "d6cd48e568c0d2fb846519c90c7e80bbb49fb8fc196dcc4f58a4df6847ee52df"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-49793",
+      "path": "corpus/fullcode/CVE-2023-49793",
+      "languages": [
+        "python"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 6.5,
+      "patch_url": "https://github.com/Ericsson/codechecker/commit/46bada41e32f3ba0f6011d5c556b579f6dddf07a",
+      "files": [
+        {
+          "path": "codechecker_common__util.py",
+          "bytes": 3100,
+          "sha256": "cbc1f77cddce6ef1b00beb752c2c9aec0893b71b6fa84c6211f0396a8ebb0d8c"
+        },
+        {
+          "path": "web__server__codechecker_server__api__mass_store_run.py",
+          "bytes": 57956,
+          "sha256": "aec74c4c45cb364866dfd1d0a92e6ca5d4a416887b5e7e345a09b70feae94a37"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-50721",
+      "path": "corpus/fullcode/CVE-2023-50721",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/62863736d78ffd60d822279c5fb7fb9593042766",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-search__xwiki-platform-search-ui__pom.xml",
+          "bytes": 2443,
+          "sha256": "2af4411d363760d4d13e3e9d9b3d95e17ca1dc8ce884460911e04a14a84afb51"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-search__xwiki-platform-search-ui__src__main__resources.xml",
+          "bytes": 20668,
+          "sha256": "790757ff42761356d1c05e6d946df8ea49c2985d1fde6efb63842464d79230e1"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-50723",
+      "path": "corpus/fullcode/CVE-2023-50723",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/0f367aaae4e0696f61cf5a67a75edd27d1d16db6",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-administration__xwiki-platform-administration-ui__src_.xml",
+          "bytes": 44284,
+          "sha256": "27a4803f958c1c781752736ac1f716808e96d1836bc9939c10969a0aebf82535"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-51389",
+      "path": "corpus/fullcode/CVE-2023-51389",
+      "languages": [
+        "java"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/dromara/hertzbeat/commit/97c3f14446d1c96d1fc993df111684926b6cce17",
+      "files": [
+        {
+          "path": "manager__src__main__java__org__dromara__hertzbeat__manager__controller__AppController.java",
+          "bytes": 6586,
+          "sha256": "cd347d823b5722bb4baab0b009a6b9c4cc132deda457aa0fbe63f0caf2c74106"
+        },
+        {
+          "path": "pom.xml",
+          "bytes": 15704,
+          "sha256": "fd2db53b5fd04ffe10224cc23b783c95c40da5a90d2df8e0cf00c7921870062e"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-51444",
+      "path": "corpus/fullcode/CVE-2023-51444",
+      "languages": [
+        "java"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-20",
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 7.2,
+      "patch_url": "https://github.com/geoserver/geoserver/commit/ca683170c669718cb6ad4c79e01b0451065e13b8",
+      "files": [
+        {
+          "path": "src__platform__src__main__java__org__geoserver__platform__resource__Files.java",
+          "bytes": 18495,
+          "sha256": "34a945357208d35f2c16286b21f48b489d4e5b4b6f6dc5007c3a7be666e699e2"
+        },
+        {
+          "path": "src__platform__src__main__java__org__geoserver__platform__resource__URIs.java",
+          "bytes": 3309,
+          "sha256": "7dddfa895a175817ac76c49c3f222ab5e93ba7574557fbad1330c39f2e92e2c1"
+        },
+        {
+          "path": "src__platform__src__test__java__org__geoserver__platform__resource__ResourceTheoryTest.java",
+          "bytes": 15781,
+          "sha256": "9cdfe9f9d9e4092b3b710a00ac17f40f4aa262387394ebe27a9cf237919e922a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-51450",
+      "path": "corpus/fullcode/CVE-2023-51450",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 5.6,
+      "patch_url": "https://github.com/baserproject/basercms/commit/18f426d63e752b4d22c40e9ea8d1f6e692ef601c",
+      "files": [
+        {
+          "path": "plugins__baser-core__src__View__Helper__BcAdminFormHelper.php",
+          "bytes": 6651,
+          "sha256": "c4b9a764552434c44a163bb13037d9d9204b16a267292004f8c027aa436d3010"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-51699",
+      "path": "corpus/fullcode/CVE-2023-51699",
+      "languages": [
+        "go"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 4.0,
+      "patch_url": "https://github.com/fluid-cloudnative/fluid/commit/e0184cff8790ad000c3e8943392c7f544fad7d66",
+      "files": [
+        {
+          "path": "charts__juicefs__Chart.yaml",
+          "bytes": 303,
+          "sha256": "721c09dd277c36b2fb22ad919665270fe4da27e5adb3e3c6eb3fd234ad6980f2"
+        },
+        {
+          "path": "pkg__ddc__juicefs__operations__base.go",
+          "bytes": 10221,
+          "sha256": "1399d775292d86b15d2c7b45b5013a862543a9edba25843293268428e27ac33c"
+        },
+        {
+          "path": "pkg__ddc__juicefs__operations__base_test.go",
+          "bytes": 17543,
+          "sha256": "6544ef2249419f6498f6a58dfa9ada2120788b775c827c6f2a3f2a0b925ac19e"
+        },
+        {
+          "path": "pkg__ddc__juicefs__transform_fuse.go",
+          "bytes": 16025,
+          "sha256": "3efcf0a313c09094b94767ebe22587fd64b86663679b5df5f572c741078325c6"
+        },
+        {
+          "path": "pkg__ddc__juicefs__ufs_test.go",
+          "bytes": 12174,
+          "sha256": "b464e5d8df2d2a913572f2e2d8a802272342e6ad55ac7b5e5e2ea1774e39ae0a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-52138",
+      "path": "corpus/fullcode/CVE-2023-52138",
+      "languages": [
+        "c"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-25",
+        "CWE-22",
+        "CWE-59"
+      ],
+      "cvss_score": 8.2,
+      "patch_url": "https://github.com/mate-desktop/engrampa/commit/63d5dfa9005c6b16d0f0ccd888cc859fca78f970",
+      "files": [
+        {
+          "path": "src__fr-command-cpio.c",
+          "bytes": 8553,
+          "sha256": "b28d0f2bb15daf450f5b4d05171ab2e91e8ee71aaa9711f6b3c2ab8ac99bb701"
+        },
+        {
+          "path": "src__fr-command-unarchiver.c",
+          "bytes": 10226,
+          "sha256": "13e1fb9f282ea73fc36f12a58aa12af5514d0270f3948b4a22aee0d976fbcc62"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-5844",
+      "path": "corpus/fullcode/CVE-2023-5844",
+      "languages": [
+        "php"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-620",
+        "CWE-287"
+      ],
+      "cvss_score": 7.2,
+      "patch_url": "https://github.com/pimcore/admin-ui-classic-bundle/commit/498ac77e54541177be27b0c710e387c47b3836ea",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 639,
+          "sha256": "ae5f45d23263e0bdbe8166489164d0bd2e50181901847bc5d04f7995f47fc66e"
+        },
+        {
+          "path": "src__Controller__Admin__UserController.php",
+          "bytes": 45669,
+          "sha256": "091f2e152c03de17b505fdc87085c91987fd7fa06d28b83c1e4a1c62a1698f5d"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-6124",
+      "path": "corpus/fullcode/CVE-2023-6124",
+      "languages": [
+        "php"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 4.3,
+      "patch_url": "https://github.com/salesagility/suitecrm/commit/54bc56c3bd9f1db75408db1c1d7d652c3f5f71e9",
+      "files": [
+        {
+          "path": "composer.lock",
+          "bytes": 387352,
+          "sha256": "2634fc5e2f890269ae55f6796ebfd4ae110aaa5dc86c4f4be5576e0e42570f65"
+        },
+        {
+          "path": "download.php",
+          "bytes": 14929,
+          "sha256": "e742ee00f8c0e382230fa4a2e9d908f2d92dcf396953fb54ce9beaf9bfb773c8"
+        },
+        {
+          "path": "files.md5",
+          "bytes": 859199,
+          "sha256": "7504966d1d117cba46c2b2ec16eae425b8a9150c45bcefb670274e4ff033b8f4"
+        },
+        {
+          "path": "ModuleInstall__ModuleScanner.php",
+          "bytes": 31912,
+          "sha256": "ceae68444425707304894064ca7ce42b0c071c6cd9babfce7423d993e0de17cb"
+        },
+        {
+          "path": "README.md",
+          "bytes": 4983,
+          "sha256": "09761dfec7b9174f13b79283d91763cdd6dcd9697849510c11eb0c6bb14f2beb"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-0964",
+      "path": "corpus/fullcode/CVE-2024-0964",
+      "languages": [
+        "python",
+        "typescript"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 9.4,
+      "patch_url": "https://github.com/gradio-app/gradio/commit/d76bcaaaf0734aaf49a680f94ea9d4d22a602e70",
+      "files": [
+        {
+          "path": "client__js__src__client.ts",
+          "bytes": 37346,
+          "sha256": "cfd1b96f50e4eabfc1a5585d3b58a1ebbbdc7f385cb029a2752eae3b2d4a21a5"
+        },
+        {
+          "path": "client__js__src__types.ts",
+          "bytes": 2629,
+          "sha256": "ac7795d866959dfabb958deec7661809be752e8dbf14000fbdc77740e075619d"
+        },
+        {
+          "path": "client__python__gradio_client__client.py",
+          "bytes": 68859,
+          "sha256": "67c4ae18d8dcb9380486d5d3cd55d4d496126d8f67d78751e48ebe64fc7679ee"
+        },
+        {
+          "path": "client__python__gradio_client__utils.py",
+          "bytes": 26250,
+          "sha256": "06505a2a9217b0382de8dba7b656947249802aca30c66d00c8970b5fdf334c3f"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1109",
+      "path": "corpus/fullcode/CVE-2024-1109",
+      "languages": [
+        "php"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-862",
+        "CWE-862"
+      ],
+      "cvss_score": 5.3,
+      "patch_url": "https://github.com/podlove/podlove-publisher/commit/0ac83d1955aa964a358833b1b5ce790fff45b3f4",
+      "files": [
+        {
+          "path": "lib__modules__import_export__export__podcast_exporter.php",
+          "bytes": 7316,
+          "sha256": "fdbeaf0b40e836b0e087046140395790b0fd5cf7d3da0c5121e9bc29eae9a07f"
+        },
+        {
+          "path": "lib__modules__import_export__export__tracking_exporter.php",
+          "bytes": 3506,
+          "sha256": "d847b2932e7e5c0bffb1dd1924b081a5f875ef8c85669916d56f0097306040ea"
+        },
+        {
+          "path": "lib__modules__import_export__import_export.php",
+          "bytes": 8861,
+          "sha256": "320298f0edaa9bf3f22801a08d3870d6755e6001825e0b85ec1dd049f9256755"
+        },
+        {
+          "path": "readme.txt",
+          "bytes": 10741,
+          "sha256": "4b710a2dd7c020d77947a0662efb1a0398e8a7c2625708b6047edb43cd1e23c2"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1110",
+      "path": "corpus/fullcode/CVE-2024-1110",
+      "languages": [
+        "php"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-862",
+        "CWE-862",
+        "CWE-862"
+      ],
+      "cvss_score": 5.3,
+      "patch_url": "https://github.com/podlove/podlove-publisher/commit/7873ff520631087e2f10737860cdcd64d53187ba",
+      "files": [
+        {
+          "path": "lib__modules__import_export__import__podcast_importer.php",
+          "bytes": 5658,
+          "sha256": "10a097d56ce840b10a59086002fac4fdef91a375fb1a4d29ec01313a7d3d7e66"
+        },
+        {
+          "path": "lib__modules__import_export__import__tracking_importer.php",
+          "bytes": 2202,
+          "sha256": "d1beefc072fa8f921f348cb2935cef9c7e6a263e3e598e4d504db25ef2bd2636"
+        },
+        {
+          "path": "lib__modules__import_export__import_export.php",
+          "bytes": 8722,
+          "sha256": "cd5faab94b5b55c0662ef1a026b0ae236bdb5f39bf81e70700c2c227e88aa7dd"
+        },
+        {
+          "path": "readme.txt",
+          "bytes": 10650,
+          "sha256": "a3734290d7f317f856f846b2375d152e155c41a213e8cd75bda406856c2231b4"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1118",
+      "path": "corpus/fullcode/CVE-2024-1118",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-89",
+        "CWE-89"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/podlove/podlove-subscribe-button-wp-plugin/commit/b16b7a2e98db4c642ca671b0aede4dbfce4578b3",
+      "files": [
+        {
+          "path": "model__base.php",
+          "bytes": 13488,
+          "sha256": "0f2d1786b2f64d8680f4968920d73dc6ac9c17dfdd187e17ce40e6c9320e393a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1163",
+      "path": "corpus/fullcode/CVE-2024-1163",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.1,
+      "patch_url": "https://github.com/mbloch/mapshaper/commit/7437d903c0a87802c3751fc529d2de7098094c72",
+      "files": [
+        {
+          "path": "bin__mapshaper-gui",
+          "bytes": 9775,
+          "sha256": "ec587ed3af8d13f14ae0634274bb5a55c6418ca763d145d6872a6ff9f0386ba4"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 64913,
+          "sha256": "12e353ce0bdd5ad7fb5159396a33b8d080ef8989d148b1a9467c74162af468b3"
+        },
+        {
+          "path": "package-lock.json",
+          "bytes": 147920,
+          "sha256": "49e29aa0319fb18f19b3ce40c949f1b7a74bd0476623b3971721896f69112211"
+        },
+        {
+          "path": "package.json",
+          "bytes": 2588,
+          "sha256": "43367b93b1e5ec539beab5501e4c25dd9175fe2c82c7345b2b67ea63cdae8d2b"
+        },
+        {
+          "path": "REFERENCE.md",
+          "bytes": 73322,
+          "sha256": "9ac111f0143d91ac74cfc84b24f7f3c0f1d2c986a76bef2ff1698dfc50336067"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-1485",
+      "path": "corpus/fullcode/CVE-2024-1485",
+      "languages": [
+        "go"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 8.0,
+      "patch_url": "https://github.com/devfile/registry-support/commit/0e44b9ca6d03fac4fc3f77d37656d56dc5defe0d",
+      "files": [
+        {
+          "path": "registry-library__library__util.go",
+          "bytes": 5379,
+          "sha256": "efbea54c8888b39d2d3cc09aac923df3886940bf44f0c774c8bb100f34ead81d"
+        },
+        {
+          "path": "registry-library__library__util_test.go",
+          "bytes": 3434,
+          "sha256": "7a3d3b4a13e07336ce2f41c646d85c9e147b1e552e7c7c9e0fbbd9320c3d5b71"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-21485",
+      "path": "corpus/fullcode/CVE-2024-21485",
+      "languages": [
+        "javascript"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-79",
+        "CWE-79"
+      ],
+      "cvss_score": 6.5,
+      "patch_url": "https://github.com/plotly/dash/commit/9920073c9a8619ae8f90fcec1924f2f3a4332a8c",
+      "files": [
+        {
+          "path": "components__dash-core-components__package-lock.json",
+          "bytes": 690128,
+          "sha256": "69b7f29583ff29e64684257b96860333de5ad6d9476165720a5a9cc89609cfd4"
+        },
+        {
+          "path": "components__dash-core-components__package.json",
+          "bytes": 4387,
+          "sha256": "050c3459b5a93948597157d722ef69bdee8e7fce413a97a9cd114d2ea8317b29"
+        },
+        {
+          "path": "components__dash-core-components__src__components__Link.react.js",
+          "bytes": 4290,
+          "sha256": "abfcac17092fff1551b787a1bddf19f9b947aac6595b2fa21cd1bed07652ca44"
+        },
+        {
+          "path": "components__dash-html-components__package-lock.json",
+          "bytes": 545091,
+          "sha256": "d3c2c9e231b59128b7293d7e366bf46e232a287d6f100a399b6c9d999e52a1cc"
+        },
+        {
+          "path": "components__dash-html-components__package.json",
+          "bytes": 2322,
+          "sha256": "273b94248e483eae92129a23ab15e03419acdfc1626911c26f37792c8b41a1ef"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-21514",
+      "path": "corpus/fullcode/CVE-2024-21514",
+      "languages": [
+        "php"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-89",
+        "CWE-89"
+      ],
+      "cvss_score": 7.4,
+      "patch_url": "https://github.com/opencart/opencart/commit/46bd5f5a8056ff9aad0aa7d71729c4cf593d67e2",
+      "files": [
+        {
+          "path": "upload__admin__controller__extension__module__divido_calculator.php",
+          "bytes": 2672,
+          "sha256": "88956d6cc9f9abcb532b71fa00ea2080db40efe8e4ee27b0da7ae17090759237"
+        },
+        {
+          "path": "upload__admin__controller__extension__payment__divido.php",
+          "bytes": 8393,
+          "sha256": "0f25ca356ac55fc2fee687645801c864a207d73f3b66edd5e3489ac92fc1dfd9"
+        },
+        {
+          "path": "upload__admin__language__en-gb__extension__module__divido_calculator.php",
+          "bytes": 455,
+          "sha256": "cfd587814fe1e5efc5d817d27a612bef26124835bee9ebb305c36bf3e6641c91"
+        },
+        {
+          "path": "upload__admin__language__en-gb__extension__payment__divido.php",
+          "bytes": 2480,
+          "sha256": "a376157fbd0ec006d59071d9273503dfc1394ac5350ba5fd82d7027788ec3710"
+        },
+        {
+          "path": "upload__admin__model__extension__payment__divido.php",
+          "bytes": 2631,
+          "sha256": "5d605de49551b811fee0a4c481b5a49099faa6377ed10784c2cce449eb262626"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2221",
+      "path": "corpus/fullcode/CVE-2024-2221",
+      "languages": [
+        "javascript"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-22",
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/qdrant/qdrant/commit/e6411907f0ecf3c2f8ba44ab704b9e4597d9705d",
+      "files": [
+        {
+          "path": "Cargo.lock",
+          "bytes": 165856,
+          "sha256": "16e675bb854a42552b6a96ea3a341e7e9c7ccd1f344848ea36341350db1bd3bc"
+        },
+        {
+          "path": "Cargo.toml",
+          "bytes": 5498,
+          "sha256": "5c799235d22e8b573ef00bf57aeecf2692b7b6d1db39413b120229d80eb8d541"
+        },
+        {
+          "path": "docs__redoc__default_version.js",
+          "bytes": 37,
+          "sha256": "a5140e02a80c2f3c0a22f9e91e2a52077c701f2743f6d04d66dafb051b26c9a9"
+        },
+        {
+          "path": "docs__redoc__index.html",
+          "bytes": 6060,
+          "sha256": "cdacda52965087d8c34c7f3d6e39555d872ae9471d1a5ac64475cc487a2850cb"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-22779",
+      "path": "corpus/fullcode/CVE-2024-22779",
+      "languages": [
+        "java"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/Kihron/ServerRPExposer/commit/8f7b829df633f59e828d677f736c53652d6f1b8f",
+      "files": [
+        {
+          "path": "gradle.properties",
+          "bytes": 326,
+          "sha256": "fab9d3e5648ce5c125ff5ebab810c51918c285f8faead3afeb4448a0aefeed81"
+        },
+        {
+          "path": "src__main__java__com__kihron__serverrpexposer__mixins__ServerResourcePackProviderMixin.java",
+          "bytes": 3233,
+          "sha256": "26ae888c2f5f9601ff59dd43c87feac3834e1d051b38ebc5b4c6fe4fe514ba81"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-23328",
+      "path": "corpus/fullcode/CVE-2024-23328",
+      "languages": [
+        "java"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 9.1,
+      "patch_url": "https://github.com/dataease/dataease/commit/4128adf5fc4592b55fa1722a53b178967545d46a",
+      "files": [
+        {
+          "path": "core__core-backend__src__main__java__io__dataease__datasource__type__Mysql.java",
+          "bytes": 1909,
+          "sha256": "17798a1ba4331a8c0885012509e3d353681a392eaa51ed17431934278c8c2db4"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-23654",
+      "path": "corpus/fullcode/CVE-2024-23654",
+      "languages": [
+        "ruby"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 4.1,
+      "patch_url": "https://github.com/discourse/discourse-ai/commit/94ba0dadc2cf38e8f81c3936974c167219878edd",
+      "files": [
+        {
+          "path": "lib__completions__endpoints__base.rb",
+          "bytes": 10500,
+          "sha256": "e92c00d222ee0d1022101f282ab9cdf94fcc5b3f9322d916786eebd850f72cd7"
+        },
+        {
+          "path": "lib__inference__cloudflare_workers_ai.rb",
+          "bytes": 801,
+          "sha256": "c1020aa07fb7833451c75e3e3d1bc66b68c89dbe0ddb98ab318b9cf3fd08b089"
+        },
+        {
+          "path": "lib__inference__discourse_classifier.rb",
+          "bytes": 590,
+          "sha256": "88d6275ac1331c086def7b6f3749d1700c28c760764d68f210f4cf17b81b71a5"
+        },
+        {
+          "path": "lib__inference__discourse_reranker.rb",
+          "bytes": 677,
+          "sha256": "e2723db1093ac4b04d8543a4b824b3f895fc5accbac0c113001cc8797889824b"
+        },
+        {
+          "path": "lib__inference__gemini_embeddings.rb",
+          "bytes": 673,
+          "sha256": "102a40b689f4f489e1ddd97e523b32e029e4b13a5059497cba7cd047326a04ad"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-24749",
+      "path": "corpus/fullcode/CVE-2024-24749",
+      "languages": [
+        "java"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/GeoWebCache/geowebcache/commit/c7f76bd8a1d67c3b986146e7a5e0b14dd64a8fef",
+      "files": [
+        {
+          "path": "geowebcache__rest__src__main__java__org__geowebcache__rest__controller__ByteStreamController.java",
+          "bytes": 5526,
+          "sha256": "1ecee8f34ca5577936d8ac32a1a4e9054c7857bb6723022cbda38952343c19bb"
+        },
+        {
+          "path": "geowebcache__rest__src__test__java__org__geowebcache__rest__controller__ByteStreamControll.java",
+          "bytes": 3976,
+          "sha256": "edfed3b3303dcc3aaa2c6d3eec458667bb4507b3d0eedec1109ab6dc09aabd6d"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-24756",
+      "path": "corpus/fullcode/CVE-2024-24756",
+      "languages": [
+        "javascript"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/crafatar/crafatar/commit/bba004acc725b362a5d2d5dfe30cf60e7365a373",
+      "files": [
+        {
+          "path": "lib__routes__avatars.js",
+          "bytes": 3298,
+          "sha256": "f7ea6968514b2987ec4b384252be7ed705722ef24e90f16274bdcdd2f6cfacf0"
+        },
+        {
+          "path": "lib__routes__capes.js",
+          "bytes": 1144,
+          "sha256": "79110f995e020cf6afbe53e5965869ea7fee687ab9f0c3c4f3e961e20df130c6"
+        },
+        {
+          "path": "lib__routes__renders.js",
+          "bytes": 3849,
+          "sha256": "b5110367a42ea9b3fc8c518683b6ef05a799c4e9cbf228450d3305791c5b31c0"
+        },
+        {
+          "path": "lib__routes__skins.js",
+          "bytes": 2954,
+          "sha256": "9abfd1d4d2e6759b57f74e55bf98026c174f74ed50e3f2630764e3ff527ee69c"
+        },
+        {
+          "path": "lib__server.js",
+          "bytes": 4688,
+          "sha256": "38d4802a92ffe109661817b3b0a63c23c33ae670c5d670ea037bd12c61186f62"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-24759",
+      "path": "corpus/fullcode/CVE-2024-24759",
+      "languages": [
+        "python"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 9.3,
+      "patch_url": "https://github.com/mindsdb/mindsdb/commit/5f7496481bd3db1d06a2d2e62c0dce960a1fe12b",
+      "files": [
+        {
+          "path": "mindsdb____about__.py",
+          "bytes": 404,
+          "sha256": "9183b2cc08cd323f9d8ea0842b62bf78ad41f4342d853ebe1e50b5982bee1ccf"
+        },
+        {
+          "path": "mindsdb__integrations__handlers__anyscale_endpoints_handler__anyscale_endpoints_handler.py",
+          "bytes": 9214,
+          "sha256": "f15e7f83aafbab4fcb60aac64229989a32d506e16bae848b1fd184b281fe311c"
+        },
+        {
+          "path": "mindsdb__integrations__handlers__anyscale_endpoints_handler__requirements.txt",
+          "bytes": 84,
+          "sha256": "bf6d1b8abedbf3bbaa18c9df452e5cdf0262c957819b8eca97f21a2a50759e36"
+        },
+        {
+          "path": "mindsdb__integrations__handlers__instatus_handler__instatus_handler.py",
+          "bytes": 4361,
+          "sha256": "4d1eedad6ee2ddc760a5da4279b4422a7f4ec6540e872c3f5bda4712c6f0032b"
+        },
+        {
+          "path": "mindsdb__integrations__handlers__instatus_handler__README.md",
+          "bytes": 4573,
+          "sha256": "efdeddfc17072da927e291db38e934e50e79ade7a511749a0222aa6f358c20d0"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25123",
+      "path": "corpus/fullcode/CVE-2024-25123",
+      "languages": [
+        "python"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.3,
+      "patch_url": "https://github.com/Open-MSS/MSS/commit/f23033729ee930b97f8bdbd07df0174311c9b658",
+      "files": [
+        {
+          "path": "mslib__index.py",
+          "bytes": 7462,
+          "sha256": "c9cdbacc88610de04cdd92c0b8566a4882e43a9cecd1a4508fa06755dc8d8ff1"
+        },
+        {
+          "path": "mslib__mscolab__server.py",
+          "bytes": 27449,
+          "sha256": "1efae7a67d95f475a08de3334436728802b4adaaf37585574baac042e523b4c2"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25125",
+      "path": "corpus/fullcode/CVE-2024-25125",
+      "languages": [
+        "java"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 5.3,
+      "patch_url": "https://github.com/treasure-data/digdag/commit/eae89b0daf6c62f12309d8c7194454dfb18cc5c3",
+      "files": [
+        {
+          "path": "digdag-core__src__main__java__io__digdag__core__log__LocalFileLogServerFactory.java",
+          "bytes": 7535,
+          "sha256": "20fd0089d6797104c2826f8d6a5ff740e30fb202a456f4ad62aaf81e942768ba"
+        },
+        {
+          "path": "digdag-core__src__test__java__io__digdag__core__log__LocalFileLogServerFactoryTest.java",
+          "bytes": 4804,
+          "sha256": "c2d54dd1006af0bcb553d171e1ef3756c91905245adf86d6ee76ea4ed6b3a606"
+        },
+        {
+          "path": "digdag-tests__src__test__java__acceptance__LogIT.java",
+          "bytes": 3025,
+          "sha256": "1d077c59158c1ec86375e1a7be010efb2f4b9c3f494736285f0776c758c38ae3"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2548",
+      "path": "corpus/fullcode/CVE-2024-2548",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 0,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-36",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/parisneo/lollms-webui/commit/49b0332e98d42dd5204dda53dee410b160106265",
+      "files": []
+    },
+    {
+      "cve_id": "CVE-2024-25620",
+      "path": "corpus/fullcode/CVE-2024-25620",
+      "languages": [
+        "go"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 6.4,
+      "patch_url": "https://github.com/helm/helm/commit/0d0f91d1ce277b2c8766cdc4c7aa04dbafbf2503",
+      "files": [
+        {
+          "path": "pkg__chart__metadata.go",
+          "bytes": 5631,
+          "sha256": "1eb91a34df4d1c002fe2719836262d88c7f6deef6ac5b7f66cddabca462d7760"
+        },
+        {
+          "path": "pkg__chart__metadata_test.go",
+          "bytes": 5481,
+          "sha256": "48348a0abcf42a5c9ed737fd4f715a3347a69c8458659d69a433c773945e3fda"
+        },
+        {
+          "path": "pkg__chartutil__errors.go",
+          "bytes": 1027,
+          "sha256": "6586a2ee6aa1418ad35028dbe3582ac1da27d6c465af68bef2fb50f740a53bf0"
+        },
+        {
+          "path": "pkg__chartutil__save.go",
+          "bytes": 6465,
+          "sha256": "61d7c8cff75b2f5425a5aab647d87c8adc6ec8c3e2d4ccfc0456c98c3b6134df"
+        },
+        {
+          "path": "pkg__chartutil__save_test.go",
+          "bytes": 6158,
+          "sha256": "c288e1e19d2e61806de77f12d413615bff552aea77c81240286a58794e4406b9"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25623",
+      "path": "corpus/fullcode/CVE-2024-25623",
+      "languages": [
+        "ruby"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.5,
+      "patch_url": "https://github.com/mastodon/mastodon/commit/9fee5e852669e26f970e278021302e1a203fc022",
+      "files": [
+        {
+          "path": "app__helpers__jsonld_helper.rb",
+          "bytes": 7960,
+          "sha256": "f437afc4034c7be90e80614343823f641c0fc687b3ab4c46e5024f2804c029b3"
+        },
+        {
+          "path": "app__services__fetch_resource_service.rb",
+          "bytes": 3355,
+          "sha256": "ea5661afc722a98f171964b530c104316dca769bd07fc0eb3d8a9a137ea47b44"
+        },
+        {
+          "path": "spec__helpers__json_ld_helper_spec.rb",
+          "bytes": 6161,
+          "sha256": "dc1647ae60320352b2e3f19eca7a1c6d9d12b2325b6a3bebbfa3f7aecbea27b3"
+        },
+        {
+          "path": "spec__lib__activitypub__activity__announce_spec.rb",
+          "bytes": 5506,
+          "sha256": "2922da0f9c38c8d830ba56f69254cd418675235bb15aa8aee4a4994d492d90e3"
+        },
+        {
+          "path": "spec__services__activitypub__fetch_featured_collection_service_spec.rb",
+          "bytes": 6199,
+          "sha256": "c0305ab53b088a7a8f3d1dd2865a1f31c0e44a4dc96d46caed20ba650289481e"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25636",
+      "path": "corpus/fullcode/CVE-2024-25636",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 7.1,
+      "patch_url": "https://github.com/misskey-dev/misskey/commit/9a70ce8f5ea9df00001894809f5ce7bc69b14c8a",
+      "files": [
+        {
+          "path": "packages__backend__src__core__activitypub__ApRequestService.ts",
+          "bytes": 6180,
+          "sha256": "e8fbc654704c167f59691e9ce33a9479507ec888bd7efefe58f39ef12ef8b3e6"
+        },
+        {
+          "path": "packages__backend__src__core__activitypub__ApResolverService.ts",
+          "bytes": 8068,
+          "sha256": "746c62651206ec24adf5fafe1498ebc07c6a1d54c558ae4628947337cd011ba3"
+        },
+        {
+          "path": "packages__backend__src__core__activitypub__LdSignatureService.ts",
+          "bytes": 4600,
+          "sha256": "473ea105c3cdf268dcaeea9747431bf15de80ae97d6a148eae73ae02c92d51a1"
+        },
+        {
+          "path": "packages__backend__src__core__HttpRequestService.ts",
+          "bytes": 4365,
+          "sha256": "1bc32084e31621543d8e3c12a831bd416b84fcf2271da1add5837a7c879be82f"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-25674",
+      "path": "corpus/fullcode/CVE-2024-25674",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/MISP/MISP/commit/312d2d5422235235ddd211dcb6bb5bb09c07791f",
+      "files": [
+        {
+          "path": "app__Controller__OrganisationsController.php",
+          "bytes": 23221,
+          "sha256": "53b200ff9bdae6197f8070d98bdd84d4f2a5a570a1c72664571f99c8023f83cb"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-26129",
+      "path": "corpus/fullcode/CVE-2024-26129",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 5.8,
+      "patch_url": "https://github.com/PrestaShop/PrestaShop/commit/444bd0dea581659918fe2067541b9863cf099dd5",
+      "files": [
+        {
+          "path": "classes__controller__FrontController.php",
+          "bytes": 86462,
+          "sha256": "112390a73198e5db7bc0480f890adf98a20c4a2a8a839f9821784a314a7ea77b"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-26150",
+      "path": "corpus/fullcode/CVE-2024-26150",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 8.7,
+      "patch_url": "https://github.com/backstage/backstage/commit/1ad2b1b61ebb430051f7d804b0cc7ebfe7922b6f",
+      "files": [
+        {
+          "path": "packages__backend-common__src__paths.test.ts",
+          "bytes": 2227,
+          "sha256": "02022a8655a5113b117a2ff60dcb0621aeaf4f329577f8b07d69ad0fccb36f74"
+        },
+        {
+          "path": "packages__backend-common__src__paths.ts",
+          "bytes": 2977,
+          "sha256": "d92d2bde1b90736e5e5fd76555167e61b4537b0582c535c54d0a4ff4fa9f9280"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2624",
+      "path": "corpus/fullcode/CVE-2024-2624",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 0,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/parisneo/lollms-webui/commit/aeba79f3ea934331b8ecd625a58bae6e4f7e7d3f",
+      "files": []
+    },
+    {
+      "cve_id": "CVE-2024-27081",
+      "path": "corpus/fullcode/CVE-2024-27081",
+      "languages": [
+        "python"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.2,
+      "patch_url": "https://github.com/esphome/esphome/commit/d814ed1d4adc71fde47c4df41215bee449884513",
+      "files": [
+        {
+          "path": "esphome__dashboard__web_server.py",
+          "bytes": 40582,
+          "sha256": "0ad91fb361ad993aba95914f6ae03434be655de080d7b8eb5457aac06d308d0e"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-27098",
+      "path": "corpus/fullcode/CVE-2024-27098",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cvss_score": null,
+      "patch_url": null,
+      "files": [
+        {
+          "path": "ajax__comments.php",
+          "bytes": 5189,
+          "sha256": "fdb85fa781dec5ffe50ba2afffea308eac34c2ad7a3c74fb9812a73c13781a8a"
+        },
+        {
+          "path": "ajax__dropdownLocation.php",
+          "bytes": 2032,
+          "sha256": "a00f298c0baa9db20d10fd7b4f1a0288cdb4c89924945fdc6c0eeedfb2296f65"
+        },
+        {
+          "path": "ajax__kanban.php",
+          "bytes": 12704,
+          "sha256": "933cd8ab089b7f22efda765eb567f3e5f2c159c3d126833690412b272111f4cf"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-27318",
+      "path": "corpus/fullcode/CVE-2024-27318",
+      "languages": [
+        "c/cpp",
+        "cpp",
+        "python"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/onnx/onnx/commit/66b7fb630903fdcf3e83b6b6d56d82e904264a20",
+      "files": [
+        {
+          "path": "onnx__checker.cc",
+          "bytes": 40200,
+          "sha256": "3573b4c5f4afd4189e4298924a2adcd98d5eedbe457d019274050919908f1910"
+        },
+        {
+          "path": "onnx__checker.h",
+          "bytes": 5874,
+          "sha256": "a2cf543e4f6d015d25f9dba741a70b1c2852ec69cca81ce30a5b68099db1cde0"
+        },
+        {
+          "path": "onnx__common__path.h",
+          "bytes": 1684,
+          "sha256": "8ab3bb5e3a88453e362069459007dcb287841e545e5e076fcc5469ae8e261d34"
+        },
+        {
+          "path": "onnx__cpp2py_export.cc",
+          "bytes": 29467,
+          "sha256": "6667ff6f67e4e7e94b09cb037b0769a0e42e76b1ef9695972a5fcf0a0407b494"
+        },
+        {
+          "path": "onnx__external_data_helper.py",
+          "bytes": 12075,
+          "sha256": "a262428b5170ffc2c1a15e7de1c44024eed2f88174a174bc3a647ac383a266d9"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-27923",
+      "path": "corpus/fullcode/CVE-2024-27923",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/getgrav/grav/commit/e3b0aa0c502aad251c1b79d1ee973dcd93711f07",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 225828,
+          "sha256": "3f25033c5bf6f0dcd8f4d006bd06c54b48d78bb0cbc45d9ca555f5230481f381"
+        },
+        {
+          "path": "system__config__security.yaml",
+          "bytes": 698,
+          "sha256": "e1b06e2f519c887f27979b1f33e052eebb375f6d83f3fb612bdfd7d2acd1ef40"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28105",
+      "path": "corpus/fullcode/CVE-2024-28105",
+      "languages": [
+        "php"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 7.2,
+      "patch_url": "https://github.com/thorsten/phpMyFAQ/commit/9136883776af67dfdb0e8cf14f5e0ca22bf4f2e7",
+      "files": [
+        {
+          "path": "phpmyfaq__admin__api__attachment.php",
+          "bytes": 4448,
+          "sha256": "401742c6d534373e81265005fcaf99d8f393d62c99810d9f4eaf9f6595eb344a"
+        },
+        {
+          "path": "phpmyfaq__src__phpMyFAQ__Attachment__File.php",
+          "bytes": 6115,
+          "sha256": "25a68820e4fe38e8fd5357f59504f86c01b54e6ac6d597d0ad2ff2958194d176"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28116",
+      "path": "corpus/fullcode/CVE-2024-28116",
+      "languages": [
+        "php"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/getgrav/grav/commit/4149c81339274130742831422de2685f298f3a6e",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 228963,
+          "sha256": "fb9268cceb72d7a10ca877d182eec4aa7c7a28b65a32787183a78532bac31466"
+        },
+        {
+          "path": "system__src__Grav__Common__Security.php",
+          "bytes": 9707,
+          "sha256": "a17e2ef85ed2e9d95290b3b635ec188040c56db90525e15941337fd38a7d8566"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28117",
+      "path": "corpus/fullcode/CVE-2024-28117",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 228603,
+          "sha256": "331a1b78ace592b87cb25474a9120b6fc70e0f975351ab313a36111c2bc9e6c0"
+        },
+        {
+          "path": "system__src__Grav__Common__Security.php",
+          "bytes": 9106,
+          "sha256": "742044a60110ecbdedda3a00ded7e8b55b0240e3acd4b34370ec68f838e4f4c1"
+        },
+        {
+          "path": "system__src__Grav__Common__Twig__Twig.php",
+          "bytes": 21174,
+          "sha256": "a97be7b0109e6f7e1e6750dda0da2d517232028eb32e702af7c9a8ea4e975a3c"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28118",
+      "path": "corpus/fullcode/CVE-2024-28118",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 228603,
+          "sha256": "331a1b78ace592b87cb25474a9120b6fc70e0f975351ab313a36111c2bc9e6c0"
+        },
+        {
+          "path": "system__src__Grav__Common__Security.php",
+          "bytes": 9106,
+          "sha256": "742044a60110ecbdedda3a00ded7e8b55b0240e3acd4b34370ec68f838e4f4c1"
+        },
+        {
+          "path": "system__src__Grav__Common__Twig__Twig.php",
+          "bytes": 21174,
+          "sha256": "a97be7b0109e6f7e1e6750dda0da2d517232028eb32e702af7c9a8ea4e975a3c"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28119",
+      "path": "corpus/fullcode/CVE-2024-28119",
+      "languages": [
+        "php"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/getgrav/grav/commit/de1ccfa12dbcbf526104d68c1a6bc202a98698fe",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 228603,
+          "sha256": "331a1b78ace592b87cb25474a9120b6fc70e0f975351ab313a36111c2bc9e6c0"
+        },
+        {
+          "path": "system__src__Grav__Common__Security.php",
+          "bytes": 9106,
+          "sha256": "742044a60110ecbdedda3a00ded7e8b55b0240e3acd4b34370ec68f838e4f4c1"
+        },
+        {
+          "path": "system__src__Grav__Common__Twig__Twig.php",
+          "bytes": 21174,
+          "sha256": "a97be7b0109e6f7e1e6750dda0da2d517232028eb32e702af7c9a8ea4e975a3c"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-28187",
+      "path": "corpus/fullcode/CVE-2024-28187",
+      "languages": [
+        "php"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-78"
+      ],
+      "cvss_score": 7.2,
+      "patch_url": "https://github.com/inunosinsi/soycms/commit/9b0e452f628df28dec69cd72b6b55db21066cbf8",
+      "files": [
+        {
+          "path": "cms__common__action__site__Entry__SearchAction.class.php",
+          "bytes": 14362,
+          "sha256": "f9522adb313abec46f07508fb35324492746ac4c8c04a114d695e44a00ba4173"
+        },
+        {
+          "path": "cms__common__action__site__Entry__UploadFileAction.class.php",
+          "bytes": 9047,
+          "sha256": "ec57bb3bc06b698317540e8b5a0df169ebe59dc57418c4996bbbf30391d65200"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-29029",
+      "path": "corpus/fullcode/CVE-2024-29029",
+      "languages": [
+        "go"
+      ],
+      "file_count": 4,
+      "metadata_present": false,
+      "cwe_ids": [],
+      "cvss_score": null,
+      "patch_url": null,
+      "files": [
+        {
+          "path": "go.sum",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "internal__jobs__presign_link.go",
+          "bytes": 4231,
+          "sha256": "52fef117f30bf672f44fe978a95d280d8b8c22c56a66900bb3cf783f43a5db84"
+        },
+        {
+          "path": "server__integration__telegram.go",
+          "bytes": 11162,
+          "sha256": "c5fee250716bb35655cfd9f8cd2a15b6b7f2a79c6618b9107b9ae4a42e531405"
+        },
+        {
+          "path": "server__route__api__v1__auth.go",
+          "bytes": 10011,
+          "sha256": "8206677c1d374ba04a89b408fb9f679917388568be9f7254748ce3b158c61b5e"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2914",
+      "path": "corpus/fullcode/CVE-2024-2914",
+      "languages": [
+        "python"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/deepjavalibrary/djl/commit/5235be508cec9e8cb6f496a4ed2fa40e4f62c370",
+      "files": [
+        {
+          "path": "extensions__spark__setup__djl_spark__util__files_util.py",
+          "bytes": 3080,
+          "sha256": "8082382d3ab5648e0bffb39640bc0eb58f288aac9a9d55390b9442be7f4abb87"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-2928",
+      "path": "corpus/fullcode/CVE-2024-2928",
+      "languages": [
+        "python"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-29",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/mlflow/mlflow/commit/96f0b573a73d8eedd6735a2ce26e08859527be07",
+      "files": [
+        {
+          "path": "mlflow__server__handlers.py",
+          "bytes": 87947,
+          "sha256": "ab6a4507e6390eff2ba2323146accec1c4ef96f0c3279d55f1efe4ba2f420958"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-29859",
+      "path": "corpus/fullcode/CVE-2024-29859",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/MISP/MISP/commit/238010bfd004680757b324cba0c6344f77a25399",
+      "files": [
+        {
+          "path": "app__Controller__EventsController.php",
+          "bytes": 312905,
+          "sha256": "8a4e4af0776e29d81c0cdfa7d226999a5277f4bec07eb94a016399daf1a5082b"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31214",
+      "path": "corpus/fullcode/CVE-2024-31214",
+      "languages": [
+        "java"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-434",
+        "CWE-434"
+      ],
+      "cvss_score": 9.6,
+      "patch_url": "https://github.com/traccar/traccar/commit/3fbdcd81566bc72e319ec05c77cf8a4120b87b8f",
+      "files": [
+        {
+          "path": "src__main__java__org__traccar__model__Device.java",
+          "bytes": 5800,
+          "sha256": "5419fc9a6502c3571ce83adf41be707aed6785da7a886d89c329f56c5e699a8b"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31465",
+      "path": "corpus/fullcode/CVE-2024-31465",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/0317a3aa78065e66c86fc725976b06bf7f9b446e",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-search__xwiki-platform-search-ui__src__main__resources.xml",
+          "bytes": 3097,
+          "sha256": "f1d763b71168edcedaf538e66342f39ef9f22088ed43bf980af08af40e24df10"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31982",
+      "path": "corpus/fullcode/CVE-2024-31982",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 10.0,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/3c9e4bb04286de94ad24854026a09fa967538e31",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-search__xwiki-platform-search-ui__pom.xml",
+          "bytes": 3513,
+          "sha256": "0ca28afe1060b9963c8626afaac7c8df77615ed95be64b8e182c8d43f8da5425"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-search__xwiki-platform-search-ui__src__main__resources.xml",
+          "bytes": 9728,
+          "sha256": "ae8b2d3ee55911f62af2e75bf21298525ef738203efd48e63de95d670cda1d80"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31984",
+      "path": "corpus/fullcode/CVE-2024-31984",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/43c9d551e3c11e9d8f176b556dd33bbe31fc66e0",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-search__xwiki-platform-search-solr__pom.xml",
+          "bytes": 5021,
+          "sha256": "57c8830caf9787a29bb978463e482fe813bf417717fc6b394c2d9d6e95350ac8"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31993",
+      "path": "corpus/fullcode/CVE-2024-31993",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cvss_score": null,
+      "patch_url": null,
+      "files": [
+        {
+          "path": "docs__docs__documentation__getting-started__authentication__oidc.md",
+          "bytes": 3493,
+          "sha256": "a202e2b666238cd861cc2f2ea810b2f19cbc81cd7f57315c3dfbe1a94268b7d9"
+        },
+        {
+          "path": "docs__docs__documentation__getting-started__installation__backend-config.md",
+          "bytes": 10582,
+          "sha256": "29952cd0a27096e3bd10331a4fa9e1e3a14e7907243460abf4a4895aff4baa51"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-31996",
+      "path": "corpus/fullcode/CVE-2024-31996",
+      "languages": [
+        "java"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 10.0,
+      "patch_url": "https://github.com/xwiki/xwiki-commons/commit/b0805160ec7b01ee12417e79cb384e60ae4817aa",
+      "files": [
+        {
+          "path": "xwiki-commons-core__xwiki-commons-velocity__src__main__java__org__xwiki__velocity__tools__.java",
+          "bytes": 11213,
+          "sha256": "f39be9eefcc0d39c174494e69cd1fa9a7c999b06cda4291c81c9e1efae4d511d"
+        },
+        {
+          "path": "xwiki-commons-core__xwiki-commons-velocity__src__test__java__org__xwiki__velocity__tools__.java",
+          "bytes": 7951,
+          "sha256": "6dae4dad7a13c38af6b960ef9f89383e5cca935ac69a65a41bdd91ac10fcf0d0"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-32464",
+      "path": "corpus/fullcode/CVE-2024-32464",
+      "languages": [
+        "ruby"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-79",
+        "CWE-80",
+        "CWE-79"
+      ],
+      "cvss_score": 6.1,
+      "patch_url": "https://github.com/rails/rails/commit/e215bf3360e6dfe1497c1503a495e384ed6b0995",
+      "files": [
+        {
+          "path": "actiontext__app__helpers__action_text__content_helper.rb",
+          "bytes": 2297,
+          "sha256": "d241fa013e0deb185ff2eabab30d130d143ea02c896468125d42dae303edbdba"
+        },
+        {
+          "path": "actiontext__lib__action_text__content.rb",
+          "bytes": 6722,
+          "sha256": "f542a0cf26a537e2cebcfa7512e97b01ec141a3ca00158b23053d1ea5e3833d6"
+        },
+        {
+          "path": "actiontext__test__unit__attachment_test.rb",
+          "bytes": 4046,
+          "sha256": "e724eb3819a93246c82d92cdbd6c0dcb5c348d74da6314c1e6769b09f1d08566"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-34068",
+      "path": "corpus/fullcode/CVE-2024-34068",
+      "languages": [
+        "go"
+      ],
+      "file_count": 2,
+      "metadata_present": false,
+      "cwe_ids": [],
+      "cvss_score": null,
+      "patch_url": null,
+      "files": [
+        {
+          "path": "go.sum",
+          "bytes": 54194,
+          "sha256": "1b3977734bfebb5fd7987360f4761caa98a30ff64a7c19aa674c666fbbfcfa43"
+        },
+        {
+          "path": "router__downloader__downloader.go",
+          "bytes": 10552,
+          "sha256": "77804e9965ebb1c462a0b1ef2f92adcd631892b053cc5c1e15bcc6f2c24ec488"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-36116",
+      "path": "corpus/fullcode/CVE-2024-36116",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/dzikoysk/reposilite/commit/848173738e4375482c70365db5cebae29f125eaa",
+      "files": [
+        {
+          "path": "reposilite-backend__src__main__kotlin__com__reposilite__javadocs__JavadocContainerService.kt",
+          "bytes": 6719,
+          "sha256": "8ccd5abe87ab5fc2b25b1078d287c7b433a32b51bcd2c15c98ec34f782d762ef"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37157",
+      "path": "corpus/fullcode/CVE-2024-37157",
+      "languages": [
+        "ruby"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 6.4,
+      "patch_url": "https://github.com/discourse/discourse/commit/5b8cf11b69e05d5c058c1148ec69ec309491fa6e",
+      "files": [
+        {
+          "path": "lib__cooked_processor_mixin.rb",
+          "bytes": 11307,
+          "sha256": "88952cc29fec517edfcec32a45a234a02f14b3e8a8685875ccae83ac18065a00"
+        },
+        {
+          "path": "lib__final_destination__fast_image.rb",
+          "bytes": 599,
+          "sha256": "89886f0376eb83b24b2416142d99dec6f28bff5545e6bf71d03d04e58572f109"
+        },
+        {
+          "path": "spec__lib__final_destination__fast_image_spec.rb",
+          "bytes": 2637,
+          "sha256": "63d27aa41a907760e1de82f38eaaa229251e0fac7b45c8888d66efdba3d099c3"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37164",
+      "path": "corpus/fullcode/CVE-2024-37164",
+      "languages": [
+        "python"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 7.1,
+      "patch_url": "https://github.com/cvat-ai/cvat/commit/f2346934c80bd91740f55c2788ef7d535a291d4c",
+      "files": [
+        {
+          "path": "cvat__apps__engine__cloud_provider.py",
+          "bytes": 36997,
+          "sha256": "93176b9250b497a6d9af26dfbede1242aa17fe3c1c99ec4112aa43f9cf8af1d1"
+        },
+        {
+          "path": "supervisord__worker.export.conf",
+          "bytes": 1053,
+          "sha256": "d0fc700940cc31d9805c0ef6ef9d286f17db690d3d81d21956b8fbd2e69b2b4a"
+        },
+        {
+          "path": "tests__docker-compose.minio.yml",
+          "bytes": 2170,
+          "sha256": "557d0a5a998c207e6c4a8a2f9e43172337b6740c808068a494feba16ef446baa"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37899",
+      "path": "corpus/fullcode/CVE-2024-37899",
+      "languages": [
+        "java"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 9.0,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/f89c8f47fad6e5cc7e68c69a7e0acde07f5eed5a",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-oldcore__src__main__java__com__xpn__xwiki__user__api__.java",
+          "bytes": 15614,
+          "sha256": "2461194f6eb4154f8c83ff45cc21f6474d1c921c07ed919c168aa2c3b7781ae9"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-oldcore__src__test__java__com__xpn__xwiki__user__api__.java",
+          "bytes": 10742,
+          "sha256": "d47baf077059d3f97bd69decf587fff9bca67398223b525ba80e7ae681172c0d"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-web__xwiki-platform-web-templates__src__main__resource.vm",
+          "bytes": 7208,
+          "sha256": "9ec8ee9c67de9ea3ebcaec98d7b2ab828b37408578e5b315c53bee3dc15e94f5"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37900",
+      "path": "corpus/fullcode/CVE-2024-37900",
+      "languages": [
+        "java",
+        "javascript"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-96",
+        "CWE-94"
+      ],
+      "cvss_score": 6.4,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/6cdd69d31d6bf3caa7f40ec55eb317e4e528ad28",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-flamingo__xwiki-platform-flamingo-skin__xwiki-platform.java",
+          "bytes": 23585,
+          "sha256": "91380bdd28e7c36d73128d993bf203d2a23621d7e34c6c943e0b03289e802459"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-web__xwiki-platform-web-war__src__main__webapp__resour.js",
+          "bytes": 26037,
+          "sha256": "576a880f31f37aff384afe9529d748d5a91d4a3744195b5745a93b9ca77391e3"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37901",
+      "path": "corpus/fullcode/CVE-2024-37901",
+      "languages": [
+        "java"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-862",
+        "CWE-94"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/xwiki/xwiki-platform/commit/0b135760514fef73db748986a3311f3edd4a553b",
+      "files": [
+        {
+          "path": "xwiki-platform-core__xwiki-platform-oldcore__src__main__java__com__xpn__xwiki__api__Object.java",
+          "bytes": 5830,
+          "sha256": "50eb088b9087c140834d2872187c450547adb396df54def0981302a2d33223e2"
+        },
+        {
+          "path": "xwiki-platform-core__xwiki-platform-oldcore__src__main__java__com__xpn__xwiki__objects__Ba.java",
+          "bytes": 16753,
+          "sha256": "58be8cf9d66d6c2635896568c8f9ec1032563c5ed0d6544ca6acab5497cae39f"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-39699",
+      "path": "corpus/fullcode/CVE-2024-39699",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 5.0,
+      "patch_url": "https://github.com/directus/directus/commit/d577b44231c0923aca99cac5770fd853801caee1",
+      "files": [
+        {
+          "path": "api__src__services__roles.test.ts",
+          "bytes": 28402,
+          "sha256": "e58f61671dfdb09f778187e39e8e4af33fd1f095539480b0fd6b8403d14f992d"
+        },
+        {
+          "path": "api__src__services__roles.ts",
+          "bytes": 8129,
+          "sha256": "914307cf9c564b23adf7835b730c6d3ef298c0938335b8201105ff5adc92b979"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-39903",
+      "path": "corpus/fullcode/CVE-2024-39903",
+      "languages": [
+        "python"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-22"
+      ],
+      "cvss_score": 8.6,
+      "patch_url": "https://github.com/widgetti/solara/commit/df2fd66a7f4e8ffd36e8678697a8a4f76760dc54",
+      "files": [
+        {
+          "path": "solara__server__cdn_helper.py",
+          "bytes": 3342,
+          "sha256": "8dcfb7e231f04c59c397fa280c9d9f19458a1d35d20418251dd3afdd6a4aeb23"
+        },
+        {
+          "path": "solara__server__flask.py",
+          "bytes": 9311,
+          "sha256": "12fc9edadd96b70ed14708bdff13bb9e38c1ee3ecb19c8ab235f7a5faf35c981"
+        },
+        {
+          "path": "solara__server__starlette.py",
+          "bytes": 24199,
+          "sha256": "34fe01cba354a211de6bab0cefdd6ffe0afab7e268192478d6a089912f643ffb"
+        },
+        {
+          "path": "solara__server__utils.py",
+          "bytes": 678,
+          "sha256": "cf407f4f29f2bce9359c9fa5f61ee4ceba641c90db91c38ec80fe7f2f9bcc2d5"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-39943",
+      "path": "corpus/fullcode/CVE-2024-39943",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-284"
+      ],
+      "cvss_score": 9.9,
+      "patch_url": "https://github.com/rejetto/hfs/commit/305381bd36eee074fb238b64302a252668daad1d",
+      "files": [
+        {
+          "path": "src__util-os.ts",
+          "bytes": 3514,
+          "sha256": "c80ccf9f8e5dd9cc126585010a63fc7bbc483b12de319c1bb31f9280991467cd"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41127",
+      "path": "corpus/fullcode/CVE-2024-41127",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-94"
+      ],
+      "cvss_score": 8.3,
+      "patch_url": "https://github.com/monkeytypegame/monkeytype/commit/29627fd0d5f152e2da59671987090ea0a5c29874",
+      "files": [
+        {
+          "path": ".github__workflows__ci-failure-comment.yml",
+          "bytes": 1260,
+          "sha256": "80d445818d693fc64005005e383d415aadebefeec99cdb711a7c595ddb38029a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41812",
+      "path": "corpus/fullcode/CVE-2024-41812",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/TxtDot/txtdot/commit/7c72d985f7a26ec1fd3cf628444717ca54986d2d",
+      "files": [
+        {
+          "path": ".env.example",
+          "bytes": 385,
+          "sha256": "6e37b2a8cfb605fe033dc6710bf073a9769026cc9fa0938662734468aec8c231"
+        },
+        {
+          "path": ".github__workflows__format-check.yml",
+          "bytes": 417,
+          "sha256": "76bd88f3dab6a2dd5de68504ecc6bcb03460cc475a790b2c31eb01c30a9e6cea"
+        },
+        {
+          "path": "package-lock.json",
+          "bytes": 136538,
+          "sha256": "946a54240a5bc5ee147058d371d697d6405d28b436f83e054717e7de6d7d4d37"
+        },
+        {
+          "path": "README.md",
+          "bytes": 1493,
+          "sha256": "dfc63fbc81e58b316467a4b2940f1087e8fcf5568064e93c1aeff4ba1cdc72d6"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41813",
+      "path": "corpus/fullcode/CVE-2024-41813",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 7.5,
+      "patch_url": "https://github.com/TxtDot/txtdot/commit/f241a46e05b148a39b84bf956051b5aaa489949e",
+      "files": [
+        {
+          "path": "package-lock.json",
+          "bytes": 136538,
+          "sha256": "93d767073f19c79e38493fc084c8adf59563f3e3c60c91728e278849020eaa4d"
+        },
+        {
+          "path": "package.json",
+          "bytes": 2021,
+          "sha256": "b34d078ccad90daaf4704618b03ab27698694375818d27ff1bb64ae677f3ed77"
+        },
+        {
+          "path": "src__routes__browser__proxy.ts",
+          "bytes": 760,
+          "sha256": "015436a241240a104240b610dbcd821521bee7c3b4779d07b01cafb283c6c05f"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-41815",
+      "path": "corpus/fullcode/CVE-2024-41815",
+      "languages": [
+        "unknown"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-78"
+      ],
+      "cvss_score": 7.4,
+      "patch_url": "https://github.com/starship/starship/commit/cfc58161e0ec595db90af686ad77a73df6d44d74",
+      "files": [
+        {
+          "path": ".github__config-schema.json",
+          "bytes": 155823,
+          "sha256": "640cba11e910b349c013e4603896b61106fcf23076c895e651605ea5a3c7c08b"
+        },
+        {
+          "path": "docs__config__README.md",
+          "bytes": 273502,
+          "sha256": "2babf2d4a919f5f17467d73a20f5be6714d8f0c18744d798472ac5ee0bc4d169"
+        },
+        {
+          "path": "src__configs__custom.rs",
+          "bytes": 1651,
+          "sha256": "cfa914216d79c609b3d4dbad785faa0cc9d63c38fb940dc61cf0cac56281c57d"
+        },
+        {
+          "path": "src__modules__custom.rs",
+          "bytes": 23414,
+          "sha256": "870af2b0e69adcd3d0709ff25ef75fee252c18150d58139a25aaf7ecaec0f5b5"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-42355",
+      "path": "corpus/fullcode/CVE-2024-42355",
+      "languages": [
+        "php"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.3,
+      "patch_url": "https://github.com/shopware/core/commit/a784aa1cec0624e36e0ee4d41aeebaed40e0442f",
+      "files": [
+        {
+          "path": "Framework__Adapter__Twig__Node__FeatureCallSilentToken.php",
+          "bytes": 843,
+          "sha256": "46ebaedb9174436fe4aa7b9160346ae50f0b006b8053cf2a125f79b923676a8a"
+        },
+        {
+          "path": "Framework__Context.php",
+          "bytes": 7041,
+          "sha256": "97b0085feb0f78cc897a6bf8f0be0b079347a6084c5ee8374f8d63e922caa4d1"
+        },
+        {
+          "path": "Framework__DataAbstractionLayer__DataAbstractionLayerException.php",
+          "bytes": 15545,
+          "sha256": "6aba2041adad2b226341b288b9676517280cf23a79185cd36afc7004a5929cef"
+        },
+        {
+          "path": "Framework__DataAbstractionLayer__Dbal__EntityAggregator.php",
+          "bytes": 31079,
+          "sha256": "466a503250d4ed67b3c2279b7e176e3e3d04c0e9b8eee1d9114c169220b11d62"
+        },
+        {
+          "path": "Framework__DataAbstractionLayer__Search__Parser__AggregationParser.php",
+          "bytes": 14725,
+          "sha256": "d27ee960430e577c7a22d22e0f881230c936dbfaf0d4a2e1c297b432fee2f70c"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-42356",
+      "path": "corpus/fullcode/CVE-2024-42356",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 8.3,
+      "patch_url": "https://github.com/shopware/core/commit/04183e0c02af3b404eb7d52c683734bfe0595038",
+      "files": [
+        {
+          "path": "Framework__Context.php",
+          "bytes": 6890,
+          "sha256": "e5ded5019a445b74a53ab13cdb96c0a4be6af862906dd446f52a72796a88edbf"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-42362",
+      "path": "corpus/fullcode/CVE-2024-42362",
+      "languages": [
+        "java"
+      ],
+      "file_count": 5,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 8.8,
+      "patch_url": "https://github.com/apache/hertzbeat/commit/79f5408e345e8e89da97be05f43e3204a950ddfb",
+      "files": [
+        {
+          "path": "collector__src__main__java__org__dromara__hertzbeat__collector__collect__jmx__JmxCollectImpl.java",
+          "bytes": 9747,
+          "sha256": "c97b0eda499c2d714627397e07a16f91c01b040254cc709e03d00aebb32682d9"
+        },
+        {
+          "path": "manager__src__main__java__org__dromara__hertzbeat__manager__controller__AppController.java",
+          "bytes": 8366,
+          "sha256": "583cc153f58cf15ac96aa46473c4f11e5bc6012821a48e26fe124ee686237433"
+        },
+        {
+          "path": "manager__src__main__java__org__dromara__hertzbeat__manager__service__impl__AppServiceImpl.java",
+          "bytes": 29086,
+          "sha256": "c056ef0f6f894b410db90671cbda5829ce8472a015d8d62ed1660cd82ea67a9c"
+        },
+        {
+          "path": "manager__src__main__java__org__dromara__hertzbeat__manager__service__impl__YamlImExportSer.java",
+          "bytes": 2834,
+          "sha256": "ea6cf709f7e1331f8424ffb8f6d8579cb1fc5c14c560a3c1531d1174193fc863"
+        },
+        {
+          "path": "web-app__src__app__routes__monitor__monitor-list__monitor-list.component.html",
+          "bytes": 10196,
+          "sha256": "9c07b2ffb0c73670929493962d71ee928bb7e895da348c4bac3ef8b318f91065"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-43379",
+      "path": "corpus/fullcode/CVE-2024-43379",
+      "languages": [
+        "go"
+      ],
+      "file_count": 6,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-918",
+        "CWE-918"
+      ],
+      "cvss_score": 3.4,
+      "patch_url": "https://github.com/trufflesecurity/trufflehog/commit/fe5624c70923355128868cffd647b6e2cfe11443",
+      "files": [
+        {
+          "path": "go.sum",
+          "bytes": 14444,
+          "sha256": "d75c0499d31e1e324ece601ac5d8bddea5efd923fc268ee5fa9f52d47f6489c4"
+        },
+        {
+          "path": "pkg__detectors__aha__aha.go",
+          "bytes": 3184,
+          "sha256": "a2f0427ab23939e16ff836ac76b32e39bb989842db13c31e3b77201a34d1158c"
+        },
+        {
+          "path": "pkg__detectors__apiflash__apiflash.go",
+          "bytes": 2410,
+          "sha256": "257a40846fa642a4bf6d0d41bebf43cc949dafe81122c89c49ba50ddcbd733b3"
+        },
+        {
+          "path": "pkg__detectors__artifactory__artifactory.go",
+          "bytes": 3086,
+          "sha256": "b51565b636fbf881934717eed8b8dad310d21049d51c39b6fb8c23af7016a8a5"
+        },
+        {
+          "path": "pkg__detectors__auth0managementapitoken__auth0managementapitoken.go",
+          "bytes": 3130,
+          "sha256": "64e748be8d669aebfc8b1256ed6ced9ac864ec68284e441fafb4909db2550858"
+        },
+        {
+          "path": "pkg__detectors__auth0oauth__auth0oauth.go",
+          "bytes": 3852,
+          "sha256": "c1af2fd99c2058eca00ceb13799700e4cefd3bac7149c20f5497f787669ec0dd"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-43404",
+      "path": "corpus/fullcode/CVE-2024-43404",
+      "languages": [
+        "python"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-95",
+        "CWE-94"
+      ],
+      "cvss_score": 9.8,
+      "patch_url": "https://github.com/NicPWNs/MEGABOT/commit/71e79e5581ea36313700385b112d863053fb7ed6",
+      "files": [
+        {
+          "path": "commands__math.py",
+          "bytes": 312,
+          "sha256": "c777a995bb98b9c35ac7a9f81bbeacab390abe7a8c2ebcf8e00a1d8a94d0337a"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-45053",
+      "path": "corpus/fullcode/CVE-2024-45053",
+      "languages": [
+        "python"
+      ],
+      "file_count": 4,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-1336",
+        "CWE-94"
+      ],
+      "cvss_score": 9.1,
+      "patch_url": "https://github.com/ethyca/fides/commit/829cbd9cb5ef9c814fbac1ed6800e8d939d359c5",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 182248,
+          "sha256": "43d85f4196db2e982da9eff81d9322941715cb12e6b3e07b7b3fd9515485a36e"
+        },
+        {
+          "path": "src__fides__api__models__messaging_template.py",
+          "bytes": 5213,
+          "sha256": "9adf19c4ad51d3548af7d366fe66dcf14c24dda77f8ba769768570f69c8a870e"
+        },
+        {
+          "path": "src__fides__api__service__messaging__message_dispatch_service.py",
+          "bytes": 34191,
+          "sha256": "bb9b7d06bcab60cb051306ffd359beeaac4074d46a32a23366e9db256b1a777f"
+        },
+        {
+          "path": "tests__fixtures__application_fixtures.py",
+          "bytes": 118069,
+          "sha256": "c8672a13078f121e6c348b50f38d2083812b2be518421a8a7c04db0caf3da6ec"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-45390",
+      "path": "corpus/fullcode/CVE-2024-45390",
+      "languages": [
+        "typescript"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 7.3,
+      "patch_url": "https://github.com/blakeembrey/js-template/commit/b8d9aa999e464816c6cfb14acd1ad0f5d1e335aa",
+      "files": [
+        {
+          "path": "src__index.ts",
+          "bytes": 1846,
+          "sha256": "389f885cd1f2e2204a2ac9e43135f7f186b2fbc66caee69c2b1df46279f3d1ef"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-8003",
+      "path": "corpus/fullcode/CVE-2024-8003",
+      "languages": [
+        "go"
+      ],
+      "file_count": 2,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-502"
+      ],
+      "cvss_score": 3.5,
+      "patch_url": "https://github.com/Go-Tribe/gotribe-admin/commit/45ac90d6d1f82716f77dbcdf8e7309c229080e3c",
+      "files": [
+        {
+          "path": "go.sum",
+          "bytes": 8128,
+          "sha256": "0194932b49475d1c1ef572f5ac032b6dc4da6fa82e1c64cf2780c38d61664042"
+        },
+        {
+          "path": "internal__app__routes__routes.go",
+          "bytes": 3529,
+          "sha256": "6a7b0e6a40803698d845ac4706920ecefe9301680a28c8c4dff7f794f93b18a6"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-8374",
+      "path": "corpus/fullcode/CVE-2024-8374",
+      "languages": [
+        "python"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 7.8,
+      "patch_url": "https://github.com/Ultimaker/Cura/commit/285a241eb28da3188c977f85d68937c0dad79c50",
+      "files": [
+        {
+          "path": "plugins__3MFReader__ThreeMFReader.py",
+          "bytes": 14846,
+          "sha256": "5ce463abdbf36b1bdc17dfd6575504f3753af93f97ac75d803486d7e7a182dd8"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-8375",
+      "path": "corpus/fullcode/CVE-2024-8375",
+      "languages": [
+        "cpp"
+      ],
+      "file_count": 3,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-416",
+        "CWE-502"
+      ],
+      "cvss_score": 7.8,
+      "patch_url": "https://github.com/google-deepmind/reverb/commit/6a0dcf4c9e842b7f999912f792aaa6f6bd261a25",
+      "files": [
+        {
+          "path": "reverb__cc__BUILD",
+          "bytes": 16346,
+          "sha256": "2f65e609e894ceaf0ff9c9fe8829783c49173923d198f521e53ffce75782a01b"
+        },
+        {
+          "path": "reverb__cc__tensor_compression.cc",
+          "bytes": 4015,
+          "sha256": "2a73ef4b0b1933ff88facc2ad49b06c5805b2c7e5d48ca5a3dd38abe3542673c"
+        },
+        {
+          "path": "reverb__cc__tensor_compression_test.cc",
+          "bytes": 4031,
+          "sha256": "40e4a6e3f5cc6db354b5fc26eed9bcc9dd1a9222f2808665790dc3e68521ec13"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-9006",
+      "path": "corpus/fullcode/CVE-2024-9006",
+      "languages": [
+        "php"
+      ],
+      "file_count": 1,
+      "metadata_present": true,
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-94"
+      ],
+      "cvss_score": 6.3,
+      "patch_url": "https://github.com/jeanmarc77/123solar/commit/f4a8c748ec436e5a79f91ccb6a6f73752b336aa5",
+      "files": [
+        {
+          "path": "admin__admin_invt2.php",
+          "bytes": 18553,
+          "sha256": "cac78332700bc0d1423e28322d7da4d8b0c654d35fda9175dfc0ccd9d1c9f14d"
+        }
+      ]
+    }
+  ]
+}
