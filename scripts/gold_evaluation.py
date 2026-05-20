@@ -5,7 +5,6 @@ then applies strict HIT/PARTIAL/MISS matching per scoring_rubric.md.
 """
 
 import json
-import os
 import re
 import subprocess
 from dataclasses import dataclass, field
@@ -400,4 +399,4 @@ if __name__ == "__main__":
     with open("results/gold_evaluation.json", "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"\nResults saved to results/gold_evaluation.json")
+    print("\nResults saved to results/gold_evaluation.json")

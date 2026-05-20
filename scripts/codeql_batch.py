@@ -6,7 +6,6 @@ Python requires py launcher on Windows — skipped if unavailable.
 """
 
 import json
-import os
 import subprocess
 from pathlib import Path
 
@@ -181,7 +180,7 @@ if __name__ == "__main__":
     found = [r for r in scanned if r["findings"] > 0]
     blind = [r for r in scanned if r["findings"] == 0]
 
-    print(f"\n=== CodeQL Batch Results ===")
+    print("\n=== CodeQL Batch Results ===")
     print(f"Scanned: {len(scanned)}, Found: {len(found)}, Blind: {len(blind)}")
     if scanned:
         print(f"Blind rate: {len(blind)*100//len(scanned)}%")
