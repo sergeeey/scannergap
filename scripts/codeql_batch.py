@@ -183,7 +183,7 @@ if __name__ == "__main__":
     print("\n=== CodeQL Batch Results ===")
     print(f"Scanned: {len(scanned)}, Found: {len(found)}, Blind: {len(blind)}")
     if scanned:
-        print(f"Blind rate: {len(blind)*100//len(scanned)}%")
+        print(f"Blind rate: {len(blind) * 100 // len(scanned)}%")
 
     with open("results/codeql_batch.json", "w", encoding="utf-8") as f:
         json.dump(

@@ -87,7 +87,7 @@ Quick follow-up. The output is a short report, not a SaaS deployment:
 4. likely blind spots;
 5. custom rule or checklist recommendations.
 
-Best fit is a team that already has Semgrep, CodeQL, Snyk, Checkmarx, Fortify, or
+Best fit is a team that already uses Semgrep, CodeQL, Snyk, Checkmarx, Fortify, or
 GitHub Advanced Security and wants to know what the scanner output actually means.
 
 Would it make sense to test this on one repo?

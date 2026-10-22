@@ -35,7 +35,7 @@
 - [ ] **Bandit** (для Python)
 - [ ] **ESLint** с security plugins (для JS)
 - [ ] **CodeQL** (GitHub or self-hosted)
-- [ ] **Snyk** / WhiteSource (dependency scanning)
+- [ ] Question: is **Snyk** / WhiteSource (dependency scanning) already in use?
 - [ ] **Commercial SAST** (Checkmarx, Veracode, Fortify, etc.)
 - [ ] **Custom scripts** (внутренние security checkers)
 

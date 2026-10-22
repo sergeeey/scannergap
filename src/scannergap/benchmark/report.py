@@ -9,7 +9,7 @@ Produces a reproducible report with:
 """
 
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import structlog
@@ -34,8 +34,8 @@ def generate_report(
         Path to the generated JSON report.
     """
     output_dir.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.now(timezone.utc).isoformat()
-    date_str = datetime.now(timezone.utc).strftime("%Y%m%d")
+    timestamp = datetime.now(UTC).isoformat()
+    date_str = datetime.now(UTC).strftime("%Y%m%d")
 
     report = {
         "benchmark": "ScannerGap Security Blind Spot Benchmark",

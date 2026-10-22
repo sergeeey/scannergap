@@ -189,4 +189,4 @@ Verified: two independent runs produced 0/20 differences.
 
 *ScannerGap is not a scanner. It's a benchmark that shows where your scanners stop seeing.*
 
-*Methodology transferred from ARCHCODE genomic variant analysis — the same framework that found 27 structural variants invisible to all sequence predictors.*
+*Methodology transferred from ARCHCODE genomic variant analysis — the same falsification-first approach. ARCHCODE's own audit found that its headline AUC is largely explained by variant-category composition.*

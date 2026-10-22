@@ -133,9 +133,7 @@ def classify_finding(finding: ScanFinding, gold_entry: dict) -> str:
 
     if file_match and (cwe_match or keyword_match):
         return "HIT"
-    elif file_match and not cwe_match and not keyword_match:
-        return "PARTIAL"
-    elif keyword_match and not file_match:
+    elif file_match and not cwe_match and not keyword_match or keyword_match and not file_match:
         return "PARTIAL"
     else:
         return "NOISE"
@@ -331,7 +329,7 @@ def print_results(results: list[EvalResult]) -> dict:
         t = counts["total"]
         dh = counts["default_hit"]
         th = counts["tuned_hit"]
-        print(f"  {req:5s}: {t} CVEs, default {t - dh}/{t} blind, " f"tuned {t - th}/{t} blind")
+        print(f"  {req:5s}: {t} CVEs, default {t - dh}/{t} blind, tuned {t - th}/{t} blind")
 
     return {
         "total": total,

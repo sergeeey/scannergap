@@ -135,7 +135,7 @@ This sample does not prove:
 - ScannerGap has high precision.
 - ScannerGap finds all vulnerabilities.
 - ScannerGap is a production benchmark.
-- ScannerGap replaces Semgrep, CodeQL, Snyk, Checkmarx, Fortify, or manual AppSec review.
+- ScannerGap is not a replacement for Semgrep, CodeQL, Snyk, Checkmarx, Fortify, or manual AppSec review.
 
 ## Paid POC Framing
 

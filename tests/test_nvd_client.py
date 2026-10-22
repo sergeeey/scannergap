@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from scannergap.corpus.nvd_client import CVERecord, NVD_API_BASE
+from scannergap.corpus.nvd_client import NVD_API_BASE, CVERecord
 
 
 class TestCVERecord:

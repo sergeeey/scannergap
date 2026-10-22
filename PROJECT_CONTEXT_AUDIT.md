@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-**ScannerGap** is a **benchmark-backed blind-spot audit prototype** for finding vulnerability classes that baseline SAST scanners (Semgrep, Bandit, CodeQL) systematically miss.
+**ScannerGap** is a **benchmark-backed blind-spot audit prototype** for finding vulnerability classes that baseline SAST scanners systematically miss. The benchmark headline covers Semgrep and Bandit only; CodeQL appears in a separate exploratory subset.
 
 **Current State:** Research MVP with exploratory benchmark evidence  
 **Readiness Level:** Pilot-ready for manual POC, NOT production SaaS  
@@ -38,7 +38,7 @@
 | **Primary Language** | Python 3.11+ |
 | **Purpose** | Meta-scanner for SAST blind spot detection |
 | **Primary User** | Security teams / AppSec / CISOs with existing SAST tools |
-| **Core Value** | Finds vulnerability classes ALL baseline scanners miss (Q2 quadrant) |
+| **Core Value** | Finds vulnerability classes that the tested baseline scanners (Semgrep + Bandit) miss (Q2 quadrant) |
 | **Current Status** | Research MVP + demo materials |
 | **Главный риск** | Reproducibility not verified — 135 vs 131 CVE mismatch |
 | **Главная возможность** | First paying client via manual POC ($500-1000) |
@@ -518,7 +518,7 @@ diff results/full_135/benchmark_report.json results/repro_run_1/benchmark_report
 - ✅ Only `.env.example` in corpus (CVE sample data)
 
 **B. Local-Only Execution**
-- ✅ All scanners run locally (Semgrep, Bandit, CodeQL)
+- ✅ Semgrep and Bandit run locally through the wrappers; CodeQL runs only in the separate exploratory subset
 - ✅ No cloud uploads in scanner wrappers
 - ✅ Data handling policy: `demo/data-handling.md` specifies local-only
 
@@ -635,7 +635,7 @@ matplotlib>=3.8
 2. Internal tool — ❌
 3. MVP — ✅ **[CURRENT]**
 4. Pilot-ready — ✅ **[CURRENT]**
-5. Production-ready — ❌
+5. Production-ready — not yet ❌
 6. Enterprise-ready — ❌
 
 **Justification:**
@@ -818,7 +818,7 @@ git commit -m "chore: add dependency lockfile"
 # ScannerGap — AI Handoff Context
 
 ## What is this?
-ScannerGap finds vulnerability classes that ALL baseline SAST scanners (Semgrep, Bandit, CodeQL) miss.
+ScannerGap finds vulnerability classes that the baseline scanners tested here (Semgrep + Bandit) miss.
 It's a benchmark-backed blind-spot audit prototype, NOT a scanner replacement.
 
 ## Current State (2026-05-20)
