@@ -11,6 +11,7 @@ Produces a reproducible report with:
 import json
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import Any
 
 import structlog
 
@@ -84,7 +85,7 @@ def generate_report(
     return json_path
 
 
-def _render_markdown(report: dict) -> str:
+def _render_markdown(report: dict[str, Any]) -> str:
     """Render report dict as Markdown."""
     lines = [
         f"# {report['benchmark']} v{report['version']}",

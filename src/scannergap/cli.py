@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+from typing import Any
 
 import click
 import structlog
@@ -41,7 +42,7 @@ def scan(corpus_dir: str, scanners: tuple[str, ...], output: str) -> None:
     cve_dirs = sorted([d for d in corpus_path.iterdir() if d.is_dir()])
     log.info("scanning_corpus", cve_count=len(cve_dirs), scanners=list(scanners))
 
-    all_results: dict[str, dict[str, list[str]]] = {}
+    all_results: dict[str, dict[str, Any]] = {}
 
     for scanner_name in scanners:
         scanner_cls = scanner_map.get(scanner_name)
@@ -104,7 +105,7 @@ def quadrant(scan_results: str, corpus_dir: str, output: str) -> None:
 
     log.info("quadrant_result", **result.summary())
 
-    cve_metadata: dict[str, dict] = {}
+    cve_metadata: dict[str, dict[str, Any]] = {}
     for cve_id in result.q2_blind_spot:
         cve_metadata[cve_id] = {"cwe_ids": ["CWE-UNKNOWN"], "description": ""}
 
@@ -153,7 +154,7 @@ def benchmark(quadrant_file: str, output: str) -> None:
 
     scanner_names = [
         k
-        for k in raw.get("coverage_matrix", {}).keys()
+        for k in raw.get("coverage_matrix", {})
         if k not in ("any_scanner", "all_scanners", "scanner_count")
     ]
 
@@ -224,7 +225,7 @@ def pipeline(corpus_dir: str, scanners: tuple[str, ...], output_dir: str) -> Non
 
     log.info("quadrant_done", **qr.summary())
 
-    cve_metadata: dict[str, dict] = {}
+    cve_metadata: dict[str, dict[str, Any]] = {}
     for cve_id in qr.q2_blind_spot:
         meta_file = corpus_path / cve_id / "metadata.json"
         if meta_file.exists():

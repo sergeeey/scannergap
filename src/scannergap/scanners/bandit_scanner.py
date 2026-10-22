@@ -70,6 +70,7 @@ class BanditScanner(BaseScanner):
                 capture_output=True,
                 text=True,
                 timeout=10,
+                check=False,
             )
             return result.returncode == 0
         except (FileNotFoundError, subprocess.TimeoutExpired):
@@ -83,6 +84,7 @@ class BanditScanner(BaseScanner):
                 capture_output=True,
                 text=True,
                 timeout=300,
+                check=False,
             )
         except subprocess.TimeoutExpired:
             return ScanResult(

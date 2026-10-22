@@ -137,7 +137,7 @@ def run_local_semgrep(target: Path, rules: Path, timeout: int) -> tuple[dict[str
         "--quiet",
         str(target),
     ]
-    result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)
+    result = subprocess.run(command, capture_output=True, text=True, timeout=timeout, check=False)
     raw = json.loads(result.stdout) if result.stdout.strip() else {"results": []}
     return raw, result.stderr, result.returncode
 
@@ -165,7 +165,7 @@ def run_docker_semgrep(
         "--quiet",
         "/scan/target",
     ]
-    result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)
+    result = subprocess.run(command, capture_output=True, text=True, timeout=timeout, check=False)
     raw = json.loads(result.stdout) if result.stdout.strip() else {"results": []}
     return raw, result.stderr, result.returncode
 

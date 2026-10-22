@@ -45,7 +45,7 @@ def fetch_cves(
     Returns:
         List of CVERecord objects.
     """
-    params = {
+    params: dict[str, str | int] = {
         "keywordSearch": keyword,
         "resultsPerPage": results_per_page,
         "startIndex": start_index,
