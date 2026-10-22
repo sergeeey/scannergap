@@ -92,7 +92,7 @@ def main() -> None:
         verify(Path(args.manifest))
     except SystemExit:
         raise
-    except Exception as exc:
+    except Exception as exc:  # noqa: BLE001 - top-level guard: report FAIL and exit 1
         print(f"FAIL: unexpected error: {exc}")
         sys.exit(1)
 

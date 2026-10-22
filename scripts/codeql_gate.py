@@ -90,6 +90,7 @@ def run_semgrep_max(target: Path, configs: list[str]) -> list[dict]:
                 capture_output=True,
                 text=True,
                 timeout=120,
+                check=False,
             )
             if not result.stdout:
                 continue
@@ -115,7 +116,7 @@ def run_semgrep_max(target: Path, configs: list[str]) -> list[dict]:
                         "config": config,
                     }
                 )
-        except (subprocess.TimeoutExpired, json.JSONDecodeError, Exception):
+        except Exception:  # noqa: BLE001, S112 - any failure of one config skips that config
             continue
 
     return all_findings
@@ -124,7 +125,9 @@ def run_semgrep_max(target: Path, configs: list[str]) -> list[dict]:
 def check_codeql_available() -> bool:
     """Check if CodeQL CLI is available."""
     try:
-        result = subprocess.run(["codeql", "--version"], capture_output=True, text=True, timeout=10)
+        result = subprocess.run(
+            ["codeql", "--version"], capture_output=True, text=True, timeout=10, check=False
+        )
         return result.returncode == 0
     except (FileNotFoundError, subprocess.TimeoutExpired):
         return False

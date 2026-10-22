@@ -59,7 +59,7 @@ def fetch_cves_for_window(cwe_id: str, start: str, end: str, existing_ids: set[s
         if resp.status_code != 200:
             return []
         data = resp.json()
-    except Exception:
+    except (requests.RequestException, ValueError):
         return []
 
     results = []
@@ -119,7 +119,7 @@ def download_full_files(cve: dict, fullcode_dir: Path) -> int:
         pr = requests.get(patch_url + ".patch", timeout=15, allow_redirects=True)
         if pr.status_code != 200:
             return 0
-    except Exception:
+    except requests.RequestException:
         return 0
 
     changed = re.findall(r"diff --git a/(.+?) b/", pr.text)
@@ -139,7 +139,7 @@ def download_full_files(cve: dict, fullcode_dir: Path) -> int:
                     safe = safe[:90] + ext
                 (cve_dir / safe).write_text(r.text, encoding="utf-8", errors="replace")
                 file_count += 1
-        except Exception:
+        except (requests.RequestException, OSError):  # best effort: the file is skipped
             pass
 
     # Write metadata

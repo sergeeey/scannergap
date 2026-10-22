@@ -62,9 +62,10 @@ def ensure_query_pack(language: str) -> bool:
             capture_output=True,
             text=True,
             timeout=60,
+            check=False,
         )
         return result.returncode == 0
-    except Exception:
+    except Exception:  # noqa: BLE001 - probe: any failure means CodeQL is unavailable
         return False
 
 
@@ -91,6 +92,7 @@ def run_codeql_on_cve(cve_dir: Path, language: str) -> dict:
             capture_output=True,
             text=True,
             timeout=120,
+            check=False,
         )
         if result.returncode != 0:
             return {"cve_id": cve_id, "status": "db_failed", "error": result.stderr[-200:]}
@@ -116,6 +118,7 @@ def run_codeql_on_cve(cve_dir: Path, language: str) -> dict:
             capture_output=True,
             text=True,
             timeout=300,
+            check=False,
         )
         if result.returncode != 0:
             return {"cve_id": cve_id, "status": "analyze_failed", "error": result.stderr[-200:]}
@@ -134,7 +137,7 @@ def run_codeql_on_cve(cve_dir: Path, language: str) -> dict:
             "findings": len(findings),
             "rules": list({r.get("ruleId", "") for r in findings}),
         }
-    except Exception:
+    except Exception:  # noqa: BLE001 - malformed SARIF is recorded as parse_failed
         return {"cve_id": cve_id, "status": "parse_failed"}
 
 
@@ -183,7 +186,7 @@ if __name__ == "__main__":
     print("\n=== CodeQL Batch Results ===")
     print(f"Scanned: {len(scanned)}, Found: {len(found)}, Blind: {len(blind)}")
     if scanned:
-        print(f"Blind rate: {len(blind)*100//len(scanned)}%")
+        print(f"Blind rate: {len(blind) * 100 // len(scanned)}%")
 
     with open("results/codeql_batch.json", "w", encoding="utf-8") as f:
         json.dump(

@@ -56,7 +56,7 @@ def fetch_cve_metadata(cve_id: str) -> dict:
             "cvss_score": cvss_score,
         }
 
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - failure is logged and returned in the record
         log.warning("nvd_fetch_failed", cve_id=cve_id, error=str(e))
         return {"cve_id": cve_id, "cwe_ids": ["CWE-UNKNOWN"], "error": str(e)}
 

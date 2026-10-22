@@ -6,7 +6,6 @@ import re
 import sys
 from pathlib import Path
 
-
 DOC_GLOBS = ["*.md", "docs/*.md", "docs/*.html", "demo/*.md", "BENCHMARK_EVIDENCE.md"]
 SKIP_DIRS = {".git", ".ruff_cache", ".pytest_cache"}
 

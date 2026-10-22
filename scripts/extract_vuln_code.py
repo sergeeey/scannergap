@@ -36,7 +36,7 @@ def extract_from_patches(corpus_raw: Path, corpus_code: Path) -> int:
                     current_file = match.group(1)
                     if current_file not in vuln_files:
                         vuln_files[current_file] = []
-            elif line.startswith("---") or line.startswith("+++"):
+            elif line.startswith(("---", "+++")):
                 continue
             elif line.startswith("-") and not line.startswith("---"):
                 # Removed line = existed in vulnerable version

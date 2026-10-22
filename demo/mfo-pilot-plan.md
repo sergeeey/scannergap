@@ -77,7 +77,7 @@
 Типичный stack для МФО:
 - ❓ SonarQube / SonarCloud?
 - ❓ GitHub Advanced Security (если код на GitHub)?
-- ❓ Snyk / WhiteSource (dependency scanning)?
+- ❓ Question: is Snyk / WhiteSource (dependency scanning) in use?
 - ❓ Custom internal scripts?
 
 **Если НЕТ текущих SAST scanners:**

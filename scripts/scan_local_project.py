@@ -12,10 +12,9 @@ import subprocess
 import sys
 from collections import Counter
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
-
 
 DEFAULT_RULES = Path("src/scannergap/detector/rules")
 
@@ -138,7 +137,7 @@ def run_local_semgrep(target: Path, rules: Path, timeout: int) -> tuple[dict[str
         "--quiet",
         str(target),
     ]
-    result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)
+    result = subprocess.run(command, capture_output=True, text=True, timeout=timeout, check=False)
     raw = json.loads(result.stdout) if result.stdout.strip() else {"results": []}
     return raw, result.stderr, result.returncode
 
@@ -166,7 +165,7 @@ def run_docker_semgrep(
         "--quiet",
         "/scan/target",
     ]
-    result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)
+    result = subprocess.run(command, capture_output=True, text=True, timeout=timeout, check=False)
     raw = json.loads(result.stdout) if result.stdout.strip() else {"results": []}
     return raw, result.stderr, result.returncode
 
@@ -199,7 +198,9 @@ def render_summary(
     severity_counts = Counter(f.effective_severity for f in visible_findings)
     area_counts = Counter(f.area for f in findings)
     visible_area_counts = Counter(f.area for f in visible_findings)
-    non_runtime_count = sum(count for area, count in area_counts.items() if area in NON_RUNTIME_AREAS)
+    non_runtime_count = sum(
+        count for area, count in area_counts.items() if area in NON_RUNTIME_AREAS
+    )
 
     lines = [
         "# ScannerGap Local Project Scan",
@@ -212,7 +213,7 @@ def render_summary(
         "## Scope",
         "",
         f"- Target: `{target}`",
-        f"- Generated: `{datetime.now(timezone.utc).isoformat()}`",
+        f"- Generated: `{datetime.now(UTC).isoformat()}`",
         f"- Semgrep exit code: `{semgrep_exit}`",
         f"- Report mode: `{report_mode}`",
         f"- Finding count: `{len(visible_findings)}`",
@@ -234,7 +235,9 @@ def render_summary(
     lines.extend(["", "## Area Summary", "", "| Area | Visible | Total |", "|---|---:|---:|"])
     all_areas = sorted(set(area_counts) | set(visible_area_counts))
     for area in all_areas:
-        lines.append(f"| {area} | {visible_area_counts.get(area, 0)} | {area_counts.get(area, 0)} |")
+        lines.append(
+            f"| {area} | {visible_area_counts.get(area, 0)} | {area_counts.get(area, 0)} |"
+        )
     if not area_counts:
         lines.append("| none | 0 | 0 |")
 

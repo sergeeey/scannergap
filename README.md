@@ -232,7 +232,9 @@ demo/
 ## Methodology
 
 Transferred from ARCHCODE genomic variant analysis --- the same falsification-first
-framework that found 27 structural DNA variants invisible to all sequence predictors.
+approach, including its self-audit: ARCHCODE's own README reports that its headline AUC (0.977) is
+mostly explained by variant-category composition and drops to 0.551 under a position-only control.
+ScannerGap applies the same habit: headline numbers are labelled exploratory until the controls pass.
 
 Core principle: **don't build another scanner. Map where a selected scanner baseline stops seeing.**
 

@@ -10,10 +10,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
-
 
 LANG_BY_EXT = {
     ".py": "python",
@@ -90,7 +89,7 @@ def build_manifest(corpus_dir: Path) -> dict[str, Any]:
 
     return {
         "schema_version": 1,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "corpus_dir": corpus_dir.as_posix(),
         "scope": "current_checked_out_corpus",
         "notes": [

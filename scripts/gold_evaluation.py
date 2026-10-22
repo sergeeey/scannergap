@@ -50,7 +50,7 @@ def run_semgrep(target: Path, config: str = "auto") -> list[ScanFinding]:
     """Run Semgrep with given config and return findings."""
     cmd = ["semgrep", "scan", "--config", config, "--json", "--quiet", str(target)]
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120, check=False)
         if not result.stdout:
             return []
         data = json.loads(result.stdout)
@@ -70,7 +70,7 @@ def run_semgrep(target: Path, config: str = "auto") -> list[ScanFinding]:
                 )
             )
         return findings
-    except (subprocess.TimeoutExpired, json.JSONDecodeError, Exception):
+    except Exception:  # noqa: BLE001 - scanner output is best-effort; any failure means no findings
         return []
 
 
@@ -78,7 +78,7 @@ def run_bandit(target: Path, extra_args: list[str] | None = None) -> list[ScanFi
     """Run Bandit and return findings."""
     cmd = ["bandit", "-r", "-f", "json"] + (extra_args or []) + [str(target)]
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=60, check=False)
         if not result.stdout:
             return []
         data = json.loads(result.stdout)
@@ -94,7 +94,7 @@ def run_bandit(target: Path, extra_args: list[str] | None = None) -> list[ScanFi
                 )
             )
         return findings
-    except (subprocess.TimeoutExpired, json.JSONDecodeError, Exception):
+    except Exception:  # noqa: BLE001 - scanner output is best-effort; any failure means no findings
         return []
 
 
@@ -133,9 +133,7 @@ def classify_finding(finding: ScanFinding, gold_entry: dict) -> str:
 
     if file_match and (cwe_match or keyword_match):
         return "HIT"
-    elif file_match and not cwe_match and not keyword_match:
-        return "PARTIAL"
-    elif keyword_match and not file_match:
+    elif file_match and not cwe_match and not keyword_match or keyword_match and not file_match:
         return "PARTIAL"
     else:
         return "NOISE"
@@ -331,7 +329,7 @@ def print_results(results: list[EvalResult]) -> dict:
         t = counts["total"]
         dh = counts["default_hit"]
         th = counts["tuned_hit"]
-        print(f"  {req:5s}: {t} CVEs, default {t - dh}/{t} blind, " f"tuned {t - th}/{t} blind")
+        print(f"  {req:5s}: {t} CVEs, default {t - dh}/{t} blind, tuned {t - th}/{t} blind")
 
     return {
         "total": total,

@@ -85,7 +85,7 @@ class TestBlindSpotPatterns:
         assert len(patterns["CWE-89"]) == 2
         assert len(patterns["CWE-79"]) == 1
         # CWE-89 should come first (larger cluster)
-        assert list(patterns.keys())[0] == "CWE-89"
+        assert next(iter(patterns)) == "CWE-89"
 
     def test_unknown_cwe(self) -> None:
         patterns = analyze_blind_spot_patterns(["CVE-1"], {})

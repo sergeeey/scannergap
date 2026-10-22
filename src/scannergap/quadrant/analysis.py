@@ -10,6 +10,7 @@ Methodology from ARCHCODE:
 """
 
 from dataclasses import dataclass, field
+from typing import Any
 
 import pandas as pd
 import structlog
@@ -122,7 +123,7 @@ def classify_quadrants(
 
 def analyze_blind_spot_patterns(
     blind_spot_cves: list[str],
-    cve_metadata: dict[str, dict],
+    cve_metadata: dict[str, dict[str, Any]],
 ) -> dict[str, list[str]]:
     """Group blind spot CVEs by CWE category to find systematic patterns.
 
